@@ -7,15 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-   public Question[] Questions;
-   private static List<Question> UnansweredQuestions;
+   public QuestionList JSONQuestions;
+   public List<Question> UnansweredQuestions;
+
+   [SerializeField]
    private Question CurrentQuestion;
 
    [SerializeField]
    private float QuestionTransitionTime = 1f;
 
+   [SerializeField]
    private Text QuestionText;
 
+   [SerializeField]
    private Text[] AnswerText = new Text[4];
    
    [SerializeField]
@@ -26,23 +30,16 @@ public class GameManager : MonoBehaviour
 
    void Start()
    {
-      //var jsonTextFile = Resources.Load<TextAsset>("TestQuestion");
-      //Debug.Log(jsonTextFile.text);
+      var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
+      JSONQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
+      UnansweredQuestions = JSONQuestions.Questions;
 
-      CurrentQuestion = Question.CreateFromJSON();
-      print(CurrentQuestion.QuestionText);
-      foreach(var answer in CurrentQuestion.Answers) {
-         print(answer);
-      }
-      print(CurrentQuestion.CorrectAnswerIndex);
-      foreach(var tag in CurrentQuestion.Tags) {
-         print(tag);
-      }
-
+      /*
       if (UnansweredQuestions == null || UnansweredQuestions.Count == 0)
       {
          UnansweredQuestions = Questions.ToList<Question>();
       }
+      */
 
       SetCurrentQuestion();
    }
