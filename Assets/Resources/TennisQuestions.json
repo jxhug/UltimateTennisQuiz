@@ -33,17 +33,16 @@
          ]
       },
       {
-         "QuestionText": "How many titles has Jannik Sinner won?",
+         "QuestionText": "What was the first ATP title that Jannik Sinner won?",
          "Answers": [
-            0,
-            3,
-            1,
-            2
+            "Sofia Open",
+            "ATP NextGen",
+            "St. Petersburg Open",
+            "Hamburg European Open"
          ],
-         "CorrectAnswerIndex": 3,
+         "CorrectAnswerIndex": 0,
          "Tags": [
             "ATP",
-            "NextGen",
             "Tennis"
          ]
       },
@@ -120,6 +119,36 @@
             "ATP",
             "Tennis",
             "Masters"
+         ]
+      },
+      {
+         "QuestionText": "Where was Cameron Norrie born?",
+         "Answers": [
+            "Johannesburg, South Africa",
+            "Yaoundé, Cameroon",
+            "London, Great Britian",
+            "Accra, Ghana"
+         ],
+         "CorrectAnswerIndex": 0,
+         "Tags": [
+            "ATP",
+            "Tennis",
+            "Random Trivia"
+         ]
+      },
+      {
+         "QuestionText": "Alex de Minaur has citizenship in Austrailia and what?",
+         "Answers": [
+            "France",
+            "Italy",
+            "Spain",
+            "Poland"
+         ],
+         "CorrectAnswerIndex": 2,
+         "Tags": [
+            "ATP",
+            "Tennis",
+            "Random Trivia"
          ]
       }
    ]
