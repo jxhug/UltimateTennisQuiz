@@ -137,6 +137,36 @@
          ]
       },
       {
+         "QuestionText": "How fast was the world's fastest Grand Slam final?",
+         "Answers": [
+            "32 mins",
+            "34 mins",
+            "33 mins",
+            "31 mins"
+         ],
+         "CorrectAnswerIndex": 0,
+         "Tags": [
+            "Grand Slams",
+            "Tennis",
+            "Random Trivia"
+         ]
+      },
+      {
+         "QuestionText": "Which of these players has completed a Calendar Grand Slam",
+         "Answers": [
+            "Daniel Buge",
+            "Don Budge",
+            "Dan Burgel",
+            "Dom Budgel"
+         ],
+         "CorrectAnswerIndex": 1,
+         "Tags": [
+            "Grand Slams",
+            "Tennis",
+            "Random Trivia"
+         ]
+      },
+      {
          "QuestionText": "Alex de Minaur has citizenship in Austrailia and what?",
          "Answers": [
             "France",
