@@ -6,16 +6,10 @@ public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
 
+
     void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(transform.gameObject);
-        }
+        instance = this;
+        DontDestroyOnLoad(transform.gameObject);
     }  
 } 
