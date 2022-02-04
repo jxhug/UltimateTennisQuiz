@@ -1,6 +1,6 @@
 # Tennis Quiz 🎾
 
-Tennis Quiz is a trivia game I'm working on directed for tennis fans.
+Tennis Quiz is a trivia game in development, directed for tennis fans.
 
 # Motivation
 
