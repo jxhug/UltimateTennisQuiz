@@ -1,15 +1,15 @@
-# tennis_quiz 🎾
+# Tennis Quiz 🎾
 
-Tennis Quiz is a trivia game I'm working on directed for tennis fans.
+Tennis Quiz is a trivia game in development, directed for tennis fans.
 
-# motivation
+# Motivation
 
 There are many games on the App Store, but none about tennis. I decided to make my own.
 
-# building
+# Building
 
 To build the project, clone the repo. Then open the project folder in the latest version of Unity.
 
-# license
+# License
 
 Licensed under the GNU GPLv3 license.
