@@ -152,6 +152,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 460208653}
   m_Father: {fileID: 224700151}
@@ -241,6 +242,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1896092596}
   m_Father: {fileID: 840759123}
@@ -280,6 +282,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1117064126}
   m_Father: {fileID: 1698184854}
@@ -372,6 +375,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107907517}
   m_Father: {fileID: 364198853}
@@ -463,6 +467,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1117064126}
   m_RootOrder: 0
@@ -514,11 +519,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261024116}
   m_CullTransparentMesh: 1
---- !u!82 &297053869 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5654994308273454667, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-  m_PrefabInstance: {fileID: 4880672675244502980}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &337508431
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +553,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1721978421}
   m_Father: {fileID: 401306363}
@@ -691,7 +692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297053869}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -779,6 +780,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 224700151}
   m_Father: {fileID: 1433221151}
@@ -817,6 +819,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1798880114}
   m_RootOrder: 0
@@ -890,6 +893,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4240569, y: 1.4240569, z: 1.4240569}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1069798743}
   - {fileID: 337508432}
@@ -929,6 +933,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 107907517}
   m_RootOrder: 0
@@ -1006,6 +1011,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1491689129}
   m_Father: {fileID: 1433221151}
@@ -1110,6 +1116,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069798743}
   m_RootOrder: 2
@@ -1147,6 +1154,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 3.5850003}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 840759123}
   m_Father: {fileID: 1798880114}
@@ -1225,6 +1233,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1798880114}
   m_RootOrder: 2
@@ -1292,6 +1301,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4012232805920681293, guid: c479178706a4d4e9c93412da517aa3b9, type: 3}
@@ -1343,6 +1353,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c479178706a4d4e9c93412da517aa3b9, type: 3}
 --- !u!1 &804751134
 GameObject:
@@ -1438,6 +1449,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069798743}
   m_RootOrder: 1
@@ -1475,6 +1487,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1798880114}
   m_RootOrder: 4
@@ -1555,6 +1568,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1416413970}
   - {fileID: 176733601}
@@ -1708,6 +1722,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 3.5850003}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1433221151}
   m_Father: {fileID: 1798880114}
@@ -1806,6 +1821,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1991108199}
   - {fileID: 804751139}
@@ -1847,6 +1863,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 261024117}
   m_Father: {fileID: 207363296}
@@ -1938,6 +1955,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1433221151}
   m_RootOrder: 0
@@ -2013,6 +2031,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840759123}
   m_RootOrder: 0
@@ -2089,6 +2108,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1386732341}
   - {fileID: 544290951}
@@ -2242,6 +2262,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 544290951}
   m_RootOrder: 0
@@ -2368,6 +2389,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2398,6 +2420,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 207363296}
   m_Father: {fileID: 840759123}
@@ -2437,6 +2460,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 337508432}
   m_RootOrder: 0
@@ -2580,6 +2604,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2593,6 +2618,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 383652466}
   - {fileID: 928280811}
@@ -2650,6 +2676,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176733601}
   m_RootOrder: 0
@@ -2759,6 +2786,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2857,6 +2885,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069798743}
   m_RootOrder: 0
@@ -2866,60 +2895,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &4880672675244502980
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1376335853976371473, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 687.97284
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 331.02005
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -406.8755
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978691637066118017, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 92b3aa8391e1a4a7caf4df37e8e2a48b, type: 3}

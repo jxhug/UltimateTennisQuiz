@@ -9,27 +9,27 @@ public class GameManager : MonoBehaviour
 {
     public QuestionList JSONQuestions;
     public List<Question> UnansweredQuestions;
-    private Question CurrentQuestion;
+    private Question currentQuestion;
 
-    private int RandomQuestionIndex;
-    private int RandomPermutationIndex;
-    private int[,] RandomAnswerPermutations = new int[6, 4] { { 1, 0, 2, 3 }, { 2, 1, 3, 0 }, { 2, 3, 1, 0 }, { 1, 2, 0, 3 }, { 0, 3, 2, 1 }, { 3, 0, 2, 1 } };
-    private int CorrectAnswerCellIndex;
-
-    [SerializeField]
-    private float QuestionTransitionTime = 1f;
+    private int randomQuestionIndex;
+    private int randomPermutationIndex;
+    private int[,] randomAnswerPermutations = new int[6, 4] { { 1, 0, 2, 3 }, { 2, 1, 3, 0 }, { 2, 3, 1, 0 }, { 1, 2, 0, 3 }, { 0, 3, 2, 1 }, { 3, 0, 2, 1 } };
+    private int correctAnswerCellIndex;
 
     [SerializeField]
-    private Text QuestionText;
+    private float questionTransitionTime = 2.5f;
 
     [SerializeField]
-    private Text[] AnswerText = new Text[4];
+    private TMPro.TMP_Text questionText;
 
     [SerializeField]
-    private GameObject CorrectAnswerUI;
+    private TMPro.TMP_Text[] answerText = new TMPro.TMP_Text[4];
 
     [SerializeField]
-    private GameObject WrongAnswerUI;
+    private GameObject correctAnswerUI;
+
+    [SerializeField]
+    private GameObject wrongAnswerUI;
 
     void Start()
     {
@@ -42,45 +42,45 @@ public class GameManager : MonoBehaviour
 
     void SetCurrentQuestion()  
     {
-        CorrectAnswerUI.SetActive(false);
-        WrongAnswerUI.SetActive(false);
+        correctAnswerUI.SetActive(false);
+        wrongAnswerUI.SetActive(false);
 
-        RandomQuestionIndex = Random.Range(0, UnansweredQuestions.Count);
-        CurrentQuestion = UnansweredQuestions[RandomQuestionIndex];
-        QuestionText.text = CurrentQuestion.QuestionText;
+        randomQuestionIndex = Random.Range(0, UnansweredQuestions.Count);
+        currentQuestion = UnansweredQuestions[randomQuestionIndex];
+        questionText.text = currentQuestion.QuestionText;
 
-        RandomPermutationIndex = Random.Range(0, RandomAnswerPermutations.GetLength(0));
+        randomPermutationIndex = Random.Range(0, randomAnswerPermutations.GetLength(0));
 
         for (int cellIndex = 0; cellIndex <= 3; cellIndex++)
         {
-            int answerIndex = RandomAnswerPermutations[RandomPermutationIndex, cellIndex];
-            AnswerText[cellIndex].text = CurrentQuestion.Answers[answerIndex];
+            int answerIndex = randomAnswerPermutations[randomPermutationIndex, cellIndex];
+            answerText[cellIndex].text = currentQuestion.Answers[answerIndex];
 
-            if (answerIndex == CurrentQuestion.CorrectAnswerIndex)
+            if (answerIndex == currentQuestion.CorrectAnswerIndex)
             {
-                CorrectAnswerCellIndex = cellIndex;
+                correctAnswerCellIndex = cellIndex;
             }
         }
     }
 
     IEnumerator TransitionToNextQuestion() 
     {
-        UnansweredQuestions.Remove(CurrentQuestion);
+        UnansweredQuestions.Remove(currentQuestion);
 
-        yield return new WaitForSeconds(QuestionTransitionTime);
+        yield return new WaitForSeconds(questionTransitionTime);
 
         SetCurrentQuestion();
     }
 
     public void CheckAnswer(int SelectedIndex)
     {
-        if (SelectedIndex == CorrectAnswerCellIndex)
+        if (SelectedIndex == correctAnswerCellIndex)
         {
-            CorrectAnswerUI.SetActive(true);
+            correctAnswerUI.SetActive(true);
         }
         else
         {
-            WrongAnswerUI.SetActive(true);
+            wrongAnswerUI.SetActive(true);
         }
         StartCoroutine(TransitionToNextQuestion());
     }
