@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public QuestionList JSONQuestions;
-    public List<Question> UnansweredQuestions;
+    public QuestionList jsonQuestions;
+    public List<Question> allQuestions;
+    public List<Question> unansweredQuestions;
     private Question currentQuestion;
 
     private int randomQuestionIndex;
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
     private int correctAnswerCellIndex;
 
     [SerializeField]
-    private float questionTransitionTime = 2.5f;
+    private float questionTransitionTime;
 
     [SerializeField]
     private TMPro.TMP_Text questionText;
@@ -31,32 +32,39 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject wrongAnswerUI;
 
+    [SerializeField]
+    private int numQuestionsPerGame = 10;
+
+    public int score = 0;
+    public static int highScore = 0;
+
+
     void Start()
     {
         var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
-        JSONQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
-        UnansweredQuestions = JSONQuestions.Questions;
+        jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
+        allQuestions = jsonQuestions.questions;
+
+        // TODO: Randomly select "numQuestionsPerGame" questions from allQuestions list
+        unansweredQuestions = allQuestions.Take(numQuestionsPerGame).ToList();
 
         SetCurrentQuestion();
     }
 
     void SetCurrentQuestion()  
     {
-        correctAnswerUI.SetActive(false);
-        wrongAnswerUI.SetActive(false);
-
-        randomQuestionIndex = Random.Range(0, UnansweredQuestions.Count);
-        currentQuestion = UnansweredQuestions[randomQuestionIndex];
-        questionText.text = currentQuestion.QuestionText;
+        randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
+        currentQuestion = unansweredQuestions[randomQuestionIndex];
+        questionText.text = currentQuestion.questionText;
 
         randomPermutationIndex = Random.Range(0, randomAnswerPermutations.GetLength(0));
 
         for (int cellIndex = 0; cellIndex <= 3; cellIndex++)
         {
             int answerIndex = randomAnswerPermutations[randomPermutationIndex, cellIndex];
-            answerText[cellIndex].text = currentQuestion.Answers[answerIndex];
+            answerText[cellIndex].text = currentQuestion.answers[answerIndex];
 
-            if (answerIndex == currentQuestion.CorrectAnswerIndex)
+            if (answerIndex == currentQuestion.correctAnswerIndex)
             {
                 correctAnswerCellIndex = cellIndex;
             }
@@ -65,11 +73,20 @@ public class GameManager : MonoBehaviour
 
     IEnumerator TransitionToNextQuestion() 
     {
-        UnansweredQuestions.Remove(currentQuestion);
-
-        yield return new WaitForSeconds(questionTransitionTime);
-
-        SetCurrentQuestion();
+        unansweredQuestions.Remove(currentQuestion);
+        if (unansweredQuestions.Count == 0)
+        {
+            //SceneManager.LoadScene(Scene)
+            Debug.Log("No more questions left");
+        }
+        else
+        {
+            yield return new WaitForSeconds(questionTransitionTime / 2);
+            SetCurrentQuestion();
+            yield return new WaitForSeconds(questionTransitionTime / 2);
+            correctAnswerUI.SetActive(false);
+            wrongAnswerUI.SetActive(false);
+        }
     }
 
     public void CheckAnswer(int SelectedIndex)
@@ -77,6 +94,7 @@ public class GameManager : MonoBehaviour
         if (SelectedIndex == correctAnswerCellIndex)
         {
             correctAnswerUI.SetActive(true);
+            score++;
         }
         else
         {

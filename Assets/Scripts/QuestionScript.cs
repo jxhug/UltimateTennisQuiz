@@ -8,14 +8,14 @@ using System.Linq;
 [Serializable]
 public class Question
 {
-    public string QuestionText;
-    public string[] Answers = new string[4];
-    public int CorrectAnswerIndex;
-    public string[] Tags = new string[10];
+    public string questionText;
+    public string[] answers = new string[4];
+    public int correctAnswerIndex;
+    public string[] tags = new string[10];
 }
 
 [Serializable]
 public class QuestionList
 {
-    public List<Question> Questions;
+    public List<Question> questions;
 }

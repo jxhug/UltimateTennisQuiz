@@ -266,7 +266,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00046539, y: 0.00014496}
-  m_SizeDelta: {x: 298.5, y: 116.03}
+  m_SizeDelta: {x: 252.5733, y: 87.5992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227144999
 MonoBehaviour:
@@ -315,12 +315,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 60
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 22
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -461,9 +461,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SFX, Assembly-CSharp
-        m_MethodName: PlayClickSound
+      - m_Target: {fileID: 1774269244}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -820,7 +820,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00046539, y: 0.00014496}
-  m_SizeDelta: {x: 298.5, y: 116.03}
+  m_SizeDelta: {x: 252.5733, y: 87.5992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216447676
 MonoBehaviour:
@@ -869,12 +869,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 49.35
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 22
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1004,8 +1004,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498354099}
-  - component: {fileID: 1498354098}
   - component: {fileID: 1498354097}
+  - component: {fileID: 1498354098}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1774269242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840acc11485534f8caa89fe27a845ce0, type: 3}
+  m_Script: {fileID: 11500000, guid: 80c1025778b3f403ebec712634d67240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1793159384
@@ -1582,7 +1582,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00046539, y: 0.00014496}
-  m_SizeDelta: {x: 298.5, y: 116.03}
+  m_SizeDelta: {x: 252.5733, y: 87.5992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012561249
 MonoBehaviour:
@@ -1631,12 +1631,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 60
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 22
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1717,7 +1717,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00046539, y: 0.00014496}
-  m_SizeDelta: {x: 298.5, y: 116.03}
+  m_SizeDelta: {x: 252.5733, y: 87.5992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028742679
 MonoBehaviour:
@@ -1766,12 +1766,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 44.45
   m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 22
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

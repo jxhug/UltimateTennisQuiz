@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
     //Change volume of SFX with slider
     public void SetSFXVolume(float SFXVolume)
     {
-        SFXMixer.SetFloat("volume", SFXVolume);
+        SFXMixer.SetFloat("volume", Mathf.Log10 (SFXVolume) * 20);
     }
 
     //Change volume of music with slider

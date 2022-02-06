@@ -1,31 +1,31 @@
 {
-   "Questions":
+   "questions":
    [
       {
-         "QuestionText": "How old is Roger Federer?",
-         "Answers": [
+         "questionText": "How old is Roger Federer?",
+         "answers": [
             "40 years old",
             "37 years old",
             "39 years old",
             "41 years old"
          ],
-         "CorrectAnswerIndex":0,
-         "Tags": [
+         "correctAnswerIndex":0,
+         "tags": [
             "Federer",
             "ATP",
             "Tennis"
          ]
       },
       {
-         "QuestionText": "What is Brad Gilbert's nickname for Kei Nishikori?",
-         "Answers": [
+         "questionText": "What is Brad Gilbert's nickname for Kei Nishikori?",
+         "answers": [
             "Silent K",
             "Special K",
             "Stupid K",
             "Smelly K"
          ],
-         "CorrectAnswerIndex": 1,
-         "Tags": [
+         "correctAnswerIndex": 1,
+         "tags": [
             "ATP",
             "Commentators",
             "Random Trivia",
@@ -33,149 +33,149 @@
          ]
       },
       {
-         "QuestionText": "What was the first ATP title that Jannik Sinner won?",
-         "Answers": [
+         "questionText": "What was the first ATP title that Jannik Sinner won?",
+         "answers": [
             "Sofia Open",
             "ATP NextGen",
             "St. Petersburg Open",
             "Hamburg European Open"
          ],
-         "CorrectAnswerIndex": 0,
-         "Tags": [
+         "correctAnswerIndex": 0,
+         "tags": [
             "ATP",
             "Tennis"
          ]
       },
       {
-         "QuestionText": "Alex Dogopolov got bitten by what breed of cat?",
-         "Answers": [
+         "questionText": "Alex Dogopolov got bitten by what breed of cat?",
+         "answers": [
             "Serval Cat",
             "Sphinx Cat",
             "Servil Cat",
             "Stupid Cat"
          ],
-         "CorrectAnswerIndex": 0,
-         "Tags": [
+         "correctAnswerIndex": 0,
+         "tags": [
             "Random Trivia",
             "ATP",
             "Tennis"
          ]
       },
       {
-         "QuestionText": "Who won the 2020 US Open?",
-         "Answers": [
+         "questionText": "Who won the 2020 US Open?",
+         "answers": [
             "Alex Zverev",
             "Dominic Thiem",
             "Novak Djokovic",
             "Roger Federer"
          ],
-         "CorrectAnswerIndex": 1,
-         "Tags": [
+         "correctAnswerIndex": 1,
+         "tags": [
             "ATP",
             "Tennis",
             "Grand Slams"
          ]
       },
       {
-         "QuestionText": "When did Rafael Nadal turn pro?",
-         "Answers": [
+         "questionText": "When did Rafael Nadal turn pro?",
+         "answers": [
             2002,
             2000,
             2001,
             2003
          ],
-         "CorrectAnswerIndex": 2,
-         "Tags": [
+         "correctAnswerIndex": 2,
+         "tags": [
             "ATP",
             "Tennis",
             "Nadal"
          ]
       },
       {
-         "QuestionText": "How many slams has Marin Cilic won?",
-         "Answers": [
+         "questionText": "How many slams has Marin Cilic won?",
+         "answers": [
             0,
             5,
             2,
             1
          ],
-         "CorrectAnswerIndex": 3,
-         "Tags": [
+         "correctAnswerIndex": 3,
+         "tags": [
             "ATP",
             "Tennis",
             "Grand Slams"
          ]
       },
       {
-         "QuestionText": "Who won Indian Wells in 2018?",
-         "Answers": [
+         "questionText": "Who won Indian Wells in 2018?",
+         "answers": [
             "Roger Federer",
             "Rafael Nadal",
             "Juan Martin Del Potro",
             "Novak Djokovic"
          ],
-         "CorrectAnswerIndex": 2,
-         "Tags": [
+         "correctAnswerIndex": 2,
+         "tags": [
             "ATP",
             "Tennis",
             "Masters"
          ]
       },
       {
-         "QuestionText": "Where was Cameron Norrie born?",
-         "Answers": [
+         "questionText": "Where was Cameron Norrie born?",
+         "answers": [
             "Johannesburg, South Africa",
             "Yaoundé, Cameroon",
             "London, Great Britian",
             "Accra, Ghana"
          ],
-         "CorrectAnswerIndex": 0,
-         "Tags": [
+         "correctAnswerIndex": 0,
+         "tags": [
             "ATP",
             "Tennis",
             "Random Trivia"
          ]
       },
       {
-         "QuestionText": "How fast was the world's fastest Grand Slam final?",
-         "Answers": [
+         "questionText": "How fast was the world's fastest Grand Slam final?",
+         "answers": [
             "32 mins",
             "34 mins",
             "33 mins",
             "31 mins"
          ],
-         "CorrectAnswerIndex": 0,
-         "Tags": [
+         "correctAnswerIndex": 0,
+         "tags": [
             "Grand Slams",
             "Tennis",
             "Random Trivia"
          ]
       },
       {
-         "QuestionText": "Which of these players has completed a Calendar Grand Slam?",
-         "Answers": [
+         "questionText": "Which of these players has completed a Calendar Grand Slam?",
+         "answers": [
             "Daniel Buge",
             "Don Budge",
             "Dan Burgel",
             "Dom Budgel"
          ],
-         "CorrectAnswerIndex": 1,
-         "Tags": [
+         "correctAnswerIndex": 1,
+         "tags": [
             "Grand Slams",
             "Tennis",
             "Random Trivia"
          ]
       },
       {
-         "QuestionText": "Alex de Minaur has citizenship in Austrailia and what?",
-         "Answers": [
+         "questionText": "Alex de Minaur has citizenship in Austrailia and what?",
+         "answers": [
             "France",
             "Italy",
             "Spain",
             "Poland"
          ],
-         "CorrectAnswerIndex": 2,
-         "Tags": [
+         "correctAnswerIndex": 2,
+         "tags": [
             "ATP",
             "Tennis",
             "Random Trivia"

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SettingsMenu.unity
     guid: a99e50b8b4ae64a049ca1ecc6bf3992e
   - enabled: 1
-    path: Assets/Scenes/PlayerSelectMenu.unity
-    guid: 04e19de6343c34ecc88ec8ef21ea2f7d
-  - enabled: 1
     path: Assets/Scenes/SingleplayerQuiz.unity
     guid: 7ff066c6492a148b9b3a8b06d0d8d95d
   m_configObjects: {}
