@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class SceneLoader : MonoBehaviour
-{  
+{
     public void LoadSettings()
     {
         SceneManager.LoadScene("SettingsMenu");

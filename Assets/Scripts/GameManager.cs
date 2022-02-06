@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public QuestionList jsonQuestions;
@@ -33,25 +34,39 @@ public class GameManager : MonoBehaviour
     private GameObject wrongAnswerUI;
 
     [SerializeField]
-    private int numQuestionsPerGame = 10;
+    private GameObject MainQuestionScreen;
 
-    public int score = 0;
+    [SerializeField]
+    private GameObject FinalScoreScreen;
+
+    [SerializeField]
+    private TMPro.TMP_Text finalScoreText;
+
+    [SerializeField]
+    private TMPro.TMP_Text highScoreText;
+
+    private int numberQuestionsPerGame = 5;
+
+    private int score = 0;
     public static int highScore = 0;
 
 
     void Start()
     {
+        MainQuestionScreen.SetActive(true);
+        FinalScoreScreen.SetActive(false);
+
         var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
         allQuestions = jsonQuestions.questions;
 
-        // TODO: Randomly select "numQuestionsPerGame" questions from allQuestions list
-        unansweredQuestions = allQuestions.Take(numQuestionsPerGame).ToList();
+        // TODO: Randomly select "numberQuestionsPerGame" questions from allQuestions list
+        unansweredQuestions = allQuestions.Take(numberQuestionsPerGame).ToList();
 
         SetCurrentQuestion();
     }
 
-    void SetCurrentQuestion()  
+    void SetCurrentQuestion()
     {
         randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
@@ -71,22 +86,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator TransitionToNextQuestion() 
+    IEnumerator TransitionToNextQuestion()
     {
         unansweredQuestions.Remove(currentQuestion);
+
+        // Fade to correct / incorrect display
+        yield return new WaitForSeconds(questionTransitionTime / 2);
+
+        // Set up the next question or switch to the finish scene
         if (unansweredQuestions.Count == 0)
         {
-            //SceneManager.LoadScene(Scene)
-            Debug.Log("No more questions left");
+            if (score > highScore)
+            {
+                highScore = score;
+            }
+            MainQuestionScreen.SetActive(false);
+            FinalScoreScreen.SetActive(true);
+            finalScoreText.text = ("Your final score is: " + score + "/" + numberQuestionsPerGame);
+            highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerGame);
         }
         else
         {
-            yield return new WaitForSeconds(questionTransitionTime / 2);
             SetCurrentQuestion();
-            yield return new WaitForSeconds(questionTransitionTime / 2);
-            correctAnswerUI.SetActive(false);
-            wrongAnswerUI.SetActive(false);
         }
+        // Fade into the next question
+        yield return new WaitForSeconds(questionTransitionTime / 2);
+        correctAnswerUI.SetActive(false);
+        wrongAnswerUI.SetActive(false);
     }
 
     public void CheckAnswer(int SelectedIndex)
@@ -100,6 +126,7 @@ public class GameManager : MonoBehaviour
         {
             wrongAnswerUI.SetActive(true);
         }
+
         StartCoroutine(TransitionToNextQuestion());
     }
-}
+}   
