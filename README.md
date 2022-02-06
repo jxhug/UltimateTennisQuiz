@@ -1,6 +1,6 @@
-# Tennis Quiz 🎾
+# Ultimate Tennis Quiz 🎾
 
-Tennis Quiz is a trivia game in development, directed for tennis fans.
+Ultimate Tennis Quiz is a trivia game in development, directed for tennis fans.
 
 # Motivation
 
