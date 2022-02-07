@@ -10,12 +10,16 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("SettingsMenu");
     }
-    public void LoadSingleplayer()
+    public void LoadQuiz()
     {
-        SceneManager.LoadScene("SingleplayerQuiz");
+        SceneManager.LoadScene("Quiz");
     }
     public void LoadHome()
     {
         SceneManager.LoadScene("HomeMenu");
+    }
+    public void LoadPlayerSelect()
+    {
+        SceneManager.LoadScene("PlayerSelect");
     }
 }

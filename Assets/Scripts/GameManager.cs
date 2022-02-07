@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private int correctAnswerCellIndex;
 
     [SerializeField]
-    private float questionTransitionTime;
+    private float questionTransitionTime = 2.5f;
 
     [SerializeField]
     private TMPro.TMP_Text questionText;
@@ -34,40 +34,67 @@ public class GameManager : MonoBehaviour
     private GameObject wrongAnswerUI;
 
     [SerializeField]
-    private GameObject MainQuestionScreen;
+    private GameObject mainQuestionScreen;
 
     [SerializeField]
-    private GameObject FinalScoreScreen;
+    private GameObject finalSingleplayerScoreScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text finalScoreText;
+    private TMPro.TMP_Text finalSingleplayerScoreText;
 
     [SerializeField]
     private TMPro.TMP_Text highScoreText;
 
-    private int numberQuestionsPerGame = 5;
+    [SerializeField]
+    private TMPro.TMP_Text numberPlayerText;
 
-    private int score = 0;
+    //Four player end screen
+    [SerializeField]
+    private GameObject fourPlayerFinalScoreScreen;
+    [SerializeField]
+    private GameObject[] fourPlayerImages = new GameObject[4];
+    private int largestFourPlayerScore;
+
+    private int numberQuestionsPerPlayer = 5;
+    private int numberQuestionsInGame;
+
+    private int numberPlayersInGame;
+    private int currentPlayer;
+
+    private int[] scores;
     public static int highScore = 0;
 
 
     void Start()
     {
-        MainQuestionScreen.SetActive(true);
-        FinalScoreScreen.SetActive(false);
+        mainQuestionScreen.SetActive(true);
+        finalSingleplayerScoreScreen.SetActive(false);
+        fourPlayerFinalScoreScreen.SetActive(false);
 
         var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
         allQuestions = jsonQuestions.questions;
 
-        // TODO: Randomly select "numberQuestionsPerGame" questions from allQuestions list
-        unansweredQuestions = allQuestions.Take(numberQuestionsPerGame).ToList();
+        numberPlayersInGame = PlayerSelect.numberPlayersInGame;
+        numberQuestionsInGame = numberPlayersInGame * numberQuestionsPerPlayer;
 
+        scores = new int[numberPlayersInGame];
+        for (int i = 0; i < numberPlayersInGame; i++)
+        {
+            scores[i] = 0;
+            fourPlayerImages[i].SetActive(false);
+        }
+
+        // TODO: Randomly select "numberQuestionsInGame" questions from allQuestions list
+        unansweredQuestions = allQuestions.Take(numberQuestionsInGame).ToList();
+
+        currentPlayer = 0;
         SetCurrentQuestion();
     }
 
     void SetCurrentQuestion()
     {
+        numberPlayerText.text = ("Player " + (currentPlayer + 1));
         randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
         questionText.text = currentQuestion.questionText;
@@ -96,17 +123,32 @@ public class GameManager : MonoBehaviour
         // Set up the next question or switch to the finish scene
         if (unansweredQuestions.Count == 0)
         {
-            if (score > highScore)
+            mainQuestionScreen.SetActive(false);
+
+            if (numberPlayersInGame == 1)
             {
-                highScore = score;
+                if (scores[0] > highScore)
+                {
+                    highScore = scores[0];
+                }
+                finalSingleplayerScoreScreen.SetActive(true);
+                finalSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
+                highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
             }
-            MainQuestionScreen.SetActive(false);
-            FinalScoreScreen.SetActive(true);
-            finalScoreText.text = ("Your final score is: " + score + "/" + numberQuestionsPerGame);
-            highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerGame);
+            else
+            {
+                if (numberPlayersInGame == 4)
+                {
+                    FourPlayerEndScreen();
+                }
+            }
         }
         else
         {
+            Debug.Log("Before increment current Player is :" + currentPlayer);
+            currentPlayer = (currentPlayer + 1) % numberPlayersInGame;
+            Debug.Log("After increment current Player is :" + currentPlayer);
+
             SetCurrentQuestion();
         }
         // Fade into the next question
@@ -120,7 +162,7 @@ public class GameManager : MonoBehaviour
         if (SelectedIndex == correctAnswerCellIndex)
         {
             correctAnswerUI.SetActive(true);
-            score++;
+            scores[currentPlayer]++;
         }
         else
         {
@@ -128,5 +170,16 @@ public class GameManager : MonoBehaviour
         }
 
         StartCoroutine(TransitionToNextQuestion());
+    }
+
+    void FourPlayerEndScreen()
+    {
+        fourPlayerFinalScoreScreen.SetActive(true);
+        for (int i = 0; i < numberPlayersInGame; i++)
+        {
+            fourPlayerImages[i].SetActive(true);
+        }
+        largestFourPlayerScore = (scores[0] > scores[1] && scores[0] > scores[1] && scores[0] > scores[1]) ? scores[0] : (scores[1] > scores[2] && scores[1] > scores[3]) ? scores[1] : (scores[2] > scores[3]) ? scores[2] : scores[3];
+
     }
 }   
