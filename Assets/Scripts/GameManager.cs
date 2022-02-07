@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     private int[,] randomAnswerPermutations = new int[6, 4] { { 1, 0, 2, 3 }, { 2, 1, 3, 0 }, { 2, 3, 1, 0 }, { 1, 2, 0, 3 }, { 0, 3, 2, 1 }, { 3, 0, 2, 1 } };
     private int correctAnswerCellIndex;
 
-    [SerializeField]
     private float questionTransitionTime = 2.5f;
 
     [SerializeField]
@@ -48,14 +47,22 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TMPro.TMP_Text numberPlayerText;
 
+    [SerializeField]
+    private Sprite winningImage;
+
     //Four player end screen
     [SerializeField]
     private GameObject fourPlayerFinalScoreScreen;
     [SerializeField]
     private GameObject[] fourPlayerImages = new GameObject[4];
-    private int largestFourPlayerScore;
+    [SerializeField]
+    private GameObject[] fourPlayerWinnerTexts = new GameObject[4];
+    [SerializeField]
+    private TMPro.TMP_Text[] fourPlayerImageTexts = new TMPro.TMP_Text[4];
+    private Image fourPlayerWinningImage;
+    
 
-    private int numberQuestionsPerPlayer = 5;
+    private int numberQuestionsPerPlayer = 1;
     private int numberQuestionsInGame;
 
     private int numberPlayersInGame;
@@ -175,11 +182,21 @@ public class GameManager : MonoBehaviour
     void FourPlayerEndScreen()
     {
         fourPlayerFinalScoreScreen.SetActive(true);
+        int winningScore = scores.Max();
         for (int i = 0; i < numberPlayersInGame; i++)
         {
             fourPlayerImages[i].SetActive(true);
+            fourPlayerWinnerTexts[i].SetActive(false);
+            fourPlayerImageTexts[i].text = ("Player " + (i + 1) + ": " + scores[i] + "/" + numberQuestionsPerPlayer);
+
+            if (scores[i] == winningScore)
+            {
+                // You know that the i’th player is the winning player (there may be more than one winning player)
+                fourPlayerWinningImage = fourPlayerImages[i].GetComponent<Image>();
+                fourPlayerWinningImage.sprite = winningImage;
+                fourPlayerWinnerTexts[i].SetActive(true);
+            }
         }
-        largestFourPlayerScore = (scores[0] > scores[1] && scores[0] > scores[1] && scores[0] > scores[1]) ? scores[0] : (scores[1] > scores[2] && scores[1] > scores[3]) ? scores[1] : (scores[2] > scores[3]) ? scores[2] : scores[3];
 
     }
 }   
