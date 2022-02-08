@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         threePlayerFinalScoreScreen.SetActive(false);
         fourPlayerFinalScoreScreen.SetActive(false);
 
-        var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
+        var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
         allQuestions = jsonQuestions.questions;
 

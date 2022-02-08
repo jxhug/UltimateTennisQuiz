@@ -12,6 +12,7 @@ public class Question
     public string[] answers = new string[4];
     public int correctAnswerIndex;
     public string[] tags = new string[10];
+    public string info;
 }
 
 [Serializable]

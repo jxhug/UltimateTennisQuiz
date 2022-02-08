@@ -1,0 +1,67 @@
+{
+    "questions": [
+        {
+            "questionText": "When was Roger Federer born?",
+            "answers": [
+                "August, 1981",
+                "July, 1980",
+                "August, 1980",
+                "August, 1979"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three",
+                "Birthdays"
+            ],
+            "info": "Roger Federer was born on August 8, 1981 in Basel, Switzerland"
+        },
+        {
+            "questionText": "When was Novak Djokovic born?",
+            "answers": [
+                "May, 1986",
+                "May, 1987",
+                "June, 1987",
+                "June, 1986"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three",
+                "Birthdays"
+            ],
+            "info": "Novak Djokovic was born on May 22, 1987 in Belgrade, Serbia"
+        },
+        {
+            "questionText": "When was Rafael Nadal born?",
+            "answers": [
+                "May, 1986",
+                "May, 1987",
+                "June, 1987",
+                "June, 1986"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three",
+                "Birthdays"
+            ],
+            "info": "Novak Djokovic was born on June 3, 1986 in Manacor, Mallorca, Spain"
+        },
+        {
+            "questionText": "What year did Federer turn pro?",
+            "answers": [
+                "1998",
+                "1999",
+                "1997",
+                "2000"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three",
+            ],
+            "info": "Roger Federer made his debut on the ATP Tour in 1998."
+        }
+    ]
+}
