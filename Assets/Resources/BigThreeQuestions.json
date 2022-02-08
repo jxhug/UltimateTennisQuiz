@@ -59,9 +59,294 @@
             "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
-                "Big Three",
+                "Big Three"
             ],
             "info": "Roger Federer made his debut on the ATP Tour in 1998."
-        }
+        },
+        {
+            "questionText": "What year did Nadal turn pro?",
+            "answers": [
+                "1999",
+                "1998",
+                "2001",
+                "2000"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal made his debut on the ATP Tour in 1998."
+        },
+        {
+            "questionText": "What year did Federer turn pro?",
+            "answers": [
+                "1998",
+                "1999",
+                "1997",
+                "2000"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer made his debut on the ATP Tour in 1998."
+        },
+        {
+            "questionText": "What year did Nadal turn pro?",
+            "answers": [
+                "1999",
+                "1998",
+                "2001",
+                "2000"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal made his debut on the ATP Tour in 1998."
+        },
+        {
+            "questionText": "What year did Djokovic turn pro?",
+            "answers": [
+                "2004",
+                "2003",
+                "2002",
+                "2005"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic made his debut on the ATP Tour in 2003."
+        },
+        {
+            "questionText": "When did Federer win his first Grand Slam?",
+            "answers": [
+                "2003",
+                "2004",
+                "2002",
+                "2001"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer won his first Grand Slam, Wimbledon, in 2003."
+        },
+        {
+            "questionText": "When did Nadal win his first Grand Slam?",
+            "answers": [
+                "2005",
+                "2006",
+                "2003",
+                "2004"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal won Roland Garros, in 2005. He won on his first Roland Garros debut."
+        },
+        {
+            "questionText": "When did Djokovic win his first Grand Slam?",
+            "answers": [
+                "2008",
+                "2007",
+                "2006",
+                "2005"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic won the Austrailian Open in 2008, becoming the first Serbian man to win a Grand Slam."
+        },
+        {
+            "questionText": "When did Djokovic win his first Grand Slam?",
+            "answers": [
+                "2008",
+                "2007",
+                "2006",
+                "2005"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic won the Austrailian Open in 2008, becoming the first Serbian man to win a Grand Slam."
+        },
+        {
+            "questionText": "What was the first year Federer was Number One in the world?",
+            "answers": [
+                "2003",
+                "2004",
+                "2005",
+                "2006"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer took the Number One ranking for his first time in 2004."
+        },
+        {
+            "questionText": "What was the first year Nadal was Number One in the world?",
+            "answers": [
+                "2009",
+                "2007",
+                "2008",
+                "2006"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal took the Number One ranking for his first time in 2008."
+        },
+        {
+            "questionText": "What was the first year Djokovic was Number One in the world?",
+            "answers": [
+                "2011",
+                "2010",
+                "2012",
+                "2009"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic took the Number One ranking for his first time in 2011."
+        },
+        {
+            "questionText": "How many years did Roger Federer finish the season Number One in the world?",
+            "answers": [
+                "5",
+                "7",
+                "6",
+                "8"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer finished Number One in the world for 5 years."
+        },
+        {
+            "questionText": "How many years did Rafael Nadal finish the season Number One in the world?",
+            "answers": [
+                "5",
+                "7",
+                "6",
+                "8"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal finished Number One in the world for 5 years."
+        },
+        {
+            "questionText": "How many years did Novak Djokovic finish the season Number One in the world?",
+            "answers": [
+                "5",
+                "7",
+                "6",
+                "8"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic finished Number One in the world for 7 years."
+        },
+        {
+            "questionText": "How old was Roger Federer when he won his first Grand Slam?",
+            "answers": [
+                "20",
+                "21",
+                "22",
+                "19"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer won his first Grand Slam at 21."
+        },
+        {
+            "questionText": "How old was Rafael Nadal when he won his first Grand Slam?",
+            "answers": [
+                "24",
+                "21",
+                "23",
+                "25"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal won his first Grand Slam at 24."
+        },
+        {
+            "questionText": "How old was Novak Djokovic when he won his first Grand Slam?",
+            "answers": [
+                "23",
+                "21",
+                "22",
+                "20"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic won his first Grand Slam at 20."
+        },
+        {
+            "questionText": "How old was Roger Federer when he turned pro?",
+            "answers": [
+                "17",
+                "18",
+                "19",
+                "20"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer turned pro at age 17, but he didn't have much success initially."
+        },
+        {
+            "questionText": "How old was Rafael Nadal when he turned pro?",
+            "answers": [
+                "15",
+                "16",
+                "17",
+                "18"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal turned pro at the young age of 15, but he didn't have much success initially."
+        },
     ]
 }
