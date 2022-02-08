@@ -50,17 +50,45 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Sprite winningImage;
 
+    //Two player end screen
+    [SerializeField]
+    private GameObject twoPlayerFinalScoreScreen;
+    [SerializeField]
+    private GameObject[] twoPlayerImages = new GameObject[2];
+    [SerializeField]
+    private GameObject[] twoPlayerWinnerImages = new GameObject[2];
+    [SerializeField]
+    private TMPro.TMP_Text[] twoPlayerImageTexts = new TMPro.TMP_Text[2];
+    private Image twoPlayerWinningImage;
+
+    //Three player end screen
+    [SerializeField]
+    private GameObject threePlayerFinalScoreScreen;
+    [SerializeField]
+    private GameObject[] threePlayerImages = new GameObject[3];
+    [SerializeField]
+    private GameObject[] threePlayerWinnerImages = new GameObject[3];
+    [SerializeField]
+    private TMPro.TMP_Text[] threePlayerImageTexts = new TMPro.TMP_Text[3];
+    private Image threePlayerWinningImage;
+
     //Four player end screen
     [SerializeField]
     private GameObject fourPlayerFinalScoreScreen;
     [SerializeField]
     private GameObject[] fourPlayerImages = new GameObject[4];
     [SerializeField]
-    private GameObject[] fourPlayerWinnerTexts = new GameObject[4];
+    private GameObject[] fourPlayerWinnerImages = new GameObject[4];
     [SerializeField]
     private TMPro.TMP_Text[] fourPlayerImageTexts = new TMPro.TMP_Text[4];
     private Image fourPlayerWinningImage;
-    
+
+    //Multiplayer end screen objects
+    private GameObject multiplayerFinalScoreScreen;
+    private GameObject[] multiplayerImages;
+    private GameObject[] multiplayerWinnerImages;
+    private TMPro.TMP_Text[] multiplayerImageTexts;
+    private Image multiplayerWinningImage;
 
     private int numberQuestionsPerPlayer = 1;
     private int numberQuestionsInGame;
@@ -76,6 +104,8 @@ public class GameManager : MonoBehaviour
     {
         mainQuestionScreen.SetActive(true);
         finalSingleplayerScoreScreen.SetActive(false);
+        twoPlayerFinalScoreScreen.SetActive(false);
+        threePlayerFinalScoreScreen.SetActive(false);
         fourPlayerFinalScoreScreen.SetActive(false);
 
         var jsonTextFile = Resources.Load<TextAsset>("TennisQuestions");
@@ -85,11 +115,36 @@ public class GameManager : MonoBehaviour
         numberPlayersInGame = PlayerSelect.numberPlayersInGame;
         numberQuestionsInGame = numberPlayersInGame * numberQuestionsPerPlayer;
 
+        switch (numberPlayersInGame)
+        {
+            case 2:
+                multiplayerFinalScoreScreen = twoPlayerFinalScoreScreen;
+                multiplayerImages = twoPlayerImages;
+                multiplayerWinnerImages = twoPlayerWinnerImages;
+                multiplayerImageTexts = twoPlayerImageTexts;
+                multiplayerWinningImage = twoPlayerWinningImage;
+                break;
+            case 3:
+                multiplayerFinalScoreScreen = threePlayerFinalScoreScreen;
+                multiplayerImages = threePlayerImages;
+                multiplayerWinnerImages = threePlayerWinnerImages;
+                multiplayerImageTexts = threePlayerImageTexts;
+                multiplayerWinningImage = threePlayerWinningImage;
+                break;
+            case 4:
+                multiplayerFinalScoreScreen = fourPlayerFinalScoreScreen;
+                multiplayerImages = fourPlayerImages;
+                multiplayerWinnerImages = fourPlayerWinnerImages;
+                multiplayerImageTexts = fourPlayerImageTexts;
+                multiplayerWinningImage = fourPlayerWinningImage;
+                break;
+        }
+
         scores = new int[numberPlayersInGame];
         for (int i = 0; i < numberPlayersInGame; i++)
         {
             scores[i] = 0;
-            fourPlayerImages[i].SetActive(false);
+            multiplayerImages[i].SetActive(false);
         }
 
         // TODO: Randomly select "numberQuestionsInGame" questions from allQuestions list
@@ -133,29 +188,13 @@ public class GameManager : MonoBehaviour
             mainQuestionScreen.SetActive(false);
 
             if (numberPlayersInGame == 1)
-            {
-                if (scores[0] > highScore)
-                {
-                    highScore = scores[0];
-                }
-                finalSingleplayerScoreScreen.SetActive(true);
-                finalSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
-                highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
-            }
+                SingleplayerEndScreen();
             else
-            {
-                if (numberPlayersInGame == 4)
-                {
-                    FourPlayerEndScreen();
-                }
-            }
+                MultiplayerEndScreen();
         }
         else
         {
-            Debug.Log("Before increment current Player is :" + currentPlayer);
             currentPlayer = (currentPlayer + 1) % numberPlayersInGame;
-            Debug.Log("After increment current Player is :" + currentPlayer);
-
             SetCurrentQuestion();
         }
         // Fade into the next question
@@ -179,24 +218,34 @@ public class GameManager : MonoBehaviour
         StartCoroutine(TransitionToNextQuestion());
     }
 
-    void FourPlayerEndScreen()
+    void SingleplayerEndScreen()
     {
-        fourPlayerFinalScoreScreen.SetActive(true);
+        if (scores[0] > highScore)
+        {
+            highScore = scores[0];
+        }
+        finalSingleplayerScoreScreen.SetActive(true);
+        finalSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
+        highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
+    }
+
+    void MultiplayerEndScreen()
+    {
+        multiplayerFinalScoreScreen.SetActive(true);
         int winningScore = scores.Max();
         for (int i = 0; i < numberPlayersInGame; i++)
         {
-            fourPlayerImages[i].SetActive(true);
-            fourPlayerWinnerTexts[i].SetActive(false);
-            fourPlayerImageTexts[i].text = ("Player " + (i + 1) + ": " + scores[i] + "/" + numberQuestionsPerPlayer);
+            multiplayerImages[i].SetActive(true);
+            multiplayerWinnerImages[i].SetActive(false);
+            multiplayerImageTexts[i].text = ("Player " + (i + 1) + ": " + scores[i] + "/" + numberQuestionsPerPlayer);
 
             if (scores[i] == winningScore)
             {
                 // You know that the i’th player is the winning player (there may be more than one winning player)
-                fourPlayerWinningImage = fourPlayerImages[i].GetComponent<Image>();
-                fourPlayerWinningImage.sprite = winningImage;
-                fourPlayerWinnerTexts[i].SetActive(true);
+                multiplayerWinningImage = multiplayerImages[i].GetComponent<Image>();
+                multiplayerWinningImage.sprite = winningImage;
+                multiplayerWinnerImages[i].SetActive(true);
             }
         }
-
     }
 }   
