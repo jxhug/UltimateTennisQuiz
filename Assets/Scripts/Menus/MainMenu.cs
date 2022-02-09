@@ -7,10 +7,18 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer sfxMixer;
-    public AudioMixer musicMixer;
-    public Slider sfxSlider;
-    public Slider musicSlider;
+    [SerializeField]
+    private AudioMixer sfxMixer;
+    [SerializeField]
+    private AudioMixer musicMixer;
+    [SerializeField]
+    private Slider sfxSlider;
+    [SerializeField]
+    private Slider musicSlider;
+    [SerializeField]
+    private GameObject mainMenuScreen;
+    [SerializeField]
+    private GameObject settingsMenuScreen;
 
     public float sfxSliderValue;
     public float musicSliderValue;
@@ -19,6 +27,13 @@ public class SettingsMenu : MonoBehaviour
 
 
     private void Start()
+    {
+        LoadValues();
+        mainMenuScreen.SetActive(true);
+        settingsMenuScreen.SetActive(false);
+    }
+
+    void LoadValues()
     {
         savedSFXVolume = PlayerPrefs.GetFloat("sfxSavedVolume", sfxSliderValue);
         savedMusicVolume = musicSlider.value = PlayerPrefs.GetFloat("musicSavedVolume", musicSliderValue);
@@ -40,5 +55,16 @@ public class SettingsMenu : MonoBehaviour
         musicSliderValue = musicVolume;
         musicMixer.SetFloat("volume", Mathf.Log10(musicVolume) * 20);
         PlayerPrefs.SetFloat("musicSavedVolume", musicSliderValue);
+    }
+
+    public void EnableMainMenu()
+    {
+        settingsMenuScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+    }       
+    public void EnableSettingsMenu()
+    {
+        mainMenuScreen.SetActive(false);
+        settingsMenuScreen.SetActive(true);
     }
 }

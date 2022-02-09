@@ -302,6 +302,36 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal turned pro at the young age of 15, but he didn't have much success initially."
-        }
+        },
+        {
+            "questionText": "How old was Novak Djokovic when he turned pro?",
+            "answers": [
+                "15",
+                "16",
+                "17",
+                "18"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic turned pro at 16, and 2 years after, he ended the year as the youngest player in the top 100."
+        },
+        {
+            "questionText": "How old was Roger Federer when he won his first Grans Slam?",
+            "answers": [
+                "21",
+                "22",
+                "19",
+                "18"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer won his first Grand Slam, Wimbledon at 21 years old."
+        },
     ]
 }
