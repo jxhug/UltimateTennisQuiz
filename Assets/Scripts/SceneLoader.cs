@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadSettings()
-    {
-        SceneManager.LoadScene("SettingsMenu");
-    }
     public void LoadQuiz()
     {
         SceneManager.LoadScene("Quiz");

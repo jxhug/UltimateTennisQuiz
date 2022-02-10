@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 
-public class SettingsMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private AudioMixer sfxMixer;
