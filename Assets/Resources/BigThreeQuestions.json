@@ -241,7 +241,7 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first Grand Slam at 21."
+            "info": "Roger Federer won his first Grand Slam, Wimbledon, at 21."
         },
         {
             "questionText": "How old was Rafael Nadal when he won his first Grand Slam?",
@@ -319,19 +319,94 @@
             "info": "Novak Djokovic turned pro at 16, and 2 years after, he ended the year as the youngest player in the top 100."
         },
         {
-            "questionText": "How old was Roger Federer when he won his first Grans Slam?",
+            "questionText": "Who did Roger Federer beat in order to win his first Grand Slam?",
             "answers": [
-                "21",
-                "22",
-                "19",
-                "18"
+                "Mark Philippoussis",
+                "Andy Roddick",
+                "Marat Safin",
+                "Lleyton Hewitt"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first Grand Slam, Wimbledon at 21 years old."
+            "info": "Roger Federer won his first Grand Slam beating Mark Philippousis in striaght sets."
         },
+        {
+            "questionText": "Who did Rafael Nadal beat in order to win his first Grand Slam?",
+            "answers": [
+                "Mariano Puerta",
+                "Roger Federer",
+                "Nikolay Davydenko",
+                "Tommy Robredo"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal won his first Grand Slam beating Mariano Puerta in four sets."
+        },
+        {
+            "questionText": "Who did Novak Djokovic beat in order to win his first Grand Slam?",
+            "answers": [
+                "Jo-Wilfried Tsonga",
+                "Roger Federer",
+                "Rafael Nadal",
+                "David Ferrer"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic won his first Grand Slam beating Jo-Wilfried Tsonga in four sets."
+        },
+        {
+            "questionText": "On what surface did Roger Federer win his first ever ATP title?",
+            "answers": [
+                "Carpet",
+                "Clay",
+                "Grass",
+                "Hard Court"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Roger Federer won his first ATP title, the Milan Indoor, on carpet courts."
+        },
+        {
+            "questionText": "On what surface did Rafael Nadal win his first ever ATP title?",
+            "answers": [
+                "Carpet",
+                "Clay",
+                "Grass",
+                "Hard Court"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Rafael Nadal won his first ATP title, the Croatia Open, on clay courts."
+        },
+        {
+            "questionText": "On what surface did Novak Djokovic win his first ever ATP title?",
+            "answers": [
+                "Carpet",
+                "Clay",
+                "Grass",
+                "Hard Court"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Novak Djokovic won his first ATP title, the Dutch Open, on clay courts. He didn't drop a set thorughout the entire tournament."
+        }
     ]
 }
