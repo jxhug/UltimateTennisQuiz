@@ -48,6 +48,12 @@ public class GameManager : MonoBehaviour
     private TMPro.TMP_Text numberPlayerText;
 
     [SerializeField]
+    private TMPro.TMP_Text correctAnswerInfoText;
+
+    [SerializeField]
+    private TMPro.TMP_Text incorrectAnswerInfoText;
+
+    [SerializeField]
     private Sprite winningImage;
 
     //Two player end screen
@@ -144,7 +150,10 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < numberPlayersInGame; i++)
         {
             scores[i] = 0;
-            multiplayerImages[i].SetActive(false);
+            if (numberPlayersInGame > 1)
+            {
+                multiplayerImages[i].SetActive(false);
+            }
         }
 
         // TODO: Randomly select "numberQuestionsInGame" questions from allQuestions list
@@ -208,11 +217,13 @@ public class GameManager : MonoBehaviour
         if (SelectedIndex == correctAnswerCellIndex)
         {
             correctAnswerUI.SetActive(true);
+            correctAnswerInfoText.text = currentQuestion.info;
             scores[currentPlayer]++;
         }
         else
         {
             wrongAnswerUI.SetActive(true);
+            incorrectAnswerInfoText.text = currentQuestion.info;
         }
 
         StartCoroutine(TransitionToNextQuestion());
