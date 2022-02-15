@@ -407,6 +407,21 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic won his first ATP title, the Dutch Open, on clay courts. He didn't drop a set thorughout the entire tournament."
+        },
+        {
+            "questionText": "What is Roger Federer's best singles Olympic result?",
+            "answers": [
+                "Silver at 2012 London Games",
+                "Gold at 2008 Beijing Games",
+                "Bronze at 2012 London Games",
+                "Silver at 2004 Athens Games"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's best olympic result is at the 2012 London Summer Olympic Games."
         }
     ]
 }
