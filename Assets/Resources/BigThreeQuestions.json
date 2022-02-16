@@ -421,6 +421,51 @@
                 "Federer",
                 "Big Three"
             ],
+            "info": "Federer's best singles olympic result is a silver medal at the 2012 London Summer Olympic Games."
+        },
+        {
+            "questionText": "What is Rafael Nadal's best singles Olympic result?",
+            "answers": [
+                "Silver at 2012 London Games",
+                "Gold at 2008 Beijing Games",
+                "Bronze at 2012 London Games",
+                "Silver at 2004 Athens Games"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's best singles olympic result is a gold metal at the 2008 Beijing Summer Olympic Games."
+        },
+        {
+            "questionText": "What is Novak Djokovic's best singles Olympic result?",
+            "answers": [
+                "Silver at 2012 London Games",
+                "Gold at 2008 Beijing Games",
+                "Bronze at 2008 London Games",
+                "Silver at 2004 Athens Games"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's best singles olympic result is a brozne medal at the 2008 Beijing Summer Olympic Games."
+        },
+        {
+            "questionText": "Who did Roger Federer beat to win his first ATP match?",
+            "answers": [
+                "Guillaume Raoux",
+                "Carlos Moya",
+                "",
+                ""
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
             "info": "Federer's best olympic result is at the 2012 London Summer Olympic Games."
         }
     ]
