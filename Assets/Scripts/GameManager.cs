@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
     private int[] scores;
     public static int highScore = 0;
 
+    private static System.Random rng = new System.Random();
 
     void Start()
     {
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
 
         var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
-        allQuestions = jsonQuestions.questions;
+        allQuestions = jsonQuestions.questions.OrderBy(a => rng.Next()).ToList();
 
         numberPlayersInGame = PlayerSelect.numberPlayersInGame;
         numberQuestionsInGame = numberPlayersInGame * numberQuestionsPerPlayer;
@@ -158,6 +159,8 @@ public class GameManager : MonoBehaviour
 
         // TODO: Randomly select "numberQuestionsInGame" questions from allQuestions list
         unansweredQuestions = allQuestions.Take(numberQuestionsInGame).ToList();
+
+
 
         currentPlayer = 0;
         SetCurrentQuestion();
@@ -250,7 +253,7 @@ public class GameManager : MonoBehaviour
             multiplayerWinnerImages[i].SetActive(false);
             multiplayerImageTexts[i].text = ("Player " + (i + 1) + ": " + scores[i] + "/" + numberQuestionsPerPlayer);
 
-            if (scores[i] == winningScore)
+            if (scores[i] == winningScore && scores[i] != 0)
             {
                 // You know that the i’th player is the winning player (there may be more than one winning player)
                 multiplayerWinningImage = multiplayerImages[i].GetComponent<Image>();
