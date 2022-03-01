@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private int[,] randomAnswerPermutations = new int[6, 4] { { 1, 0, 2, 3 }, { 2, 1, 3, 0 }, { 2, 3, 1, 0 }, { 1, 2, 0, 3 }, { 0, 3, 2, 1 }, { 3, 0, 2, 1 } };
     private int correctAnswerCellIndex;
 
-    private float questionTransitionTime = 2.5f;
+    private float questionTransitionTime = 3.5f;
 
     [SerializeField]
     private TMPro.TMP_Text questionText;
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
     private TMPro.TMP_Text[] multiplayerImageTexts;
     private Image multiplayerWinningImage;
 
-    private int numberQuestionsPerPlayer = 1;
+    private int numberQuestionsPerPlayer = 3;
     private int numberQuestionsInGame;
 
     private int numberPlayersInGame;

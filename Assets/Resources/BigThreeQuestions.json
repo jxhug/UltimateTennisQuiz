@@ -458,15 +458,195 @@
             "answers": [
                 "Guillaume Raoux",
                 "Carlos Moya",
-                "",
-                ""
+                "Lucas Arnold Ker",
+                "Andre Agassi"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer's best olympic result is at the 2012 London Summer Olympic Games."
+            "info": "Federer won his first ATP match against Guillaume Raoux in Toulouse."
+        },
+        {
+            "questionText": "Who did Rafael Nadal beat to win his first ATP match?",
+            "answers": [
+                "Guillaume Raoux",
+                "Ramón Delgado",
+                "Simon Aspelin",
+                "David Adams"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal won his first ATP match against Ramón Delgado in Mallorca."
+        },
+        {
+            "questionText": "What was Roger Federer's apparel sponsor between 2018 - 2021?",
+            "answers": [
+                "Nike",
+                "Uniqlo",
+                "Adidas",
+                "Wilson"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer first signed with Nike footwear and apparel in 1994 and the sponsor chnaged to Uniqlo in 2018."
+        },
+        {
+            "questionText": "What was Rafael Nadal's apparel sponsor between 2018 - 2021?",
+            "answers": [
+                "Nike",
+                "Uniqlo",
+                "Adidas",
+                "Lotto"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nike has sponsored Nadal since 2008 and the sponsorship is still going past 2021!"
+        },
+        {
+            "questionText": "What was Novak Djokovic's apparel sponsor between 2018 - 2021?",
+            "answers": [
+                "Nike",
+                "Uniqlo",
+                "Adidas",
+                "Lacoste"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Lacoste has sponsored Djokovic since 2017 and the sponsor has lasted past 2021, over 4 years later!"
+        },
+        {
+            "questionText": "What nationality did Federer represent in 2004?",
+            "answers": [
+                "Switzerland",
+                "Luxemburg",
+                "Germany",
+                "South Africa"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer has represented Switzerland for his entire life."
+        },
+        {
+            "questionText": "What nationality did Djokovic represent in 2004?",
+            "answers": [
+                "Serbia and Montenegro",
+                "Serbia",
+                "Montenegro",
+                "Monaco"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic represented Serbia and Montenegro from 2003 - 2006, but since 2006 he has represented Serbia."
+        },
+        {
+            "questionText": "What is the URL of Roger Federer's offical website?",
+            "answers": [
+                "federer.com",
+                "rogerfederer.com",
+                "theswissmaestro.com",
+                "rogerfederer.net"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's offical website URL is rogerfederer.com."
+        },
+        {
+            "questionText": "What is the URL of Rafael Nadal's offical website?",
+            "answers": [
+                "rnadal.com",
+                "rafaelnadal.com",
+                "vamosrafa.com",
+                "rafaelnadal.net"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's offical website URL is rafaelnadal.com."
+        },
+        {
+            "questionText": "What is the URL of Novak Djokovic's offical website?",
+            "answers": [
+                "djoker.com",
+                "novakdjokovic.com",
+                "goldendjoker.com",
+                "djokovic.net"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's offical website URL is novakdjokovic.com."
+        },
+        {
+            "questionText": "What was Roger Federer's first watch sponsor?",
+            "answers": [
+                "Rolex",
+                "Hublot",
+                "Longines",
+                "Rado"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's first watch sponsor was Rolex, and Rolex is also his current one."
+        },
+        {
+            "questionText": "What was Rafael Nadal's first watch sponsor?",
+            "answers": [
+                "Rolex",
+                "Hublot",
+                "Longines",
+                "Richard Mille"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's first watch sponsor was Richard Mille, and Richard Mille is also his current one."
+        },
+        {
+            "questionText": "What was Novak Djokovic's first watch sponsor?",
+            "answers": [
+                "Rolex",
+                "Hublot",
+                "Longines",
+                "Audemars Piguet"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Djokovic's first watch sponsor was Audemars Piguet, but today his watch sponsor is Hublot."
         }
-    ]
+    ]   
 }
