@@ -13,6 +13,7 @@ public class Question
     public int correctAnswerIndex;
     public string[] tags = new string[10];
     public string info;
+    public bool isActive;
 }
 
 [Serializable]

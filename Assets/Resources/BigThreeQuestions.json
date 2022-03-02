@@ -15,7 +15,7 @@
                 "Birthdays"
             ],
             "info": "Roger Federer was born on August 8, 1981 in Basel, Switzerland",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "When was Rafael Nadal born?",
@@ -32,7 +32,7 @@
                 "Birthdays"
             ],
             "info": "Rafael Nadal was born on June 3, 1986 in Manacor, Mallorca, Spain",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "When was Novak Djokovic born?",
@@ -49,7 +49,7 @@
                 "Birthdays"
             ],
             "info": "Novak Djokovic was born on May 22, 1987 in Belgrade, Serbia",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Roger Federer turn pro?",
@@ -65,7 +65,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer made his debut on the ATP Tour in 1998.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Rafael Nadal turn pro?",
@@ -81,7 +81,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal made his debut on the ATP Tour in 1998.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Novak Djokovic turn pro?",
@@ -97,7 +97,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic made his debut on the ATP Tour in 2003.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "When did Roger Federer win his first Grand Slam?",
@@ -113,7 +113,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer won his first Grand Slam, Wimbledon, in 2003.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "When did Rafael Nadal win his first Grand Slam?",
@@ -129,7 +129,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal won Roland Garros, in 2005. He won on his first Roland Garros debut.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "When did Novak Djokovic win his first Grand Slam?",
@@ -145,7 +145,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic won the Austrailian Open in 2008, becoming the first Serbian man to win a Grand Slam.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was the first year Roger Federer was Number One in the world?",
@@ -161,7 +161,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer took the Number One ranking for his first time in 2004.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was the first year Rafael Nadal was Number One in the world?",
@@ -177,7 +177,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal took the Number One ranking for his first time in 2008.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was the first year Novak Djokovic was Number One in the world?",
@@ -193,7 +193,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic took the Number One ranking for his first time in 2011.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How many years did Roger Federer finish the season Number One in the world?",
@@ -209,7 +209,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer finished Number One in the world for 5 years.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How many years did Rafael Nadal finish the season Number One in the world?",
@@ -225,7 +225,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal finished Number One in the world for 5 years.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How many years did Novak Djokovic finish the season Number One in the world?",
@@ -241,7 +241,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic finished Number One in the world for 7 years.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Roger Federer when he won his first Grand Slam?",
@@ -257,7 +257,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer won his first Grand Slam, Wimbledon, at 21.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Rafael Nadal when he won his first Grand Slam?",
@@ -273,7 +273,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal won his first Grand Slam at 24.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Novak Djokovic when he won his first Grand Slam?",
@@ -289,7 +289,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic won his first Grand Slam at 20.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Roger Federer when he turned pro?",
@@ -305,7 +305,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer was 17 years old when he made his ATP Debut.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Rafael Nadal when he turned pro?",
@@ -321,7 +321,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal turned pro at the young age of 15, but he didn't have much success initially.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How old was Novak Djokovic when he turned pro?",
@@ -337,7 +337,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic turned pro at 16, and 2 years after, he ended the year as the youngest player in the top 100.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "Who did Roger Federer beat in order to win his first Grand Slam?",
@@ -353,7 +353,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer won his first Grand Slam beating Mark Philippousis in striaght sets.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "Who did Rafael Nadal beat in order to win his first Grand Slam?",
@@ -369,7 +369,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal won his first Grand Slam beating Mariano Puerta in four sets.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "Who did Novak Djokovic beat in order to win his first Grand Slam?",
@@ -385,7 +385,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic won his first Grand Slam beating Jo-Wilfried Tsonga in four sets.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "On what surface did Roger Federer win his first ever ATP title?",
@@ -401,7 +401,7 @@
                 "Big Three"
             ],
             "info": "Roger Federer won his first ATP title, the Milan Indoor, on carpet courts.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "On what surface did Rafael Nadal win his first ever ATP title?",
@@ -417,7 +417,7 @@
                 "Big Three"
             ],
             "info": "Rafael Nadal won his first ATP title, the Croatia Open, on clay courts.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "On what surface did Novak Djokovic win his first ever ATP title?",
@@ -433,7 +433,7 @@
                 "Big Three"
             ],
             "info": "Novak Djokovic won his first ATP title, the Dutch Open, on clay courts. He didn't drop a set thorughout the entire tournament.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What is Roger Federer's best singles Olympic result?",
@@ -449,7 +449,7 @@
                 "Big Three"
             ],
             "info": "Federer's best singles olympic result is a silver medal at the 2012 London Summer Olympic Games.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "What is Rafael Nadal's best singles Olympic result?",
@@ -465,7 +465,7 @@
                 "Big Three"
             ],
             "info": "Nadal's best singles olympic result is a gold metal at the 2008 Beijing Summer Olympic Games.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "What is Novak Djokovic's best singles Olympic result?",
@@ -481,7 +481,7 @@
                 "Big Three"
             ],
             "info": "Djokovic's best singles olympic result is a brozne medal at the 2008 Beijing Summer Olympic Games.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "Who did Roger Federer beat to win his first ATP match?",
@@ -497,7 +497,7 @@
                 "Big Three"
             ],
             "info": "Federer won his first ATP match against Guillaume Raoux in Toulouse.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "Who did Rafael Nadal beat to win his first ATP match?",
@@ -513,7 +513,7 @@
                 "Big Three"
             ],
             "info": "Nadal won his first ATP match against Ramón Delgado in Mallorca.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Roger Federer's apparel sponsor between 2018 - 2021?",
@@ -529,7 +529,7 @@
                 "Big Three"
             ],
             "info": "Federer first signed with Nike footwear and apparel in 1994 and the sponsor chnaged to Uniqlo in 2018.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Rafael Nadal's apparel sponsor between 2018 - 2021?",
@@ -545,7 +545,7 @@
                 "Big Three"
             ],
             "info": "Nike has sponsored Nadal since 2008 and the sponsorship is still going past 2021!",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Novak Djokovic's apparel sponsor between 2018 - 2021?",
@@ -561,7 +561,7 @@
                 "Big Three"
             ],
             "info": "Lacoste has sponsored Djokovic since 2017 and the sponsor has lasted past 2021, over 4 years later!",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What nationality did Djokovic represent in 2004?",
@@ -577,7 +577,7 @@
                 "Big Three"
             ],
             "info": "Djokovic represented Serbia and Montenegro from 2003 - 2006, but since 2006 he has represented Serbia.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What is the URL of Roger Federer's offical website?",
@@ -593,7 +593,7 @@
                 "Big Three"
             ],
             "info": "Federer's offical website URL is rogerfederer.com.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What is the URL of Rafael Nadal's offical website?",
@@ -609,7 +609,7 @@
                 "Big Three"
             ],
             "info": "Nadal's offical website URL is rafaelnadal.com.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What is the URL of Novak Djokovic's offical website?",
@@ -625,7 +625,7 @@
                 "Big Three"
             ],
             "info": "Djokovic's offical website URL is novakdjokovic.com.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Roger Federer's first watch sponsor?",
@@ -641,7 +641,7 @@
                 "Big Three"
             ],
             "info": "Federer's first watch sponsor was Rolex.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Rafael Nadal's first watch sponsor?",
@@ -657,7 +657,7 @@
                 "Big Three"
             ],
             "info": "Nadal's first watch sponsor was Richard Mille.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What was Novak Djokovic's first watch sponsor?",
@@ -673,7 +673,7 @@
                 "Big Three"
             ],
             "info": "Djokovic's first watch sponsor was Audemars Piguet, but in 2021 his watch sponsor is Hublot.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Roger Federer win his 5th Slam in?",
@@ -689,7 +689,7 @@
                 "Big Three"
             ],
             "info": "Federer won his 5th Grand Slam, Wimbledon, in 2005.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Rafael Nadal win his 5th Slam in?",
@@ -705,7 +705,7 @@
                 "Big Three"
             ],
             "info": "Nadal won his 5th Grand Slam, Wimbledon, in 2008.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Novak Djokovic win his 5th Slam in?",
@@ -721,7 +721,7 @@
                 "Big Three"
             ],
             "info": "Djokovic won his 5th Grand Slam, The Australian Open, in 2012.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Roger Federer win his 10th Slam in?",
@@ -737,7 +737,7 @@
                 "Big Three"
             ],
             "info": "Djokovic won his 10th Grand Slam, The Australian Open, in 2012.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Rafael Nadal win his 10th Slam in?",
@@ -753,7 +753,7 @@
                 "Big Three"
             ],
             "info": "Nadal won his 10th Grand Slam, Roland Garros, in 2011.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Novak Djokovic win his 10th Slam in?",
@@ -769,7 +769,7 @@
                 "Big Three"
             ],
             "info": "Djokovic won his 10th Grand Slam, The US Open, in 2011.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Roger Federer win his 15th Slam in?",
@@ -785,7 +785,7 @@
                 "Big Three"
             ],
             "info": "Federer won his 15th Grand Slam, Wimbledon, in 2009.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Rafael Nadal win his 15th Slam in?",
@@ -801,7 +801,7 @@
                 "Big Three"
             ],
             "info": "Nadal won his 15th Grand Slam, Roland Garros, in 2017.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Novak Djokovic win his 15th Slam in?",
@@ -817,7 +817,7 @@
                 "Big Three"
             ],
             "info": "Djokovic won his 15th Grand Slam, The Australian Open, in 2019.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Roger Federer win his 20th Slam in?",
@@ -833,7 +833,7 @@
                 "Big Three"
             ],
             "info": "Federer won his 20th Grand Slam, The Australian Open, in 2018.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Rafael Nadal win his 20th Slam in?",
@@ -849,7 +849,7 @@
                 "Big Three"
             ],
             "info": "Nadal won his 20th Grand Slam, Roland Garros, in 2020.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "What year did Novak Djokovic win his 20th Slam in?",
@@ -865,7 +865,7 @@
                 "Big Three"
             ],
             "info": "Djokovic won his 20th Grand Slam, Wimbledon, in 2021.",
-            "activity": false
+            "isActiveQuestion": false
         },
         {
             "questionText": "How many Wimbledon titles has Roger Federer won?",
@@ -881,7 +881,7 @@
                 "Big Three"
             ],
             "info": "Federer has won 8 Wimbledon titles, an all-time record.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Wimbledon titles has Rafael Nadal won?",
@@ -897,7 +897,7 @@
                 "Big Three"
             ],
             "info": "Nadal has won 2 Wimbledon titles, one quarter of how many Roger Federer has won.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Wimbledon titles has Novak Djokovic won?",
@@ -913,7 +913,7 @@
                 "Big Three"
             ],
             "info": "Djokovic has won 5 Wimbledon titles, 3 more than Nadal, and 3 less than Roger Federer.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Roland Garros titles has Roger Federer won?",
@@ -929,7 +929,7 @@
                 "Big Three"
             ],
             "info": "Federer has won 1 Roland Garros title, 12 less than Nadal.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Roland Garros titles has Rafael Nadal won?",
@@ -945,7 +945,7 @@
                 "Big Three"
             ],
             "info": "Nadal has won 13 French Open titles which is a record for any player, male or female.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Roland Garros titles has Novak Djokovic won?",
@@ -961,7 +961,7 @@
                 "Big Three"
             ],
             "info": "Nadal has won 13 French Open titles which is a record for any player, male or female.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Australian Open titles has Roger Federer won?",
@@ -977,7 +977,7 @@
                 "Big Three"
             ],
             "info": "Federer has won 6 Australian Open titles, his most recent in 2018.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Australian Open titles has Rafael Nadal won?",
@@ -993,7 +993,7 @@
                 "Big Three"
             ],
             "info": "Nadal has won 2 Australian Open titles, his most recent in 2022 after beating Daniil Medvedev in the final.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many Australian Open titles has Novak Djokovic won?",
@@ -1009,7 +1009,7 @@
                 "Big Three"
             ],
             "info": "Djokovic has won 9 Australian Open titles, he's never lost a Australian Open final.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many US Open titles has Roger Federer won?",
@@ -1025,7 +1025,7 @@
                 "Big Three"
             ],
             "info": "Federer has won 5 US Open titles, he's lost 2 US Open finals; one to Djokovic and one to Del Potro.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many US Open titles has Rafael Nadal won?",
@@ -1041,7 +1041,7 @@
                 "Big Three"
             ],
             "info": "Nadal has won 4 US Open titles, and he's lost one in the final to Novak Djokovic.",
-            "activity": true
+            "isActiveQuestion": true
         },
         {
             "questionText": "How many US Open titles has Novak Djokovic won?",
@@ -1057,7 +1057,7 @@
                 "Big Three"
             ],
             "info": "Djokovic has won 3 US Open titles, he's lost 6 US Open finals.",
-            "activity": true
+            "isActiveQuestion": true
         }
     ]   
 }
