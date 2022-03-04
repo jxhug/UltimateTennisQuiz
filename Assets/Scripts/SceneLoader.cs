@@ -16,4 +16,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("PlayerSelect");
     }
+    public void LoadSettings()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
 }
