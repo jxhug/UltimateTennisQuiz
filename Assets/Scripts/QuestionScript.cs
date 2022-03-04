@@ -1,23 +1,20 @@
-using UnityEngine;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 
-[Serializable]
-public class Question
+namespace Questions
 {
-    public string questionText;
-    public string[] answers = new string[4];
-    public int correctAnswerIndex;
-    public string[] tags = new string[10];
-    public string info;
-    public bool isActive;
-}
+    public class Question
+    {
+        public string questionText;
+        public string[] answers = new string[4];
+        public int correctAnswerIndex;
+        public string[] tags = new string[10];
+        public string info;
+        public bool isActive;
+    }
 
-[Serializable]
-public class QuestionList
-{
-    public List<Question> questions;
+    public class QuestionList
+    {
+        public List<Question> questions;
+    }
 }

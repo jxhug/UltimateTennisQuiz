@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UtilsNS;
 
 
 public class MainMenu : MonoBehaviour
@@ -12,59 +11,98 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private AudioMixer musicMixer;
     [SerializeField]
-    private Slider sfxSlider;
+    private Slider sfxPortraitSlider;
     [SerializeField]
-    private Slider musicSlider;
+    private Slider musicPortraitSlider;
     [SerializeField]
-    private GameObject mainMenuScreen;
+    private GameObject mainMenuPortraitScreen;
     [SerializeField]
-    private GameObject settingsMenuScreen;
+    private GameObject settingsMenuPortraitScreen;
+    [SerializeField]
+    private Slider sfxLandscapeSlider;
+    [SerializeField]
+    private Slider musicLandscapeSlider;
+    [SerializeField]
+    private GameObject mainMenuLandscapeScreen;
+    [SerializeField]
+    private GameObject settingsMenuLandscapeScreen;
 
-    public float sfxSliderValue;
-    public float musicSliderValue;
-    private float savedSFXVolume;
-    private float savedMusicVolume;
+    [SerializeField]
+    private GameObject portraitCanvas;
+    [SerializeField]
+    private GameObject landscapeCanvas;
+
+    private DeviceOrientation currentOrientation, lastOrientation;
+
+    private float sfxSliderValue;
+    private float musicSliderValue;
+
+    private Utils utils;
 
 
-    private void Start()
+    void Start()
     {
-        LoadValues();
-        mainMenuScreen.SetActive(true);
-        settingsMenuScreen.SetActive(false);
+        currentOrientation = lastOrientation = Input.deviceOrientation;
+        Screen.orientation = ScreenOrientation.AutoRotation;
+        utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
+        LoadSettings();
     }
 
-    void LoadValues()
-    {
-        savedSFXVolume = PlayerPrefs.GetFloat("sfxSavedVolume", sfxSliderValue);
-        savedMusicVolume = musicSlider.value = PlayerPrefs.GetFloat("musicSavedVolume", musicSliderValue);
-        sfxSlider.value = savedSFXVolume;
-        musicSlider.value = savedMusicVolume;
-        sfxMixer.SetFloat("volume", Mathf.Log10(savedSFXVolume) * 20);
-        musicMixer.SetFloat("volume", Mathf.Log10(savedMusicVolume) * 20);
+	private void Update()
+	{
+        currentOrientation = Input.deviceOrientation;
+        if (currentOrientation != lastOrientation)
+		{
+            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
+            lastOrientation = currentOrientation;
+        }
     }
 
-    public void SetSFXVolume(float sfxVolume)
+	void LoadSettings()
     {
-        sfxSliderValue = sfxVolume;
-        sfxMixer.SetFloat("volume", Mathf.Log10(sfxVolume) * 20);
-        PlayerPrefs.SetFloat("sfxSavedVolume", sfxSliderValue);
+        // Get the currently saved slider values
+        sfxSliderValue = PlayerPrefs.GetFloat("sfxSliderValue", 1f);
+        musicSliderValue = PlayerPrefs.GetFloat("musicSliderValue", 1f);
+
+        sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
+        musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
+
+        sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
+        musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
     }
 
-    public void SetMusicVolume(float musicVolume)
+    public void SetSFXVolume(float sfxSliderValue)
     {
-        musicSliderValue = musicVolume;
-        musicMixer.SetFloat("volume", Mathf.Log10(musicVolume) * 20);
-        PlayerPrefs.SetFloat("musicSavedVolume", musicSliderValue);
+        sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
+        PlayerPrefs.SetFloat("sfxSliderValue", sfxSliderValue);
     }
 
-    public void EnableMainMenu()
+    public void SetMusicVolume(float musicSliderValue)
     {
-        settingsMenuScreen.SetActive(false);
-        mainMenuScreen.SetActive(true);
+        musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
+        PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
+    }
+
+    public void EnableLandscapeMainMenu()
+    {
+        settingsMenuLandscapeScreen.SetActive(false);
+        mainMenuLandscapeScreen.SetActive(true);
     }       
-    public void EnableSettingsMenu()
+    public void EnableLandscapeSettingsMenu()
     {
-        mainMenuScreen.SetActive(false);
-        settingsMenuScreen.SetActive(true);
+        mainMenuLandscapeScreen.SetActive(false);
+        settingsMenuLandscapeScreen.SetActive(true);
+        LoadSettings();
+    }
+    public void EnablePortraitMainMenu()
+    {
+        settingsMenuPortraitScreen.SetActive(false);
+        mainMenuPortraitScreen.SetActive(true);
+    }
+    public void EnablePortraitSettingsMenu()
+    {
+        mainMenuPortraitScreen.SetActive(false);
+        settingsMenuPortraitScreen.SetActive(true);
+        LoadSettings();
     }
 }

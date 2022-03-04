@@ -416,7 +416,7 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal won his first ATP title, the Croatia Open, on clay courts.",
+            "info": "Rafael Nadal won his first ATP title, the Prokom Open, on clay courts.",
             "isActiveQuestion": false
         },
         {
@@ -763,7 +763,7 @@
                 "2011",
                 "2015"
             ],
-            "correctAnswerIndex": 3,
+            "correctAnswerIndex": 2,
             "tags": [
                 "Djokovic",
                 "Big Three"
@@ -886,10 +886,10 @@
         {
             "questionText": "How many Wimbledon titles has Rafael Nadal won?",
             "answers": [
-                "8",
-                "7",
-                "9",
-                "11"
+                "1",
+                "4",
+                "3",
+                "2"
             ],
             "correctAnswerIndex": 0,
             "tags": [
@@ -1058,6 +1058,102 @@
             ],
             "info": "Djokovic has won 3 US Open titles, he's lost 6 US Open finals.",
             "isActiveQuestion": true
+        },
+        {
+            "questionText": "What was the first ATP title Federer won?",
+            "answers": [
+                "Milan Indoors",
+                "Swiss Indoors",
+                "Marseille Open",
+                "Grand Prix de Tennis de Toulouse"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's first ATP title was at the 2001 Milan Indoor tournament, where he defeated Julien Boutter in the final.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What was the first ATP title Nadal won?",
+            "answers": [
+                "Prokom Open",
+                "Croatia Open",
+                "Stuttgart Open",
+                "Chennai Open"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's first ATP title was at the 2004 Prokom Open tournament, where he defeated José Acasuso in the final.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What was the first ATP title Djokovic won?",
+            "answers": [
+                "Italian Open",
+                "Brisbane International",
+                "Dutch Open",
+                "Moselle Open"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's first ATP title was at the 2006 Dutch Open tournament, where he defeated Nicolás Massú in the final.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Federer’s best doubles Olympic result?",
+            "answers": [
+                "Silver at 2004 Athens Games",
+                "Gold at 2008 Beijing Games",
+                "Silver at 2012 London Games",
+                "Gold at 2004 Athens Games"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer’s best doubles olympic result is a gold medal at 2008 Beijing Summer Olympic Games.",
+            "“isActiveQuestion”": false
+        },
+        {
+            "questionText": "What is Nadal’s best doubles Olympic result?",
+            "answers": [
+                "Silver at 2004 Athens Games",
+                "Gold at 2008 Beijing Games",
+                "Silver at 2012 London Games",
+                "Gold at 2016 Rio Games"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal’s best doubles olympic result is a gold medal at 2016 Rio Summer Olympic Games.",
+            "“isActiveQuestion”": false
+        },
+        {
+            "questionText": "What is Djokovic’s best doubles Olympic result?",
+            "answers": [
+                "Silver at 2004 Athens Games",
+                "Bronze at 2008 Beijing Games",
+                "No Medal",
+                "Bronze at 2016 Rio Games"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic’s best doubles olympic result is no medal at all. Djokovic doesn’t have any doubles medal at the Summer Olympic Games.",
+            "“isActiveQuestion”": false
         }
     ]   
 }
