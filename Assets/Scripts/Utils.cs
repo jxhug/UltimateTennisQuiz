@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace UtilsNS
 {
     public class Utils : MonoBehaviour

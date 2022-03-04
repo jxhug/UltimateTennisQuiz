@@ -41,6 +41,23 @@ namespace SettingsNS
 
         private Utils utils;
 
+        void Awake()
+        {
+            currentOrientation = lastOrientation = Input.deviceOrientation;
+            Screen.orientation = ScreenOrientation.AutoRotation;
+            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
+        }
+
+        private void Update()
+	    {   
+        currentOrientation = Input.deviceOrientation;
+        if (currentOrientation != lastOrientation)
+		{
+            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
+            lastOrientation = currentOrientation;
+        }
+    }
+
         public void LoadSettings()
         {
             // Get the currently saved slider values
