@@ -8,9 +8,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Quiz");
     }
-    public void LoadHome()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene("HomeMenu");
+        SceneManager.LoadScene("MainMenu");
     }
     public void LoadPlayerSelect()
     {
@@ -18,6 +18,6 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadSettings()
     {
-        SceneManager.LoadScene("SettingsMenu");
+        SceneManager.LoadScene("Settings");
     }
 }

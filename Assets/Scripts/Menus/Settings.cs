@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UtilsNS;
 
 namespace SettingsNS
 {
-    public class SettingsMenu : MonoBehaviour
+    public class Settings : MonoBehaviour
     {
         [SerializeField]
         private AudioMixer sfxMixer;
@@ -17,24 +16,12 @@ namespace SettingsNS
         [SerializeField]
         private Slider musicPortraitSlider;
         [SerializeField]
-        private GameObject mainMenuPortraitScreen;
-        [SerializeField]
-        private GameObject settingsMenuPortraitScreen;
-        [SerializeField]
         private Slider sfxLandscapeSlider;
         [SerializeField]
         private Slider musicLandscapeSlider;
-        [SerializeField]
-        private GameObject mainMenuLandscapeScreen;
-        [SerializeField]
-        private GameObject settingsMenuLandscapeScreen;
 
-        [SerializeField]
-        private GameObject portraitCanvas;
-        [SerializeField]
-        private GameObject landscapeCanvas;
-
-        private DeviceOrientation currentOrientation, lastOrientation;
+        public GameObject portraitCanvas;
+        public GameObject landscapeCanvas;
 
         private float sfxSliderValue;
         private float musicSliderValue;
@@ -43,20 +30,20 @@ namespace SettingsNS
 
         void Awake()
         {
-            currentOrientation = lastOrientation = Input.deviceOrientation;
-            Screen.orientation = ScreenOrientation.AutoRotation;
-            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
+            utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
+            LoadSettings();
         }
 
         private void Update()
-	    {   
-        currentOrientation = Input.deviceOrientation;
-        if (currentOrientation != lastOrientation)
-		{
-            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
-            lastOrientation = currentOrientation;
+	    {
+            if (utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas))
+            {
+                // switch to landscape as a test
+                portraitCanvas.SetActive(false);
+                landscapeCanvas.SetActive(true);
+                LoadSettings();
+            }
         }
-    }
 
         public void LoadSettings()
         {

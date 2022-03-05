@@ -4,18 +4,38 @@ namespace UtilsNS
 {
     public class Utils : MonoBehaviour
     {
-        public void OrientationChanged(DeviceOrientation orientation, ref GameObject portrait, ref GameObject landscape)
+        private static DeviceOrientation currentOrientation, lastOrientation;
+
+        public Utils()
+		{
+            currentOrientation = lastOrientation = Input.deviceOrientation;
+            Screen.orientation = ScreenOrientation.AutoRotation;
+        }
+
+        public bool UpdateOrientation(ref GameObject portrait, ref GameObject landscape)
         {
-            if (orientation == DeviceOrientation.Portrait)
+            currentOrientation = Input.deviceOrientation;
+            if (currentOrientation != lastOrientation)
             {
-                portrait.SetActive(true);
-                landscape.SetActive(false);
+                if (currentOrientation == DeviceOrientation.Portrait)
+                {
+                    portrait.SetActive(true);
+                    landscape.SetActive(false);
+                }
+                if (currentOrientation == DeviceOrientation.LandscapeRight || currentOrientation == DeviceOrientation.LandscapeLeft)
+                {
+                    portrait.SetActive(false);
+                    landscape.SetActive(true);
+                }
+
+                lastOrientation = currentOrientation;
+                return true;
             }
-            if (orientation == DeviceOrientation.LandscapeRight || orientation == DeviceOrientation.LandscapeLeft)
+            else
             {
-                portrait.SetActive(false);
-                landscape.SetActive(true);
+                return false;
             }
         }
+
     }
 }

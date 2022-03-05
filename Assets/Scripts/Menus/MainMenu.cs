@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.UI;
 using UtilsNS;
 using SettingsNS;
 
@@ -8,35 +6,21 @@ using SettingsNS;
 public class MainMenu : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject portraitCanvas;
-    [SerializeField]
-    private GameObject landscapeCanvas;
-
-    private DeviceOrientantion currentOrientation, lastOrientation;
-
-    private float sfxSliderValue;
-    private float musicSliderValue;
+    public GameObject portraitCanvas;
+    public GameObject landscapeCanvas;
 
     private Utils utils;
-    private SettingsMenu settingsMenu;
+    private Settings settings;
 
 
     void Awake()
     {
-        currentOrientation = lastOrientation = Input.deviceOrientation;
-        Screen.orientation = ScreenOrientation.AutoRotation;
-        utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
-        settingsMenu.LoadSettings();
+        utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
+        settings.LoadSettings();
     }
 
 	private void Update()
 	{
-        currentOrientation = Input.deviceOrientation;
-        if (currentOrientation != lastOrientation)
-		{
-            utils.OrientationChanged(currentOrientation, ref portraitCanvas, ref landscapeCanvas);
-            lastOrientation = currentOrientation;
-        }
+        utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
     }
 }
