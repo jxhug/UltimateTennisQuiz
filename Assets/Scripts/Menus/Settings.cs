@@ -28,34 +28,40 @@ namespace SettingsNS
 
         private Utils utils;
 
-        void Awake()
+		private void Awake()
+		{
+            Debug.Log("settings has been loaded");
+		}
+
+		private void Start()
         {
-            utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
-            LoadSettings();
+            utils = new Utils();
+            utils.UpdateOrientation(portraitCanvas, landscapeCanvas);
+            LoadSettings(true);
         }
 
         private void Update()
 	    {
-            if (utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas))
-            {
-                // switch to landscape as a test
-                portraitCanvas.SetActive(false);
-                landscapeCanvas.SetActive(true);
-                LoadSettings();
-            }
+            if (utils.UpdateOrientation(portraitCanvas, landscapeCanvas))
+			{
+                LoadSettings(true);
+			}
         }
 
-        public void LoadSettings()
+        public void LoadSettings(bool updateSliders)
         {
             // Get the currently saved slider values
             sfxSliderValue = PlayerPrefs.GetFloat("sfxSliderValue", 1f);
             musicSliderValue = PlayerPrefs.GetFloat("musicSliderValue", 1f);
 
-            sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
-            musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
-
             sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
             musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
+
+            if (updateSliders)
+            {
+                sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
+                musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
+            }
         }
 
         public void SetSFXVolume(float sfxSliderValue)

@@ -1,6 +1,7 @@
 using UnityEngine;
-using UtilsNS;
+using UnityEngine.SceneManagement;
 using SettingsNS;
+using UtilsNS;
 
 
 public class MainMenu : MonoBehaviour
@@ -9,18 +10,24 @@ public class MainMenu : MonoBehaviour
     public GameObject portraitCanvas;
     public GameObject landscapeCanvas;
 
+    [SerializeField]
+    private AudioMixer sfxMixer;
+    [SerializeField]
+    private AudioMixer musicMixer;
+
     private Utils utils;
-    private Settings settings;
 
 
-    void Awake()
+    private void Start()
     {
-        utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
-        settings.LoadSettings();
+        utils = new Utils();
+        utils.UpdateOrientation(portraitCanvas, landscapeCanvas);
+
     }
 
 	private void Update()
-	{
-        utils.UpdateOrientation(ref portraitCanvas, ref landscapeCanvas);
+    {
+        utils.UpdateOrientation(portraitCanvas, landscapeCanvas);
     }
+
 }

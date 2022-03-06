@@ -2,17 +2,18 @@ using UnityEngine;
 
 namespace UtilsNS
 {
-    public class Utils : MonoBehaviour
+    public class Utils
     {
         private static DeviceOrientation currentOrientation, lastOrientation;
 
         public Utils()
 		{
-            currentOrientation = lastOrientation = Input.deviceOrientation;
+            currentOrientation = Input.deviceOrientation;
+            lastOrientation = DeviceOrientation.Unknown;
             Screen.orientation = ScreenOrientation.AutoRotation;
         }
 
-        public bool UpdateOrientation(ref GameObject portrait, ref GameObject landscape)
+        public bool UpdateOrientation(GameObject portrait, GameObject landscape)
         {
             currentOrientation = Input.deviceOrientation;
             if (currentOrientation != lastOrientation)
@@ -36,6 +37,5 @@ namespace UtilsNS
                 return false;
             }
         }
-
     }
 }
