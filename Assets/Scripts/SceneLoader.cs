@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadQuiz()
+    public void LoadSingleplayer()
     {
+        PlayerSelect.numberPlayersInGame = 1;
         SceneManager.LoadScene("Quiz");
     }
     public void LoadMainMenu()
@@ -15,9 +16,5 @@ public class SceneLoader : MonoBehaviour
     public void LoadPlayerSelect()
     {
         SceneManager.LoadScene("PlayerSelect");
-    }
-    public void LoadSettings()
-    {
-        SceneManager.LoadScene("Settings");
     }
 }
