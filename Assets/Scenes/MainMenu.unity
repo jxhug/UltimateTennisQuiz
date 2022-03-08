@@ -363,7 +363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &161553756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,14 +882,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1766925912}
         m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
         m_MethodName: EnableSettings
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1774269244}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
@@ -1177,18 +1177,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766925912}
-        m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
-        m_MethodName: EnableMainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1774269244}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -1200,6 +1188,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1766925912}
+        m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
+        m_MethodName: EnableMainMenu
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &300403630
 MonoBehaviour:
@@ -1642,14 +1642,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1766925912}
         m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
         m_MethodName: EnableMainMenu
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &408560366
 MonoBehaviour:
@@ -2966,14 +2966,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1766925912}
         m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
         m_MethodName: EnableSettings
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1774269244}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
@@ -5301,7 +5301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1782993159
 MonoBehaviour:
   m_ObjectHideFlags: 0

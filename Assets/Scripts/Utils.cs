@@ -4,46 +4,21 @@ namespace UtilsNS
 {
     public class Utils
     {
-        public static DeviceOrientation currentOrientation, lastOrientation;
+        public static ScreenOrientation currentOrientation, lastOrientation;
 
         public Utils()
 		{
-            currentOrientation = Input.deviceOrientation;
-            lastOrientation = DeviceOrientation.Unknown;
-            Screen.orientation = ScreenOrientation.AutoRotation;
+            currentOrientation = Screen.orientation;
+            lastOrientation = ScreenOrientation.Portrait;
+            //Screen.orientation = ScreenOrientation.AutoRotation;
         }
 
-        public bool UpdateOrientation(GameObject portrait, GameObject landscape)
+        public bool CheckIfOrientationUpdated(GameObject portrait, GameObject landscape, bool forceUpdate)
         {
-            currentOrientation = Input.deviceOrientation;
-            if (currentOrientation != lastOrientation)
+            currentOrientation = Screen.orientation;
+            if ((currentOrientation != lastOrientation) || forceUpdate)
             {
-                SetActiveOrientation(portrait, landscape);
-                lastOrientation = currentOrientation;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void SetActiveOrientation(GameObject portrait, GameObject landscape)
-		{
-            if (currentOrientation == DeviceOrientation.Portrait)
-            {
-                portrait.SetActive(true);
-                landscape.SetActive(false);
-            }
-            else if (currentOrientation == DeviceOrientation.LandscapeLeft || currentOrientation == DeviceOrientation.LandscapeRight)
-            {
-                portrait.SetActive(false);
-                landscape.SetActive(true);
-            }
-			else
-			{
-                // If not portrait or landscape (e.g. face-up or face-down) then default to the last known orientation
-                if (lastOrientation == DeviceOrientation.Portrait)
+                if (currentOrientation == ScreenOrientation.Portrait || currentOrientation == ScreenOrientation.PortraitUpsideDown)
                 {
                     portrait.SetActive(true);
                     landscape.SetActive(false);
@@ -53,6 +28,13 @@ namespace UtilsNS
                     portrait.SetActive(false);
                     landscape.SetActive(true);
                 }
+
+                lastOrientation = currentOrientation;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

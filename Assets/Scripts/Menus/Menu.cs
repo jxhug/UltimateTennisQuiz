@@ -34,48 +34,19 @@ namespace MenuNS
 
         private Utils utils;
 
+
 		private void Start()
         {
             utils = new Utils();
-            EnableMainMenu();
-            SetProperCanvas();
-            SwitchParentCanvases();
+            EnableMainMenu(true);
+            SetActiveCanvas();
             LoadSettings();
         }
 
         private void Update()
 	    {
-            SetProperCanvas();
-            SwitchParentCanvases();
+            SetActiveCanvas();
         }
-
-        void SetProperCanvas()
-		{
-            if (IsMainMenuActive())
-            {
-                portrait = mainMenuPortraitCanvas;
-                landscape = mainMenuLandscapeCanvas;
-            }
-            else
-            {
-                portrait = settingsPortraitCanvas;
-                landscape = settingsLandscapeCanvas;
-            }
-            utils.UpdateOrientation(portrait, landscape);
-            LoadSettings();
-        }
-    
-        private bool IsMainMenuActive()
-		{
-            if (mainMenuPortraitCanvas.activeInHierarchy == true || mainMenuLandscapeCanvas.activeInHierarchy == true)
-			{
-                return true;
-			}
-			else
-			{
-                return false;
-			}
-		}
 
         public void LoadSettings()
         {
@@ -90,6 +61,19 @@ namespace MenuNS
             musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
         }
 
+        void SetActiveCanvas()
+		{   
+            if (mainMenuPortraitCanvas.activeInHierarchy || mainMenuLandscapeCanvas.activeInHierarchy)
+            {
+                EnableMainMenu(false);
+            }
+            else
+            {
+                EnableSettings(false);
+                LoadSettings();
+            }
+        }
+
         public void SetSFXVolume(float sfxSliderValue)
         {
             sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
@@ -102,7 +86,21 @@ namespace MenuNS
             PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
         }
 
-        public void EnableSettings()
+        public void EnableMainMenu(bool buttonPressed)
+        {
+            portrait = mainMenuPortraitCanvas;
+            landscape = mainMenuLandscapeCanvas;
+
+            settingsPortraitCanvas.SetActive(false);
+            settingsLandscapeCanvas.SetActive(false);
+
+            if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
+			{
+                utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
+            }
+        }
+
+        public void EnableSettings(bool buttonPressed)
 		{
             portrait = settingsPortraitCanvas;
             landscape = settingsLandscapeCanvas;
@@ -110,23 +108,10 @@ namespace MenuNS
             mainMenuPortraitCanvas.SetActive(false);
             mainMenuLandscapeCanvas.SetActive(false);
 
-            utils.SetActiveOrientation(portrait, landscape);
-        }
-
-        public void EnableMainMenu()
-		{
-            portrait = mainMenuPortraitCanvas;
-            landscape = mainMenuLandscapeCanvas;
-
-            settingsPortraitCanvas.SetActive(false);
-            settingsLandscapeCanvas.SetActive(false);
-
-            utils.SetActiveOrientation(portrait, landscape);
-        }
-
-        void SwitchParentCanvases()
-		{
-            utils.SetActiveOrientation(parentPortraitCanvas, parentLandscapeCanvas);
+            if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
+            {
+                utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
+            }
         }
     }
 }
