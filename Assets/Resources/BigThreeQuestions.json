@@ -1060,7 +1060,7 @@
             "isActiveQuestion": true
         },
         {
-            "questionText": "What was the first ATP title Federer won?",
+            "questionText": "What was the first ATP title Roger Federer won?",
             "answers": [
                 "Milan Indoors",
                 "Swiss Indoors",
@@ -1076,7 +1076,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first ATP title Nadal won?",
+            "questionText": "What was the first ATP title Rafael Nadal won?",
             "answers": [
                 "Prokom Open",
                 "Croatia Open",
@@ -1092,7 +1092,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first ATP title Djokovic won?",
+            "questionText": "What was the first ATP title Novak Djokovic won?",
             "answers": [
                 "Italian Open",
                 "Brisbane International",
@@ -1108,7 +1108,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What is Federer’s best doubles Olympic result?",
+            "questionText": "What is Roger Federer’s best doubles Olympic result?",
             "answers": [
                 "Silver at 2004 Athens Games",
                 "Gold at 2008 Beijing Games",
@@ -1121,10 +1121,10 @@
                 "Big Three"
             ],
             "info": "Federer’s best doubles olympic result is a gold medal at 2008 Beijing Summer Olympic Games.",
-            "“isActiveQuestion”": false
+            "isActiveQuestion": false
         },
         {
-            "questionText": "What is Nadal’s best doubles Olympic result?",
+            "questionText": "What is Rafael Nadal’s best doubles Olympic result?",
             "answers": [
                 "Silver at 2004 Athens Games",
                 "Gold at 2008 Beijing Games",
@@ -1137,10 +1137,10 @@
                 "Big Three"
             ],
             "info": "Nadal’s best doubles olympic result is a gold medal at 2016 Rio Summer Olympic Games.",
-            "“isActiveQuestion”": false
+            "isActiveQuestion": false
         },
         {
-            "questionText": "What is Djokovic’s best doubles Olympic result?",
+            "questionText": "What is Novak Djokovic’s best doubles Olympic result?",
             "answers": [
                 "Silver at 2004 Athens Games",
                 "Bronze at 2008 Beijing Games",
@@ -1153,7 +1153,103 @@
                 "Big Three"
             ],
             "info": "Djokovic’s best doubles olympic result is no medal at all. Djokovic doesn’t have any doubles medal at the Summer Olympic Games.",
-            "“isActiveQuestion”": false
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Roger Federer’s height?",
+            "answers": [
+                "6 ft 1 in",
+                "6 ft 2 in",
+                "6 ft",
+                "6 ft 3 in"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer is 6 foot 1 inch tall.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Rafael Nadal’s height?",
+            "answers": [
+                "6 ft 1 in",
+                "6 ft 2 in",
+                "6 ft",
+                "5 ft 11 in"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal is 6 foot 1 inch tall.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Novak Djokovic’s height?",
+            "answers": [
+                "6 ft 1 in",
+                "6 ft 2 in",
+                "6 ft",
+                "5 ft 11 in"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic is 6 foot 2 inches tall.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "At what age did Roger Federer first start playing tennis.?",
+            "answers": [
+                "8",
+                "7",
+                "4",
+                "3"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer started playing tennis when he was 8 years old, although at the time he also dabbled in other sports such as badminton and basketball.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "At what age did Rafael Nadal first start playing tennis.?",
+            "answers": [
+                "8",
+                "7",
+                "4",
+                "3"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal began playing tennis at age three, coached by his uncle, Toni Nadal, who remained his coach on the professional tour.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "At what age did Novak Djokovic first start playing tennis.?",
+            "answers": [
+                "8",
+                "7",
+                "4",
+                "3"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic began playing tennis at age four, after his parents gave him a mini-racket and a soft foam ball.",
+            "isActiveQuestion": false
         }
     ]   
 }

@@ -7,6 +7,10 @@ public class SceneLoader : MonoBehaviour
     public void LoadSingleplayer()
     {
         PlayerSelect.numberPlayersInGame = 1;
+        LoadQuiz();
+    }
+    public void LoadQuiz()
+	{
         SceneManager.LoadScene("Quiz");
     }
     public void LoadMainMenu()

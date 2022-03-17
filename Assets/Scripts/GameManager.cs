@@ -251,7 +251,7 @@ public class GameManager : MonoBehaviour
         {
             multiplayerImages[i].SetActive(true);
             multiplayerWinnerImages[i].SetActive(false);
-            multiplayerImageTexts[i].text = ("Player " + (i + 1) + ": " + scores[i] + "/" + numberQuestionsPerPlayer);
+            multiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
 
             if (scores[i] == winningScore && scores[i] != 0)
             {

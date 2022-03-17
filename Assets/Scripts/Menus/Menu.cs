@@ -3,115 +3,112 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using UtilsNS;
 
-namespace MenuNS
+public class Menu : MonoBehaviour
 {
-    public class Menu : MonoBehaviour
+    public AudioMixer sfxMixer;
+    public AudioMixer musicMixer;
+    [SerializeField]
+    private Slider sfxPortraitSlider;
+    [SerializeField]
+    private Slider musicPortraitSlider;
+    [SerializeField]
+    private Slider sfxLandscapeSlider;
+    [SerializeField]
+    private Slider musicLandscapeSlider;
+
+    public GameObject mainMenuPortraitCanvas;
+    public GameObject mainMenuLandscapeCanvas;
+    public GameObject settingsPortraitCanvas;
+    public GameObject settingsLandscapeCanvas;
+
+    public GameObject parentPortraitCanvas;
+    public GameObject parentLandscapeCanvas;
+
+    private GameObject portrait;
+    private GameObject landscape;
+
+    private float sfxSliderValue;
+    private float musicSliderValue;
+
+    private Utils utils;
+
+
+	private void Start()
     {
-        public AudioMixer sfxMixer;
-        public AudioMixer musicMixer;
-        [SerializeField]
-        private Slider sfxPortraitSlider;
-        [SerializeField]
-        private Slider musicPortraitSlider;
-        [SerializeField]
-        private Slider sfxLandscapeSlider;
-        [SerializeField]
-        private Slider musicLandscapeSlider;
+        utils = new Utils();
+        EnableMainMenu(true);
+        SetActiveCanvas();
+        LoadSettings();
+    }
 
-        public GameObject mainMenuPortraitCanvas;
-        public GameObject mainMenuLandscapeCanvas;
-        public GameObject settingsPortraitCanvas;
-        public GameObject settingsLandscapeCanvas;
+    private void Update()
+	{
+        SetActiveCanvas();
+    }
 
-        public GameObject parentPortraitCanvas;
-        public GameObject parentLandscapeCanvas;
+    public void LoadSettings()
+    {
+        // Get the currently saved slider values
+        sfxSliderValue = PlayerPrefs.GetFloat("sfxSliderValue", 1f);
+        musicSliderValue = PlayerPrefs.GetFloat("musicSliderValue", 1f);
 
-        private GameObject portrait;
-        private GameObject landscape;
+        sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
+        musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
 
-        private float sfxSliderValue;
-        private float musicSliderValue;
+        sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
+        musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
+    }
 
-        private Utils utils;
-
-
-		private void Start()
+    void SetActiveCanvas()
+	{   
+        if (mainMenuPortraitCanvas.activeInHierarchy || mainMenuLandscapeCanvas.activeInHierarchy)
         {
-            utils = new Utils();
-            EnableMainMenu(true);
-            SetActiveCanvas();
+            EnableMainMenu(false);
+        }
+        else
+        {
+            EnableSettings(false);
             LoadSettings();
         }
+    }
 
-        private void Update()
-	    {
-            SetActiveCanvas();
-        }
+    public void SetSFXVolume(float sfxSliderValue)
+    {
+        sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
+        PlayerPrefs.SetFloat("sfxSliderValue", sfxSliderValue);
+    }
 
-        public void LoadSettings()
-        {
-            // Get the currently saved slider values
-            sfxSliderValue = PlayerPrefs.GetFloat("sfxSliderValue", 1f);
-            musicSliderValue = PlayerPrefs.GetFloat("musicSliderValue", 1f);
+    public void SetMusicVolume(float musicSliderValue)
+    {
+        musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
+        PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
+    }
 
-            sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
-            musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
+    public void EnableMainMenu(bool buttonPressed)
+    {
+        portrait = mainMenuPortraitCanvas;
+        landscape = mainMenuLandscapeCanvas;
 
-            sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
-            musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
-        }
+        settingsPortraitCanvas.SetActive(false);
+        settingsLandscapeCanvas.SetActive(false);
 
-        void SetActiveCanvas()
-		{   
-            if (mainMenuPortraitCanvas.activeInHierarchy || mainMenuLandscapeCanvas.activeInHierarchy)
-            {
-                EnableMainMenu(false);
-            }
-            else
-            {
-                EnableSettings(false);
-                LoadSettings();
-            }
-        }
-
-        public void SetSFXVolume(float sfxSliderValue)
-        {
-            sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
-            PlayerPrefs.SetFloat("sfxSliderValue", sfxSliderValue);
-        }
-
-        public void SetMusicVolume(float musicSliderValue)
-        {
-            musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
-            PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
-        }
-
-        public void EnableMainMenu(bool buttonPressed)
-        {
-            portrait = mainMenuPortraitCanvas;
-            landscape = mainMenuLandscapeCanvas;
-
-            settingsPortraitCanvas.SetActive(false);
-            settingsLandscapeCanvas.SetActive(false);
-
-            if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
-			{
-                utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
-            }
-        }
-
-        public void EnableSettings(bool buttonPressed)
+        if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
 		{
-            portrait = settingsPortraitCanvas;
-            landscape = settingsLandscapeCanvas;
+            utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
+        }
+    }
 
-            mainMenuPortraitCanvas.SetActive(false);
-            mainMenuLandscapeCanvas.SetActive(false);
+    public void EnableSettings(bool buttonPressed)
+	{
+        portrait = settingsPortraitCanvas;
+        landscape = settingsLandscapeCanvas;
 
-            if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
-            {
-                utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
-            }
+        mainMenuPortraitCanvas.SetActive(false);
+        mainMenuLandscapeCanvas.SetActive(false);
+
+        if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
+        {
+            utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
         }
     }
 }

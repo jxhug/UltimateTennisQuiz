@@ -18,19 +18,27 @@ namespace UtilsNS
             currentOrientation = Screen.orientation;
             if ((currentOrientation != lastOrientation) || forceUpdate)
             {
-                if (currentOrientation == ScreenOrientation.Portrait || currentOrientation == ScreenOrientation.PortraitUpsideDown)
-                {
-                    portrait.SetActive(true);
-                    landscape.SetActive(false);
-                }
-                else
-                {
-                    portrait.SetActive(false);
+                if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.tvOS)
+				{
                     landscape.SetActive(true);
-                }
+                    return true;
+				}
+                else
+				{
+                    if (currentOrientation == ScreenOrientation.Portrait || currentOrientation == ScreenOrientation.PortraitUpsideDown)
+                    {
+                        portrait.SetActive(true);
+                        landscape.SetActive(false);
+                    }
+                    else
+                    {
+                        portrait.SetActive(false);
+                        landscape.SetActive(true);
+                    }
 
-                lastOrientation = currentOrientation;
-                return true;
+                    lastOrientation = currentOrientation;
+                    return true;
+                }
             }
             else
             {
