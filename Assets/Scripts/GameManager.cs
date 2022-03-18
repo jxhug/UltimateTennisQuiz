@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using Questions;
-
+using VariableSchemaNS;
 
 public class GameManager : MonoBehaviour
 {
@@ -56,38 +55,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Sprite winningImage;
 
-    //Two player end screen
-    [SerializeField]
-    private GameObject twoPlayerFinalScoreScreen;
-    [SerializeField]
-    private GameObject[] twoPlayerImages = new GameObject[2];
-    [SerializeField]
-    private GameObject[] twoPlayerWinnerImages = new GameObject[2];
-    [SerializeField]
-    private TMPro.TMP_Text[] twoPlayerImageTexts = new TMPro.TMP_Text[2];
-    private Image twoPlayerWinningImage;
-
-    //Three player end screen
-    [SerializeField]
-    private GameObject threePlayerFinalScoreScreen;
-    [SerializeField]
-    private GameObject[] threePlayerImages = new GameObject[3];
-    [SerializeField]
-    private GameObject[] threePlayerWinnerImages = new GameObject[3];
-    [SerializeField]
-    private TMPro.TMP_Text[] threePlayerImageTexts = new TMPro.TMP_Text[3];
-    private Image threePlayerWinningImage;
-
-    //Four player end screen
-    [SerializeField]
-    private GameObject fourPlayerFinalScoreScreen;
-    [SerializeField]
-    private GameObject[] fourPlayerImages = new GameObject[4];
-    [SerializeField]
-    private GameObject[] fourPlayerWinnerImages = new GameObject[4];
-    [SerializeField]
-    private TMPro.TMP_Text[] fourPlayerImageTexts = new TMPro.TMP_Text[4];
-    private Image fourPlayerWinningImage;
+   
 
     //Multiplayer end screen objects
     private GameObject multiplayerFinalScoreScreen;
@@ -107,13 +75,15 @@ public class GameManager : MonoBehaviour
 
     private static System.Random rng = new System.Random();
 
+    private QuizScreens quizScreens;
+
     void Start()
     {
         mainQuestionScreen.SetActive(true);
         finalSingleplayerScoreScreen.SetActive(false);
-        twoPlayerFinalScoreScreen.SetActive(false);
-        threePlayerFinalScoreScreen.SetActive(false);
-        fourPlayerFinalScoreScreen.SetActive(false);
+        quizScreens.twoPlayerFinalScoreScreen.SetActive(false);
+        quizScreens.threePlayerFinalScoreScreen.SetActive(false);
+        quizScreens.fourPlayerFinalScoreScreen.SetActive(false);
 
         var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
@@ -125,25 +95,25 @@ public class GameManager : MonoBehaviour
         switch (numberPlayersInGame)
         {
             case 2:
-                multiplayerFinalScoreScreen = twoPlayerFinalScoreScreen;
-                multiplayerImages = twoPlayerImages;
-                multiplayerWinnerImages = twoPlayerWinnerImages;
-                multiplayerImageTexts = twoPlayerImageTexts;
-                multiplayerWinningImage = twoPlayerWinningImage;
+                multiplayerFinalScoreScreen = quizScreens.twoPlayerFinalScoreScreen;
+                multiplayerImages = quizScreens.twoPlayerImages;
+                multiplayerWinnerImages = quizScreens.twoPlayerWinnerImages;
+                multiplayerImageTexts = quizScreens.twoPlayerImageTexts;
+                multiplayerWinningImage = quizScreens.twoPlayerWinningImage;
                 break;
             case 3:
-                multiplayerFinalScoreScreen = threePlayerFinalScoreScreen;
-                multiplayerImages = threePlayerImages;
-                multiplayerWinnerImages = threePlayerWinnerImages;
-                multiplayerImageTexts = threePlayerImageTexts;
-                multiplayerWinningImage = threePlayerWinningImage;
+                multiplayerFinalScoreScreen = quizScreens.threePlayerFinalScoreScreen;
+                multiplayerImages = quizScreens.threePlayerImages;
+                multiplayerWinnerImages = quizScreens.threePlayerWinnerImages;
+                multiplayerImageTexts = quizScreens.threePlayerImageTexts;
+                multiplayerWinningImage = quizScreens.threePlayerWinningImage;
                 break;
             case 4:
-                multiplayerFinalScoreScreen = fourPlayerFinalScoreScreen;
-                multiplayerImages = fourPlayerImages;
-                multiplayerWinnerImages = fourPlayerWinnerImages;
-                multiplayerImageTexts = fourPlayerImageTexts;
-                multiplayerWinningImage = fourPlayerWinningImage;
+                multiplayerFinalScoreScreen = quizScreens.fourPlayerFinalScoreScreen;
+                multiplayerImages = quizScreens.fourPlayerImages;
+                multiplayerWinnerImages = quizScreens.fourPlayerWinnerImages;
+                multiplayerImageTexts = quizScreens.fourPlayerImageTexts;
+                multiplayerWinningImage = quizScreens.fourPlayerWinningImage;
                 break;
         }
 
@@ -157,10 +127,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // TODO: Randomly select "numberQuestionsInGame" questions from allQuestions list
         unansweredQuestions = allQuestions.Take(numberQuestionsInGame).ToList();
-
-
 
         currentPlayer = 0;
         SetCurrentQuestion();

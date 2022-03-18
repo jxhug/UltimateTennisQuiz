@@ -18,7 +18,7 @@ namespace UtilsNS
             currentOrientation = Screen.orientation;
             if ((currentOrientation != lastOrientation) || forceUpdate)
             {
-                if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.tvOS)
+                if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.tvOS || Application.platform == RuntimePlatform.OSXEditor)
 				{
                     landscape.SetActive(true);
                     return true;
