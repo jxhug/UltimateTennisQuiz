@@ -1204,7 +1204,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Roger Federer first start playing tennis.?",
+            "questionText": "At what age did Roger Federer first start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1220,7 +1220,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Rafael Nadal first start playing tennis.?",
+            "questionText": "At what age did Rafael Nadal first start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1236,7 +1236,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Novak Djokovic first start playing tennis.?",
+            "questionText": "At what age did Novak Djokovic first start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1250,6 +1250,70 @@
             ],
             "info": "Djokovic began playing tennis at age four, after his parents gave him a mini-racket and a soft foam ball.",
             "isActiveQuestion": false
+        },
+        {
+            "questionText": "Which Masters tournament has Rafael Nadal not won?",
+            "answers": [
+                "Miami Masters",
+                "Paris Masters",
+                "Cincinnati Masters",
+                "Shanghai Masters"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal has not yet won the Miami Masters tournament.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "In 2010, Rafael Nadal was in a music video. What song was this music video for?",
+            "answers": [
+                "Gypsy - Shakira",
+                "Boom Boom - RedOne",
+                "Try Everything - Shakira",
+                "Call Me Maybe - Carly Rae Jepsen"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal appeared in the music video for Gypsy, by the famous Canadian singer Shakira.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Roger Federer starred in a commercial for Switzerland called \"No Drama\" with what celebrity?",
+            "answers": [
+                "Robert de Niro",
+                "Mikaela Shiffrin",
+                "Davide Oldani",
+                "Gavin Rossdale"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer appeared in a commercial with American actor Robert de Niro.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Which 2012 movie did Novak Djokovic shoot for but had his part edited out of the actual movie?",
+            "answers": [
+                "The Expendables 2",
+                "Men in Black 3",
+                "Skyfall",
+                "The Dark Knight Rises"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokvovic",
+                "Big Three"
+            ],
+            "info": "Djokovic was planned to have a cameo in the movie The Expendabes 2, and they even filmed for it, but it never made it into the movie.",
+            "isActiveQuestion": false
         }
     ]   
-}
+}   
