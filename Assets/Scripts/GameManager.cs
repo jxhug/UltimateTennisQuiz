@@ -3,87 +3,244 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using VariableSchemaNS;
+using UtilsNS;
 
 public class GameManager : MonoBehaviour
 {
+    //question objects
     public QuestionList jsonQuestions;
+
     public List<Question> allQuestions;
+
     public List<Question> unansweredQuestions;
+
     private Question currentQuestion;
 
+    private int numberQuestionsPerPlayer = 3;
+
+    private int numberQuestionsInGame;
+
+
+    //question display objects
     private int randomQuestionIndex;
+
     private int randomPermutationIndex;
+
     private int[,] randomAnswerPermutations = new int[6, 4] { { 1, 0, 2, 3 }, { 2, 1, 3, 0 }, { 2, 3, 1, 0 }, { 1, 2, 0, 3 }, { 0, 3, 2, 1 }, { 3, 0, 2, 1 } };
+
     private int correctAnswerCellIndex;
+
+    private System.Random rng = new System.Random();
 
     private float questionTransitionTime = 3.5f;
 
+
+    // portrait two player end screen
+    public GameObject portraitTwoPlayerFinalScoreScreen;
+
+    public GameObject[] portraitTwoPlayerImages = new GameObject[2];
+
+    public GameObject[] portraitTwoPlayerWinnerImages = new GameObject[2];
+
+    public TMPro.TMP_Text[] portraitTwoPlayerImageTexts = new TMPro.TMP_Text[2];
+
+
+    //portrait three player end screen
+    public GameObject portraitThreePlayerFinalScoreScreen;
+
+    public GameObject[] portraitThreePlayerImages = new GameObject[3];
+
+    public GameObject[] portraitThreePlayerWinnerImages = new GameObject[3];
+
+    public TMPro.TMP_Text[] portraitThreePlayerImageTexts = new TMPro.TMP_Text[3];
+
+
+    //portrait four player end screen
+    public GameObject portraitFourPlayerFinalScoreScreen;
+
+    public GameObject[] portraitFourPlayerImages = new GameObject[4];
+
+    public GameObject[] portraitFourPlayerWinnerImages = new GameObject[4];
+
+    public TMPro.TMP_Text[] portraitFourPlayerImageTexts = new TMPro.TMP_Text[4];
+
+
+    // landscape two player end screen
+    public GameObject landscapeTwoPlayerFinalScoreScreen;
+
+    public GameObject[] landscapeTwoPlayerImages = new GameObject[2];
+
+    public GameObject[] landscapeTwoPlayerWinnerImages = new GameObject[2];
+
+    public TMPro.TMP_Text[] landscapeTwoPlayerImageTexts = new TMPro.TMP_Text[2];
+
+
+    //landscape three player end screen
+    public GameObject landscapeThreePlayerFinalScoreScreen;
+
+    public GameObject[] landscapeThreePlayerImages = new GameObject[3];
+
+    public GameObject[] landscapeThreePlayerWinnerImages = new GameObject[3];
+
+    public TMPro.TMP_Text[] landscapeThreePlayerImageTexts = new TMPro.TMP_Text[3];
+
+
+    //landscape four player end screen
+    public GameObject landscapeFourPlayerFinalScoreScreen;
+
+    public GameObject[] landscapeFourPlayerImages = new GameObject[4];
+
+    public GameObject[] landscapeFourPlayerWinnerImages = new GameObject[4];
+
+    public TMPro.TMP_Text[] landscapeFourPlayerImageTexts = new TMPro.TMP_Text[4];
+
+
+    //portrait main question screen objects
     [SerializeField]
-    private TMPro.TMP_Text questionText;
+    private GameObject portraitMainQuestionScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text[] answerText = new TMPro.TMP_Text[4];
+    private GameObject portraitCorrectAnswerUI;
 
     [SerializeField]
-    private GameObject correctAnswerUI;
+    private GameObject portraitIncorrectAnswerUI;
 
     [SerializeField]
-    private GameObject wrongAnswerUI;
+    private TMPro.TMP_Text portraitCorrectAnswerInfoText;
 
     [SerializeField]
-    private GameObject mainQuestionScreen;
+    private TMPro.TMP_Text portraitIncorrectAnswerInfoText;
 
     [SerializeField]
-    private GameObject finalSingleplayerScoreScreen;
+    private TMPro.TMP_Text portraitQuestionText;
 
     [SerializeField]
-    private TMPro.TMP_Text finalSingleplayerScoreText;
+    private TMPro.TMP_Text[] portraitAnswerText = new TMPro.TMP_Text[4];
 
     [SerializeField]
-    private TMPro.TMP_Text highScoreText;
+    private TMPro.TMP_Text portraitNumberPlayerText;
+
+
+    //landscape main question screen objects
+    [SerializeField]
+    private GameObject landscapeMainQuestionScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text numberPlayerText;
+    private GameObject landscapeCorrectAnswerUI;
 
     [SerializeField]
-    private TMPro.TMP_Text correctAnswerInfoText;
+    private GameObject landscapeIncorrectAnswerUI;
 
     [SerializeField]
-    private TMPro.TMP_Text incorrectAnswerInfoText;
+    private TMPro.TMP_Text landscapeCorrectAnswerInfoText;
 
+    [SerializeField]
+    private TMPro.TMP_Text landscapeIncorrectAnswerInfoText;
+
+    [SerializeField]
+    private TMPro.TMP_Text landscapeQuestionText;
+
+    [SerializeField]
+    private TMPro.TMP_Text[] landscapeAnswerText = new TMPro.TMP_Text[4];
+
+    [SerializeField]
+    private TMPro.TMP_Text landscapeNumberPlayerText;
+
+
+    //portrait singleplayer end screen objects
+    [SerializeField]
+    private GameObject portraitSingleplayerFinalScoreScreen;
+
+    [SerializeField]
+    private TMPro.TMP_Text portraitSingleplayerScoreText;
+
+    [SerializeField]
+    private TMPro.TMP_Text portraitSingleplayerHighScoreText;
+
+
+    //landscape singleplayer end screen objects
+    [SerializeField]
+    private GameObject landscapeSingleplayerFinalScoreScreen;
+
+    [SerializeField]
+    private TMPro.TMP_Text landscapeSingleplayerScoreText;
+
+    [SerializeField]
+    private TMPro.TMP_Text landscapeSingleplayerHighScoreText;
+
+
+    //portrait multiplayer end screen objects
+    private GameObject portraitMultiplayerFinalScoreScreen;
+
+    private GameObject[] portraitMultiplayerImages;
+
+    private GameObject[] portraitMultiplayerWinnerImages;
+
+    private TMPro.TMP_Text[] portraitMultiplayerImageTexts;
+
+    private Image portraitMultiplayerWinningImage;
+
+
+    //landscape multiplayer end screen objects
+    private GameObject landscapeMultiplayerFinalScoreScreen;
+
+    private GameObject[] landscapeMultiplayerImages;
+
+    private GameObject[] landscapeMultiplayerWinnerImages;
+
+    private TMPro.TMP_Text[] landscapeMultiplayerImageTexts;
+
+    private Image landscapeMultiplayerWinningImage;
+
+
+    [SerializeField]
+    private GameObject portraitCanvas;
+
+    [SerializeField]
+    private GameObject landscapeCanvas;
+
+    //player objects
+    private int numberPlayersInGame;
+
+    private int currentPlayer;
+
+
+    //score objects
+    private int[] scores;
+
+    public int highScore = 0;
+
+    //orange gradient object
     [SerializeField]
     private Sprite winningImage;
 
-   
+    private Utils utils;
 
-    //Multiplayer end screen objects
-    private GameObject multiplayerFinalScoreScreen;
-    private GameObject[] multiplayerImages;
-    private GameObject[] multiplayerWinnerImages;
-    private TMPro.TMP_Text[] multiplayerImageTexts;
-    private Image multiplayerWinningImage;
 
-    private int numberQuestionsPerPlayer = 3;
-    private int numberQuestionsInGame;
-
-    private int numberPlayersInGame;
-    private int currentPlayer;
-
-    private int[] scores;
-    public static int highScore = 0;
-
-    private static System.Random rng = new System.Random();
-
-    private QuizScreens quizScreens;
-
+    //methods
     void Start()
     {
-        mainQuestionScreen.SetActive(true);
-        finalSingleplayerScoreScreen.SetActive(false);
-        quizScreens.twoPlayerFinalScoreScreen.SetActive(false);
-        quizScreens.threePlayerFinalScoreScreen.SetActive(false);
-        quizScreens.fourPlayerFinalScoreScreen.SetActive(false);
+        utils = new Utils();
+
+        portraitMainQuestionScreen.SetActive(true);
+        landscapeMainQuestionScreen.SetActive(true);
+
+        portraitSingleplayerFinalScoreScreen.SetActive(false);
+        landscapeSingleplayerFinalScoreScreen.SetActive(false);
+
+		portraitTwoPlayerFinalScoreScreen.SetActive(false);
+        portraitThreePlayerFinalScoreScreen.SetActive(false);
+        portraitFourPlayerFinalScoreScreen.SetActive(false);
+        landscapeTwoPlayerFinalScoreScreen.SetActive(false);
+        landscapeThreePlayerFinalScoreScreen.SetActive(false);
+        landscapeFourPlayerFinalScoreScreen.SetActive(false);
+
+        portraitCorrectAnswerUI.SetActive(false);
+        landscapeCorrectAnswerUI.SetActive(false);
+        portraitIncorrectAnswerUI.SetActive(false);
+        landscapeIncorrectAnswerUI.SetActive(false);
+
+        utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, true);
 
         var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
@@ -95,25 +252,43 @@ public class GameManager : MonoBehaviour
         switch (numberPlayersInGame)
         {
             case 2:
-                multiplayerFinalScoreScreen = quizScreens.twoPlayerFinalScoreScreen;
-                multiplayerImages = quizScreens.twoPlayerImages;
-                multiplayerWinnerImages = quizScreens.twoPlayerWinnerImages;
-                multiplayerImageTexts = quizScreens.twoPlayerImageTexts;
-                multiplayerWinningImage = quizScreens.twoPlayerWinningImage;
+                portraitMultiplayerFinalScoreScreen = portraitTwoPlayerFinalScoreScreen;
+                landscapeMultiplayerFinalScoreScreen = landscapeTwoPlayerFinalScoreScreen;
+
+                portraitMultiplayerImages = portraitTwoPlayerImages;
+                landscapeMultiplayerImages = landscapeTwoPlayerImages;
+
+                portraitMultiplayerWinnerImages = portraitTwoPlayerWinnerImages;
+                landscapeMultiplayerWinnerImages = landscapeTwoPlayerWinnerImages;
+
+                portraitMultiplayerImageTexts = portraitTwoPlayerImageTexts;
+                landscapeMultiplayerImageTexts = landscapeTwoPlayerImageTexts;
                 break;
             case 3:
-                multiplayerFinalScoreScreen = quizScreens.threePlayerFinalScoreScreen;
-                multiplayerImages = quizScreens.threePlayerImages;
-                multiplayerWinnerImages = quizScreens.threePlayerWinnerImages;
-                multiplayerImageTexts = quizScreens.threePlayerImageTexts;
-                multiplayerWinningImage = quizScreens.threePlayerWinningImage;
+                portraitMultiplayerFinalScoreScreen = portraitThreePlayerFinalScoreScreen;
+                landscapeMultiplayerFinalScoreScreen = landscapeThreePlayerFinalScoreScreen;
+
+                portraitMultiplayerImages = portraitThreePlayerImages;
+                landscapeMultiplayerImages = landscapeThreePlayerImages;
+
+                portraitMultiplayerWinnerImages = portraitThreePlayerWinnerImages;
+                landscapeMultiplayerWinnerImages = landscapeThreePlayerWinnerImages;
+
+                portraitMultiplayerImageTexts = portraitThreePlayerImageTexts;
+                landscapeMultiplayerImageTexts = landscapeThreePlayerImageTexts;
                 break;
             case 4:
-                multiplayerFinalScoreScreen = quizScreens.fourPlayerFinalScoreScreen;
-                multiplayerImages = quizScreens.fourPlayerImages;
-                multiplayerWinnerImages = quizScreens.fourPlayerWinnerImages;
-                multiplayerImageTexts = quizScreens.fourPlayerImageTexts;
-                multiplayerWinningImage = quizScreens.fourPlayerWinningImage;
+                portraitMultiplayerFinalScoreScreen = portraitFourPlayerFinalScoreScreen;
+                landscapeMultiplayerFinalScoreScreen = landscapeFourPlayerFinalScoreScreen;
+
+                portraitMultiplayerImages = portraitFourPlayerImages;
+                landscapeMultiplayerImages = landscapeFourPlayerImages;
+
+                portraitMultiplayerWinnerImages = portraitFourPlayerWinnerImages;
+                landscapeMultiplayerWinnerImages = landscapeFourPlayerWinnerImages;
+
+                portraitMultiplayerImageTexts = portraitFourPlayerImageTexts;
+                landscapeMultiplayerImageTexts = landscapeFourPlayerImageTexts;
                 break;
         }
 
@@ -123,7 +298,8 @@ public class GameManager : MonoBehaviour
             scores[i] = 0;
             if (numberPlayersInGame > 1)
             {
-                multiplayerImages[i].SetActive(false);
+                portraitMultiplayerImages[i].SetActive(false);
+                landscapeMultiplayerImages[i].SetActive(false);
             }
         }
 
@@ -133,19 +309,30 @@ public class GameManager : MonoBehaviour
         SetCurrentQuestion();
     }
 
-    void SetCurrentQuestion()
+	private void Update()
+	{
+        utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, false);
+	}
+
+	void SetCurrentQuestion()
     {
-        numberPlayerText.text = ("Player " + (currentPlayer + 1));
+        portraitNumberPlayerText.text = ("Player " + (currentPlayer + 1));
+        landscapeNumberPlayerText.text = ("Player " + (currentPlayer + 1));
+
         randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
-        questionText.text = currentQuestion.questionText;
+
+        portraitQuestionText.text = currentQuestion.questionText;
+        landscapeQuestionText.text = currentQuestion.questionText;
+
 
         randomPermutationIndex = Random.Range(0, randomAnswerPermutations.GetLength(0));
 
         for (int cellIndex = 0; cellIndex <= 3; cellIndex++)
         {
             int answerIndex = randomAnswerPermutations[randomPermutationIndex, cellIndex];
-            answerText[cellIndex].text = currentQuestion.answers[answerIndex];
+            portraitAnswerText[cellIndex].text = currentQuestion.answers[answerIndex];
+            landscapeAnswerText[cellIndex].text = currentQuestion.answers[answerIndex];
 
             if (answerIndex == currentQuestion.correctAnswerIndex)
             {
@@ -164,12 +351,17 @@ public class GameManager : MonoBehaviour
         // Set up the next question or switch to the finish scene
         if (unansweredQuestions.Count == 0)
         {
-            mainQuestionScreen.SetActive(false);
+            portraitMainQuestionScreen.SetActive(false);
+            landscapeMainQuestionScreen.SetActive(false);
 
             if (numberPlayersInGame == 1)
+            {
                 SingleplayerEndScreen();
+            }
             else
+            {
                 MultiplayerEndScreen();
+            }
         }
         else
         {
@@ -178,22 +370,32 @@ public class GameManager : MonoBehaviour
         }
         // Fade into the next question
         yield return new WaitForSeconds(questionTransitionTime / 2);
-        correctAnswerUI.SetActive(false);
-        wrongAnswerUI.SetActive(false);
+
+        portraitCorrectAnswerUI.SetActive(false);
+        landscapeCorrectAnswerUI.SetActive(false);
+        portraitIncorrectAnswerUI.SetActive(false);
+        landscapeIncorrectAnswerUI.SetActive(false);
     }
 
     public void CheckAnswer(int SelectedIndex)
     {
         if (SelectedIndex == correctAnswerCellIndex)
         {
-            correctAnswerUI.SetActive(true);
-            correctAnswerInfoText.text = currentQuestion.info;
+            portraitCorrectAnswerUI.SetActive(true);
+            landscapeCorrectAnswerUI.SetActive(true);
+
+            portraitCorrectAnswerInfoText.text = currentQuestion.info;
+            landscapeCorrectAnswerInfoText.text = currentQuestion.info;
+
             scores[currentPlayer]++;
         }
         else
         {
-            wrongAnswerUI.SetActive(true);
-            incorrectAnswerInfoText.text = currentQuestion.info;
+            portraitIncorrectAnswerUI.SetActive(true);
+            landscapeIncorrectAnswerUI.SetActive(true);
+
+            portraitIncorrectAnswerInfoText.text = currentQuestion.info;
+            landscapeIncorrectAnswerInfoText.text = currentQuestion.info;
         }
 
         StartCoroutine(TransitionToNextQuestion());
@@ -205,28 +407,47 @@ public class GameManager : MonoBehaviour
         {
             highScore = scores[0];
         }
-        finalSingleplayerScoreScreen.SetActive(true);
-        finalSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
-        highScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
+
+        portraitSingleplayerFinalScoreScreen.SetActive(true);
+        landscapeSingleplayerFinalScoreScreen.SetActive(true);
+
+        portraitSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
+        landscapeSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
+
+        portraitSingleplayerHighScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
+        landscapeSingleplayerHighScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
     }
 
     void MultiplayerEndScreen()
     {
-        multiplayerFinalScoreScreen.SetActive(true);
+        portraitMultiplayerFinalScoreScreen.SetActive(true);
+        landscapeMultiplayerFinalScoreScreen.SetActive(true);
+
         int winningScore = scores.Max();
+
         for (int i = 0; i < numberPlayersInGame; i++)
         {
-            multiplayerImages[i].SetActive(true);
-            multiplayerWinnerImages[i].SetActive(false);
-            multiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
+            portraitMultiplayerImages[i].SetActive(true);
+            landscapeMultiplayerImages[i].SetActive(true);
+
+            portraitMultiplayerWinnerImages[i].SetActive(false);
+            landscapeMultiplayerWinnerImages[i].SetActive(false);
+
+            portraitMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
+            landscapeMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
 
             if (scores[i] == winningScore && scores[i] != 0)
             {
                 // You know that the i’th player is the winning player (there may be more than one winning player)
-                multiplayerWinningImage = multiplayerImages[i].GetComponent<Image>();
-                multiplayerWinningImage.sprite = winningImage;
-                multiplayerWinnerImages[i].SetActive(true);
+                portraitMultiplayerWinningImage = portraitMultiplayerImages[i].GetComponent<Image>();
+                landscapeMultiplayerWinningImage = landscapeMultiplayerImages[i].GetComponent<Image>();
+
+                portraitMultiplayerWinningImage.sprite = winningImage;
+                landscapeMultiplayerWinningImage.sprite = winningImage;
+
+                portraitMultiplayerWinnerImages[i].SetActive(true);
+                landscapeMultiplayerWinnerImages[i].SetActive(true);
             }
-        }
+        } 
     }
 }   
