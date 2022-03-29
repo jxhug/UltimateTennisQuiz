@@ -1265,7 +1265,7 @@
                 "Big Three"
             ],
             "info": "Nadal has not yet won the Miami Masters tournament.",
-            "isActiveQuestion": false
+            "isActiveQuestion": true
         },
         {
             "questionText": "In 2010, Rafael Nadal was in a music video. What song was this music video for?",
@@ -1314,6 +1314,70 @@
             ],
             "info": "Djokovic was planned to have a cameo in the movie The Expendabes 2, and they even filmed for it, but it never made it into the movie.",
             "isActiveQuestion": false
+        },
+        {
+            "questionText": "In 2010, Novak Djokovic was in a music video. What song was this music video for?",
+            "answers": [
+                "Gypsy - Shakira",
+                "Boom Boom - RedOne",
+                "Try Everything - Shakira",
+                "Hello - Martin Solveig"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Djokvovic",
+                "Big Three"
+            ],
+            "info": "Djokovic appeared in the music video for Hello, by the popular artist Martin Solveig.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is the fastest serve speed that Roger Federer has hit?",
+            "answers": [
+                "143 mph (230 kmh)",
+                "145 mph (233 kmh)",
+                "148 mph (238 kmh)",
+                "139 mph (224 kmh)"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's fastest serve speed is 143 mph (230 kmh).",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is the fastest serve speed that Rafael Nadal has hit?",
+            "answers": [
+                "135 mph (217 kmh)",
+                "141 mph (227 kmh)",
+                "148 mph (238 kmh)",
+                "139 mph (224 kmh)"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's fastest serve speed is 135 mph (217 kmh).",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is the fastest serve speed that Novak Djokovic has hit?",
+            "answers": [
+                "136 mph (219 kmh)",
+                "141 mph (227 kmh)",
+                "148 mph (238 kmh)",
+                "139 mph (224 kmh)"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's fastest serve speed is 136 mph (219 kmh).",
+            "isActiveQuestion": true
         }
     ]   
 }   
