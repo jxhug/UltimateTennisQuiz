@@ -1378,6 +1378,54 @@
             ],
             "info": "Djokovic's fastest serve speed is 136 mph (219 kmh).",
             "isActiveQuestion": true
+        },
+        {
+            "questionText": "Roger Federer has citizenship in Switzerland and which country?",
+            "answers": [
+                "South Africa",
+                "Austria",
+                "Germany",
+                "France"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer has citizenship in Switzerland and South Africa.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Which Grand Slam did Roger Federer win in 2007 without dropping a single set?",
+            "answers": [
+                "Australian Open",
+                "Wimbledon",
+                "US Open",
+                "Roland Garros"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer won the Australian Open in 2007 without dropping a single set.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What instrument can Federer play?",
+            "answers": [
+                "Drums",
+                "Piano",
+                "Clarinet",
+                "Saxophone"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer won the Australian Open in 2007 without dropping a single set.",
+            "isActiveQuestion": false
         }
     ]   
 }   
