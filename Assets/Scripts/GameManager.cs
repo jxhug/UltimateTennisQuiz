@@ -100,18 +100,6 @@ public class GameManager : MonoBehaviour
     private GameObject portraitMainQuestionScreen;
 
     [SerializeField]
-    private GameObject portraitCorrectAnswerUI;
-
-    [SerializeField]
-    private GameObject portraitIncorrectAnswerUI;
-
-    [SerializeField]
-    private TMPro.TMP_Text portraitCorrectAnswerInfoText;
-
-    [SerializeField]
-    private TMPro.TMP_Text portraitIncorrectAnswerInfoText;
-
-    [SerializeField]
     private TMPro.TMP_Text portraitQuestionText;
 
     [SerializeField]
@@ -124,18 +112,6 @@ public class GameManager : MonoBehaviour
     //landscape main question screen objects
     [SerializeField]
     private GameObject landscapeMainQuestionScreen;
-
-    [SerializeField]
-    private GameObject landscapeCorrectAnswerUI;
-
-    [SerializeField]
-    private GameObject landscapeIncorrectAnswerUI;
-
-    [SerializeField]
-    private TMPro.TMP_Text landscapeCorrectAnswerInfoText;
-
-    [SerializeField]
-    private TMPro.TMP_Text landscapeIncorrectAnswerInfoText;
 
     [SerializeField]
     private TMPro.TMP_Text landscapeQuestionText;
@@ -192,6 +168,18 @@ public class GameManager : MonoBehaviour
 
     private Image landscapeMultiplayerWinningImage;
 
+    [SerializeField]
+    private GameObject correctAnswerUI;
+
+    [SerializeField]
+    private GameObject incorrectAnswerUI;
+
+    [SerializeField]
+    private TMPro.TMP_Text correctAnswerInfoText;
+
+    [SerializeField]
+    private TMPro.TMP_Text incorrectAnswerInfoText;
+
 
     [SerializeField]
     private GameObject portraitCanvas;
@@ -210,18 +198,10 @@ public class GameManager : MonoBehaviour
 
     public int highScore = 0;
 
-    private bool answerCorrect;
-
 
     //orange gradient object
     [SerializeField]
     private Sprite winningImage;
-
-
-    private bool animationPlaying;
-
-    private float currentAnimationTime;
-
 
     private Utils utils;
 
@@ -244,15 +224,8 @@ public class GameManager : MonoBehaviour
         landscapeThreePlayerFinalScoreScreen.SetActive(false);
         landscapeFourPlayerFinalScoreScreen.SetActive(false);
 
-        portraitCorrectAnswerUI.SetActive(false);
-        landscapeCorrectAnswerUI.SetActive(false);
-        portraitIncorrectAnswerUI.SetActive(false);
-        landscapeIncorrectAnswerUI.SetActive(false);
-
-        portraitCorrectAnswerUI.GetComponent<Animator>().enabled = false;
-        landscapeCorrectAnswerUI.GetComponent<Animator>().enabled = false;
-        portraitIncorrectAnswerUI.GetComponent<Animator>().enabled = false;
-        landscapeIncorrectAnswerUI.GetComponent<Animator>().enabled = false;
+        correctAnswerUI.SetActive(false);
+        incorrectAnswerUI.SetActive(false);
 
         utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, true);
 
@@ -326,42 +299,6 @@ public class GameManager : MonoBehaviour
 	private void Update()
 	{
         utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, false);
-
-        if (animationPlaying == true && Utils.currentOrientation != Utils.lastOrientation)
-		{
-            if (Utils.lastOrientation == ScreenOrientation.Portrait && answerCorrect == true)
-			{
-                AnimatorStateInfo animatorState = portraitCorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-                AnimatorClipInfo[] animatorClip = portraitCorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
-                currentAnimationTime = animatorClip[0].clip.length * animatorState.normalizedTime;
-
-                portraitCorrectAnswerUI.GetComponent<Animator>().Play("CorrectAnswerUI", 0, currentAnimationTime);
-            }
-            else if (Utils.lastOrientation == ScreenOrientation.Portrait && answerCorrect == false)
-            {
-                AnimatorStateInfo animatorState = portraitIncorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-                AnimatorClipInfo[] animatorClip = portraitIncorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
-                currentAnimationTime = animatorClip[0].clip.length * animatorState.normalizedTime;
-
-                portraitIncorrectAnswerUI.GetComponent<Animator>().Play("WrongAnswerUI", 0, currentAnimationTime);
-            }
-            else if (Utils.lastOrientation == ScreenOrientation.LandscapeLeft || Utils.lastOrientation == ScreenOrientation.LandscapeRight && answerCorrect == true)
-            {
-                AnimatorStateInfo animatorState = landscapeCorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-                AnimatorClipInfo[] animatorClip = landscapeCorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
-                currentAnimationTime = animatorClip[0].clip.length * animatorState.normalizedTime;
-
-                landscapeCorrectAnswerUI.GetComponent<Animator>().Play("CorrectAnswerUI", 0, currentAnimationTime);
-            }
-            else if (Utils.lastOrientation == ScreenOrientation.LandscapeLeft || Utils.lastOrientation == ScreenOrientation.LandscapeRight && answerCorrect == false)
-			{
-                AnimatorStateInfo animatorState = landscapeIncorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-                AnimatorClipInfo[] animatorClip = landscapeIncorrectAnswerUI.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
-                currentAnimationTime = animatorClip[0].clip.length * animatorState.normalizedTime;
-
-                landscapeIncorrectAnswerUI.GetComponent<Animator>().Play("WrongAnswerUI", 0, currentAnimationTime);
-            }
-        }
 	}
 
 	void SetCurrentQuestion()
@@ -421,41 +358,25 @@ public class GameManager : MonoBehaviour
         // Fade into the next question
         yield return new WaitForSeconds(questionTransitionTime / 2);
 
-        portraitCorrectAnswerUI.SetActive(false);
-        landscapeCorrectAnswerUI.SetActive(false);
-        portraitIncorrectAnswerUI.SetActive(false);
-        landscapeIncorrectAnswerUI.SetActive(false);
-    }
-
-    void PlayAnswerUIAnimation(GameObject portraitAnswerUI, GameObject landscapeAnswerUI)
-	{
-        portraitAnswerUI.GetComponent<Animator>();
-        landscapeAnswerUI.GetComponent<Animator>();
+        correctAnswerUI.SetActive(false);
+        incorrectAnswerUI.SetActive(false);
     }
 
     public void CheckAnswer(int SelectedIndex)
     {
-        animationPlaying = true;
         if (SelectedIndex == correctAnswerCellIndex)
         {
-            answerCorrect = true;
-            portraitCorrectAnswerUI.SetActive(true);
-            landscapeCorrectAnswerUI.SetActive(true);
+            correctAnswerUI.SetActive(true);
 
-            portraitCorrectAnswerInfoText.text = currentQuestion.info;
-            landscapeCorrectAnswerInfoText.text = currentQuestion.info;
+            correctAnswerInfoText.text = currentQuestion.info;
 
             scores[currentPlayer]++;
         }
         else
         {
-            answerCorrect = false;
-            portraitIncorrectAnswerUI.SetActive(true);
-            landscapeIncorrectAnswerUI.SetActive(true);
+            correctAnswerUI.SetActive(true);
 
-
-            portraitIncorrectAnswerInfoText.text = currentQuestion.info;
-            landscapeIncorrectAnswerInfoText.text = currentQuestion.info;
+            incorrectAnswerInfoText.text = currentQuestion.info;
         }
 
         StartCoroutine(TransitionToNextQuestion());
