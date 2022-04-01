@@ -449,10 +449,14 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+<<<<<<< Updated upstream
             answerCorrect = false;
             portraitIncorrectAnswerUI.SetActive(true);
             landscapeIncorrectAnswerUI.SetActive(true);
 
+=======
+            incorrectAnswerUI.SetActive(true);
+>>>>>>> Stashed changes
 
             portraitIncorrectAnswerInfoText.text = currentQuestion.info;
             landscapeIncorrectAnswerInfoText.text = currentQuestion.info;
