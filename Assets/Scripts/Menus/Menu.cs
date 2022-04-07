@@ -72,7 +72,7 @@ namespace MenuNS
 
         private float musicSliderValue;
 
-        public int questionsPerGameSliderValue;
+        public static int questionsPerGameSliderValue;
 
 
         private Utils utils;
@@ -103,16 +103,16 @@ namespace MenuNS
 
             sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
             musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
-            questionsPerGameLandscapeSlider.value = questionsPerGamePortraitSlider.value = Mathf.RoundToInt(questionsPerGameSliderValue);
+            questionsPerGameLandscapeSlider.value = questionsPerGamePortraitSlider.value = questionsPerGameSliderValue;
 
 
-            portraiSfxVolumeText.text = "SFX Volume - " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
-            portraitMusicVolumeText.text = "Music Volume - " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            portraitNumberQuestionsPerGameText.text = ("Questions Per Game - " + Mathf.RoundToInt(questionsPerGameSliderValue));
+            portraiSfxVolumeText.text = "SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
+            portraitMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
+            portraitNumberQuestionsPerGameText.text = "Questions Per Game: " + questionsPerGameSliderValue;
 
-            landscapeSfxVolumeText.text = "SFX Volume - " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
-            landscapeMusicVolumeText.text = "Music Volume - " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            landscapeNumberQuestionsPerGameText.text = "Questions Per Game - " + Mathf.RoundToInt(questionsPerGameSliderValue);
+            landscapeSfxVolumeText.text = "SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
+            landscapeMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
+            landscapeNumberQuestionsPerGameText.text = "Questions Per Game: " + questionsPerGameSliderValue;
         }
 
         void SetActiveCanvas()
@@ -132,23 +132,29 @@ namespace MenuNS
         {
             sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
             PlayerPrefs.SetFloat("sfxSliderValue", sfxSliderValue);
-            portraiSfxVolumeText.text = ("SFX Volume - " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
-            landscapeSfxVolumeText.text = ("SFX Volume - " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
+            portraiSfxVolumeText.text = ("SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
+            landscapeSfxVolumeText.text = ("SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
         }
 
         public void SetMusicVolume(float musicSliderValue)
         {
             musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
             PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
-            portraitMusicVolumeText.text = "Music Volume - " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            landscapeMusicVolumeText.text = "Music Volume - " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
+            portraitMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
+            landscapeMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
         }
 
         public void SetNumberOfQuestionsPerGame(float questionsPerGameSliderValue)
         {
+            Debug.Log(questionsPerGameSliderValue);
             PlayerPrefs.SetFloat("questionsPerGameSliderValue", questionsPerGameSliderValue);
-            portraitNumberQuestionsPerGameText.text = "Questions Per Game - " + Mathf.RoundToInt(questionsPerGameSliderValue);
-            landscapeNumberQuestionsPerGameText.text = "Questions Per Game - " + Mathf.RoundToInt(questionsPerGameSliderValue);
+            portraitNumberQuestionsPerGameText.text = "Questions Per Game: " + Mathf.RoundToInt(questionsPerGameSliderValue);
+            landscapeNumberQuestionsPerGameText.text = "Questions Per Game: " + Mathf.RoundToInt(questionsPerGameSliderValue);
+        }
+
+        public static int GetNumberOfQuestionsPerGame()
+		{
+            return questionsPerGameSliderValue;
         }
 
         public void EnableMainMenu(bool buttonPressed)

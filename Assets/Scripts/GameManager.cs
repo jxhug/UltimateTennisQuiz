@@ -211,18 +211,14 @@ public class GameManager : MonoBehaviour
 
 
     private Utils utils;
-    private Menu menu;
 
 
     //methods
     void Start()
     {
         utils = new Utils();
-        menu = gameObject.AddComponent<Menu>() as Menu;
 
-        Debug.Log(menu.questionsPerGameSliderValue);
-
-        numberQuestionsPerPlayer = Mathf.RoundToInt(menu.questionsPerGameSliderValue);
+        numberQuestionsPerPlayer = Menu.GetNumberOfQuestionsPerGame();
 
         portraitMainQuestionScreen.SetActive(true);
         landscapeMainQuestionScreen.SetActive(true);

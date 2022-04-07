@@ -458,14 +458,14 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 5
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_WholeNumbers: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1766925912}
         m_TargetAssemblyTypeName: MenuNS.Menu, Assembly-CSharp
-        m_MethodName: SetMusicVolume
+        m_MethodName: SetNumberOfQuestionsPerGame
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5834,7 +5834,6 @@ MonoBehaviour:
   settingsLandscapeCanvas: {fileID: 1002363215}
   parentPortraitCanvas: {fileID: 1782993156}
   parentLandscapeCanvas: {fileID: 161553755}
-  questionsPerGameSliderValue: 0
 --- !u!1 &1774269242
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,7 +6656,7 @@ MonoBehaviour:
   m_MinValue: 5
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 5
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
