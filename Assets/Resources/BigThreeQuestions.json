@@ -75,7 +75,7 @@
                 "2001",
                 "2000"
             ],
-            "correctAnswerIndex": 2,
+            "correctAnswerIndex": 1,
             "tags": [
                 "Nadal",
                 "Big Three"
@@ -555,7 +555,7 @@
                 "Adidas",
                 "Lacoste"
             ],
-            "correctAnswerIndex": 0,
+            "correctAnswerIndex": 3,
             "tags": [
                 "Djokovic",
                 "Big Three"
@@ -635,7 +635,7 @@
                 "Longines",
                 "Rado"
             ],
-            "correctAnswerIndex": 1,
+            "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
                 "Big Three"
@@ -1051,7 +1051,7 @@
                 "6",
                 "3"
             ],
-            "correctAnswerIndex": 1,
+            "correctAnswerIndex": 3,
             "tags": [
                 "Djokovic",
                 "Big Three"

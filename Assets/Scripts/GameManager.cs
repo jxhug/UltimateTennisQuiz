@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UtilsNS;
+using MenuNS;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     private Question currentQuestion;
 
-    private int numberQuestionsPerPlayer = 3;
+    private int numberQuestionsPerPlayer;
 
     private int numberQuestionsInGame;
 
@@ -42,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] portraitTwoPlayerWinnerImages = new GameObject[2];
 
-    public TMPro.TMP_Text[] portraitTwoPlayerImageTexts = new TMPro.TMP_Text[2];
+    public TMP_Text[] portraitTwoPlayerImageTexts = new TMP_Text[2];
 
 
     //portrait three player end screen
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] portraitThreePlayerWinnerImages = new GameObject[3];
 
-    public TMPro.TMP_Text[] portraitThreePlayerImageTexts = new TMPro.TMP_Text[3];
+    public TMP_Text[] portraitThreePlayerImageTexts = new TMP_Text[3];
 
 
     //portrait four player end screen
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] portraitFourPlayerWinnerImages = new GameObject[4];
 
-    public TMPro.TMP_Text[] portraitFourPlayerImageTexts = new TMPro.TMP_Text[4];
+    public TMP_Text[] portraitFourPlayerImageTexts = new TMP_Text[4];
 
 
     // landscape two player end screen
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] landscapeTwoPlayerWinnerImages = new GameObject[2];
 
-    public TMPro.TMP_Text[] landscapeTwoPlayerImageTexts = new TMPro.TMP_Text[2];
+    public TMP_Text[] landscapeTwoPlayerImageTexts = new TMP_Text[2];
 
 
     //landscape three player end screen
@@ -82,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] landscapeThreePlayerWinnerImages = new GameObject[3];
 
-    public TMPro.TMP_Text[] landscapeThreePlayerImageTexts = new TMPro.TMP_Text[3];
+    public TMP_Text[] landscapeThreePlayerImageTexts = new TMP_Text[3];
 
 
     //landscape four player end screen
@@ -92,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] landscapeFourPlayerWinnerImages = new GameObject[4];
 
-    public TMPro.TMP_Text[] landscapeFourPlayerImageTexts = new TMPro.TMP_Text[4];
+    public TMP_Text[] landscapeFourPlayerImageTexts = new TMP_Text[4];
 
 
     //portrait main question screen objects
@@ -100,13 +102,13 @@ public class GameManager : MonoBehaviour
     private GameObject portraitMainQuestionScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text portraitQuestionText;
+    private TMP_Text portraitQuestionText;
 
     [SerializeField]
-    private TMPro.TMP_Text[] portraitAnswerText = new TMPro.TMP_Text[4];
+    private TMP_Text[] portraitAnswerText = new TMP_Text[4];
 
     [SerializeField]
-    private TMPro.TMP_Text portraitNumberPlayerText;
+    private TMP_Text portraitNumberPlayerText;
 
 
     //landscape main question screen objects
@@ -114,13 +116,13 @@ public class GameManager : MonoBehaviour
     private GameObject landscapeMainQuestionScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text landscapeQuestionText;
+    private TMP_Text landscapeQuestionText;
 
     [SerializeField]
-    private TMPro.TMP_Text[] landscapeAnswerText = new TMPro.TMP_Text[4];
+    private TMP_Text[] landscapeAnswerText = new TMP_Text[4];
 
     [SerializeField]
-    private TMPro.TMP_Text landscapeNumberPlayerText;
+    private TMP_Text landscapeNumberPlayerText;
 
 
     //portrait singleplayer end screen objects
@@ -128,10 +130,10 @@ public class GameManager : MonoBehaviour
     private GameObject portraitSingleplayerFinalScoreScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text portraitSingleplayerScoreText;
+    private TMP_Text portraitSingleplayerScoreText;
 
     [SerializeField]
-    private TMPro.TMP_Text portraitSingleplayerHighScoreText;
+    private TMP_Text portraitSingleplayerHighScoreText;
 
 
     //landscape singleplayer end screen objects
@@ -139,10 +141,10 @@ public class GameManager : MonoBehaviour
     private GameObject landscapeSingleplayerFinalScoreScreen;
 
     [SerializeField]
-    private TMPro.TMP_Text landscapeSingleplayerScoreText;
+    private TMP_Text landscapeSingleplayerScoreText;
 
     [SerializeField]
-    private TMPro.TMP_Text landscapeSingleplayerHighScoreText;
+    private TMP_Text landscapeSingleplayerHighScoreText;
 
 
     //portrait multiplayer end screen objects
@@ -152,7 +154,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject[] portraitMultiplayerWinnerImages;
 
-    private TMPro.TMP_Text[] portraitMultiplayerImageTexts;
+    private TMP_Text[] portraitMultiplayerImageTexts;
 
     private Image portraitMultiplayerWinningImage;
 
@@ -164,7 +166,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject[] landscapeMultiplayerWinnerImages;
 
-    private TMPro.TMP_Text[] landscapeMultiplayerImageTexts;
+    private TMP_Text[] landscapeMultiplayerImageTexts;
 
     private Image landscapeMultiplayerWinningImage;
 
@@ -197,10 +199,10 @@ public class GameManager : MonoBehaviour
     private GameObject incorrectAnswerUI;
 
     [SerializeField]
-    private TMPro.TMP_Text correctAnswerInfoText;
+    private TMP_Text correctAnswerInfoText;
 
     [SerializeField]
-    private TMPro.TMP_Text incorrectAnswerInfoText;
+    private TMP_Text incorrectAnswerInfoText;
 
 
     //orange gradient object
@@ -209,15 +211,30 @@ public class GameManager : MonoBehaviour
 
 
     private Utils utils;
+    private Menu menu;
 
 
     //methods
     void Start()
     {
         utils = new Utils();
+        menu = gameObject.AddComponent<Menu>() as Menu;
+
+        Debug.Log(menu.questionsPerGameSliderValue);
+
+        numberQuestionsPerPlayer = Mathf.RoundToInt(menu.questionsPerGameSliderValue);
 
         portraitMainQuestionScreen.SetActive(true);
         landscapeMainQuestionScreen.SetActive(true);
+
+        if (numberPlayersInGame == 1)
+		{
+            portraitNumberPlayerText.enabled = false;
+		}
+		else
+		{
+            portraitNumberPlayerText.enabled = true;
+        }
 
         portraitSingleplayerFinalScoreScreen.SetActive(false);
         landscapeSingleplayerFinalScoreScreen.SetActive(false);
@@ -367,12 +384,6 @@ public class GameManager : MonoBehaviour
         incorrectAnswerUI.SetActive(false);
     }
 
-    void PlayAnswerUIAnimation(GameObject portraitAnswerUI, GameObject landscapeAnswerUI)
-	{
-        portraitAnswerUI.GetComponent<Animator>();
-        landscapeAnswerUI.GetComponent<Animator>();
-    }
-
     public void CheckAnswer(int SelectedIndex)
     {
         if (SelectedIndex == correctAnswerCellIndex)
@@ -425,8 +436,17 @@ public class GameManager : MonoBehaviour
             portraitMultiplayerWinnerImages[i].SetActive(false);
             landscapeMultiplayerWinnerImages[i].SetActive(false);
 
-            portraitMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
-            landscapeMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score:" + scores[i] + "/" + numberQuestionsPerPlayer);
+            portraitMultiplayerImages[i].GetComponent<Image>().color = new Color32(71, 183, 255, 255);
+            landscapeMultiplayerImages[i].GetComponent<Image>().color = new Color32(71, 183, 225, 255);
+
+            portraitMultiplayerImages[i].GetComponent<Outline>().effectColor = new Color32(16, 104, 255, 71);
+            landscapeMultiplayerImages[i].GetComponent<Outline>().effectColor = new Color32(16, 104, 255, 71);
+
+            portraitMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
+            landscapeMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
+
+            portraitMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score: " + scores[i] + "/" + numberQuestionsPerPlayer);
+            landscapeMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score: " + scores[i] + "/" + numberQuestionsPerPlayer);
 
             if (scores[i] == winningScore && scores[i] != 0)
             {
@@ -436,6 +456,15 @@ public class GameManager : MonoBehaviour
 
                 portraitMultiplayerWinningImage.sprite = winningImage;
                 landscapeMultiplayerWinningImage.sprite = winningImage;
+
+                portraitMultiplayerWinningImage.color = new Color32(254, 255, 114, 255);
+                landscapeMultiplayerWinningImage.color = new Color32(254, 255, 114, 255);
+
+                portraitMultiplayerWinningImage.GetComponent<Outline>().effectColor = new Color32(255, 249, 16, 71);
+                landscapeMultiplayerWinningImage.GetComponent<Outline>().effectColor = new Color32(255, 249, 16, 71);
+
+                portraitMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(350f, 50f);
+                landscapeMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(350f, 50f);
 
                 portraitMultiplayerWinnerImages[i].SetActive(true);
                 landscapeMultiplayerWinnerImages[i].SetActive(true);
