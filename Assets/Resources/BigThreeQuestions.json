@@ -1412,7 +1412,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What instrument can Federer play?",
+            "questionText": "What instrument can Roger Federer play?",
             "answers": [
                 "Drums",
                 "Piano",
@@ -1424,7 +1424,55 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer won the Australian Open in 2007 without dropping a single set.",
+            "info": "Federer can play the piano.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Roger Federer's favorite color?",
+            "answers": [
+                "Black",
+                "White",
+                "Blue",
+                "Green"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's favorite color is black.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Rafael Nadal's favorite color?",
+            "answers": [
+                "Black",
+                "White",
+                "Blue",
+                "Green"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's favorite color is blue.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is Novak Djokovic's favorite color?",
+            "answers": [
+                "Red",
+                "White",
+                "Blue",
+                "Green"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's favorite color is red.",
             "isActiveQuestion": false
         }
     ]   
