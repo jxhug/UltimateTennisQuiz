@@ -13,40 +13,22 @@ namespace MenuNS
         public AudioMixer musicMixer;
 
         [SerializeField]
-        private Slider sfxPortraitSlider;
+        private Toggle portraitSFXToggle;
 
         [SerializeField]
-        private Slider musicPortraitSlider;
+        private Toggle landscapeSFXToggle;
 
         [SerializeField]
-        private Slider questionsPerGamePortraitSlider;
+        private Toggle portraitMusicToggle;
 
         [SerializeField]
-        private Slider sfxLandscapeSlider;
+        private Toggle landscapeMusicToggle;
 
         [SerializeField]
-        private Slider musicLandscapeSlider;
+        private TMP_Dropdown questionsPerGamePortraitDropdown;
 
         [SerializeField]
-        private Slider questionsPerGameLandscapeSlider;
-
-        [SerializeField]
-        private TMP_Text portraiSfxVolumeText;
-
-        [SerializeField]
-        private TMP_Text portraitMusicVolumeText;
-
-        [SerializeField]
-        private TMP_Text portraitNumberQuestionsPerGameText;
-
-        [SerializeField]
-        private TMP_Text landscapeSfxVolumeText;
-
-        [SerializeField]
-        private TMP_Text landscapeMusicVolumeText;
-
-        [SerializeField]
-        private TMP_Text landscapeNumberQuestionsPerGameText;
+        private TMP_Dropdown questionsPerGameLandscapeDropdown;
 
 
         public GameObject mainMenuPortraitCanvas;
@@ -54,7 +36,7 @@ namespace MenuNS
         public GameObject mainMenuLandscapeCanvas;
 
         public GameObject settingsPortraitCanvas;
-
+         
         public GameObject settingsLandscapeCanvas;
 
 
@@ -68,11 +50,11 @@ namespace MenuNS
         private GameObject landscape;
 
 
-        private float sfxSliderValue;
+        private int sfxToggle;
 
-        private float musicSliderValue;
+        private int musicToggle;
 
-        public static int questionsPerGameSliderValue;
+        public static int questionsPerGameDropdownValue;
 
 
         private Utils utils;
@@ -84,35 +66,91 @@ namespace MenuNS
             EnableMainMenu(true);
             SetActiveCanvas();
             LoadSettings();
+            SetMixers();
         }
 
         private void Update()
         {
             SetActiveCanvas();
         }
-            
+
         public void LoadSettings()
         {
-            // Get the currently saved slider values
-            sfxSliderValue = PlayerPrefs.GetFloat("sfxSliderValue", 1f);
-            musicSliderValue = PlayerPrefs.GetFloat("musicSliderValue", 1f);
-            questionsPerGameSliderValue = Mathf.RoundToInt(PlayerPrefs.GetFloat("questionsPerGameSliderValue", 5f));
+            sfxToggle = PlayerPrefs.GetInt("sfxToggle", 1);
+            musicToggle = PlayerPrefs.GetInt("musicToggle", 1);
+            questionsPerGameDropdownValue = PlayerPrefs.GetInt("questionsPerGameDropdownValue", 10);
+        }
 
-            sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
-            musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
+        public void SetMixers()
+        {
+            if (sfxToggle == 0)
+            {
+                sfxMixer.SetFloat("volume", -80);
+            }
+            else
+            {
+                sfxMixer.SetFloat("volume", 0);
+            }
 
-            sfxLandscapeSlider.value = sfxPortraitSlider.value = sfxSliderValue;
-            musicLandscapeSlider.value = musicPortraitSlider.value = musicSliderValue;
-            questionsPerGameLandscapeSlider.value = questionsPerGamePortraitSlider.value = questionsPerGameSliderValue;
+            if (musicToggle == 0)
+            {
+                musicMixer.SetFloat("volume", -80);
+            }
+            else
+            {
+                musicMixer.SetFloat("volume", 0);
+            }
+        }
 
+        public void RefreshSettingsUI()
+        {
+            if (sfxToggle == 0)
+			{
+                if (Utils.currentOrientation == ScreenOrientation.Portrait)
+                {
+                    portraitSFXToggle.isOn = false;
+                }
+                else
+                {
+                    landscapeSFXToggle.isOn = false;
+                }
+            }
+            else
+			{
+                if (Utils.currentOrientation == ScreenOrientation.Portrait)
+                {
+                    portraitSFXToggle.isOn = true;
+                }
+                else
+                {
+                    landscapeSFXToggle.isOn = true;
+                }
+            }
 
-            portraiSfxVolumeText.text = "SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
-            portraitMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            portraitNumberQuestionsPerGameText.text = "Questions Per Game: " + questionsPerGameSliderValue;
+            if (musicToggle == 0)
+			{
+                if (Utils.currentOrientation == ScreenOrientation.Portrait)
+                {
+                    portraitMusicToggle.isOn = false;
+                }
+                else
+                {
+                    landscapeMusicToggle.isOn = false;
+                }
+            }
+            else
+			{
+                if (Utils.currentOrientation == ScreenOrientation.Portrait)
+                {
+                    portraitMusicToggle.isOn = true;
+                }
+                else
+                {
+                    landscapeMusicToggle.isOn = true;
+                }
+            }
 
-            landscapeSfxVolumeText.text = "SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%";
-            landscapeMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            landscapeNumberQuestionsPerGameText.text = "Questions Per Game: " + questionsPerGameSliderValue;
+            questionsPerGamePortraitDropdown.value = questionsPerGameLandscapeDropdown.value = questionsPerGameDropdownValue;
         }
 
         void SetActiveCanvas()
@@ -124,37 +162,51 @@ namespace MenuNS
             else
             {
                 EnableSettings(false);
-                LoadSettings();
+                RefreshSettingsUI();
             }
         }
 
-        public void SetSFXVolume(float sfxSliderValue)
+        public void SetSFXToggle(bool state)
         {
-            sfxMixer.SetFloat("volume", Mathf.Log10(sfxSliderValue) * 20);
-            PlayerPrefs.SetFloat("sfxSliderValue", sfxSliderValue);
-            portraiSfxVolumeText.text = ("SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
-            landscapeSfxVolumeText.text = ("SFX Volume: " + Mathf.RoundToInt(sfxSliderValue * 100) + "%");
+            if (state)
+			{
+                sfxToggle = 1;
+                sfxMixer.SetFloat("volume", 0);
+                PlayerPrefs.SetInt("sfxToggle", 1);
+            }
+            else
+			{
+                sfxToggle = 0;
+                sfxMixer.SetFloat("volume", -80);
+                PlayerPrefs.SetInt("sfxToggle", 0);
+            }
         }
 
-        public void SetMusicVolume(float musicSliderValue)
+        public void SetMusicToggle(bool state)
         {
-            musicMixer.SetFloat("volume", Mathf.Log10(musicSliderValue) * 20);
-            PlayerPrefs.SetFloat("musicSliderValue", musicSliderValue);
-            portraitMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
-            landscapeMusicVolumeText.text = "Music Volume: " + Mathf.RoundToInt(musicSliderValue * 100) + "%";
+            if (state)
+            {
+                musicToggle = 1;
+                musicMixer.SetFloat("volume", 0);
+                PlayerPrefs.SetInt("musicToggle", 1);
+            }
+            else
+            {
+                musicToggle = 0;
+                musicMixer.SetFloat("volume", -80);
+                PlayerPrefs.SetInt("musicToggle", 0);
+            }
         }
 
-        public void SetNumberOfQuestionsPerGame(float questionsPerGameSliderValue)
+        public void SetNumberOfQuestionsPerGame(int value)
         {
-            Debug.Log(questionsPerGameSliderValue);
-            PlayerPrefs.SetFloat("questionsPerGameSliderValue", questionsPerGameSliderValue);
-            portraitNumberQuestionsPerGameText.text = "Questions Per Game: " + Mathf.RoundToInt(questionsPerGameSliderValue);
-            landscapeNumberQuestionsPerGameText.text = "Questions Per Game: " + Mathf.RoundToInt(questionsPerGameSliderValue);
+            PlayerPrefs.SetInt("questionsPerGameDropdownValue", value + 5);
+            questionsPerGameDropdownValue = value + 5;
         }
 
         public static int GetNumberOfQuestionsPerGame()
 		{
-            return questionsPerGameSliderValue;
+            return questionsPerGameDropdownValue;
         }
 
         public void EnableMainMenu(bool buttonPressed)
@@ -180,8 +232,10 @@ namespace MenuNS
             mainMenuLandscapeCanvas.SetActive(false);
 
             if (utils.CheckIfOrientationUpdated(portrait, landscape, buttonPressed))
-            {
+            {                
+                // Orientation has changed so we need to update the *parent* canvas orientation
                 utils.CheckIfOrientationUpdated(parentPortraitCanvas, parentLandscapeCanvas, true);
+                RefreshSettingsUI();
             }
         }
     }

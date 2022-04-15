@@ -10,7 +10,6 @@ namespace UtilsNS
 		{
             currentOrientation = Screen.orientation;
             lastOrientation = ScreenOrientation.Portrait;
-            //Screen.orientation = ScreenOrientation.AutoRotation;
         }
 
         public bool CheckIfOrientationUpdated(GameObject portrait, GameObject landscape, bool forceUpdate)
@@ -18,10 +17,9 @@ namespace UtilsNS
             currentOrientation = Screen.orientation;
             if ((currentOrientation != lastOrientation) || forceUpdate)
             {
-                if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.tvOS || Application.platform == RuntimePlatform.OSXEditor)
+                if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.tvOS)
 				{
                     landscape.SetActive(true);
-                    return true;
 				}
                 else
 				{
@@ -37,8 +35,8 @@ namespace UtilsNS
                     }
 
                     lastOrientation = currentOrientation;
-                    return true;
                 }
+                return true;
             }
             else
             {
