@@ -54,7 +54,7 @@ namespace MenuNS
 
         private int musicToggle;
 
-        public static int questionsPerGameDropdownValue;
+        public static int questionsPerGameDropdownIndex;
 
 
         private Utils utils;
@@ -78,7 +78,7 @@ namespace MenuNS
         {
             sfxToggle = PlayerPrefs.GetInt("sfxToggle", 1);
             musicToggle = PlayerPrefs.GetInt("musicToggle", 1);
-            questionsPerGameDropdownValue = PlayerPrefs.GetInt("questionsPerGameDropdownValue", 10);
+            questionsPerGameDropdownIndex = PlayerPrefs.GetInt("questionsPerGameDropdownIndex", 5);
         }
 
         public void SetMixers()
@@ -150,7 +150,8 @@ namespace MenuNS
                 }
             }
 
-            questionsPerGamePortraitDropdown.value = questionsPerGameLandscapeDropdown.value = questionsPerGameDropdownValue;
+            // Ensure both portrait and landscape dropdowns contain the correct value
+            questionsPerGamePortraitDropdown.value = questionsPerGameLandscapeDropdown.value = questionsPerGameDropdownIndex;
         }
 
         void SetActiveCanvas()
@@ -198,15 +199,24 @@ namespace MenuNS
             }
         }
 
-        public void SetNumberOfQuestionsPerGame(int value)
+        public void SetNumberOfQuestionsPerGame(int index)
         {
-            PlayerPrefs.SetInt("questionsPerGameDropdownValue", value + 5);
-            questionsPerGameDropdownValue = value + 5;
+            PlayerPrefs.SetInt("questionsPerGameDropdownIndex", index);
+            questionsPerGameDropdownIndex = index;
         }
 
         public static int GetNumberOfQuestionsPerGame()
 		{
-            return questionsPerGameDropdownValue;
+            /* Note: this assumes that the dropdown values begin at 5 and
+             * increase in steps of 1. If this isn't true then the following
+             * line will need to changed. The label value can be read directly
+             * from the dropdown as follows:
+             * 
+             * string text = questionsPerGamePortraitDropdown.options[index].value;
+             * 
+             * However this currently cannot be implemented for a static method.
+             */
+            return questionsPerGameDropdownIndex + 5;
         }
 
         public void EnableMainMenu(bool buttonPressed)

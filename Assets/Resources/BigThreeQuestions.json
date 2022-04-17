@@ -580,54 +580,6 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What is the URL of Roger Federer's offical website?",
-            "answers": [
-                "federer.com",
-                "rogerfederer.com",
-                "theswissmaestro.com",
-                "rogerfederer.net"
-            ],
-            "correctAnswerIndex": 1,
-            "tags": [
-                "Federer",
-                "Big Three"
-            ],
-            "info": "Federer's offical website URL is rogerfederer.com.",
-            "isActiveQuestion": false
-        },
-        {
-            "questionText": "What is the URL of Rafael Nadal's offical website?",
-            "answers": [
-                "rnadal.com",
-                "rafaelnadal.com",
-                "vamosrafa.com",
-                "rafaelnadal.net"
-            ],
-            "correctAnswerIndex": 1,
-            "tags": [
-                "Nadal",
-                "Big Three"
-            ],
-            "info": "Nadal's offical website URL is rafaelnadal.com.",
-            "isActiveQuestion": false
-        },
-        {
-            "questionText": "What is the URL of Novak Djokovic's offical website?",
-            "answers": [
-                "djoker.com",
-                "novakdjokovic.com",
-                "goldendjoker.com",
-                "djokovic.net"
-            ],
-            "correctAnswerIndex": 1,
-            "tags": [
-                "Djokovic",
-                "Big Three"
-            ],
-            "info": "Djokovic's offical website URL is novakdjokovic.com.",
-            "isActiveQuestion": false
-        },
-        {
             "questionText": "What was Roger Federer's first watch sponsor?",
             "answers": [
                 "Rolex",
@@ -1474,6 +1426,182 @@
             ],
             "info": "Djokovic's favorite color is red.",
             "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many times has Roger Federer won the Davis cup?",
+            "answers": [
+                "1",
+                "0",
+                "2",
+                "-1"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer has assisted Switzerland in winning the Davis Cup one time.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many times has Rafael Nadal won the Davis cup?",
+            "answers": [
+                "1",
+                "0",
+                "2",
+                "5"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal has assisted Spain in winning the Davis Cup five times!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many times has Novak Djokovic won the Davis cup?",
+            "answers": [
+                "1",
+                "0",
+                "2",
+                "5"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Nadal has assisted Serbia in winning the Davis Cup one time.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many times has Roger Federer won the ATP Tour Finals?",
+            "answers": [
+                "1",
+                "7",
+                "3",
+                "6"
+            ],
+            "correctAnswerIndex": 3,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer has won the ATP Tour Finals six times!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many times has Rafael Nadal won the ATP Tour Finals?",
+            "answers": [
+                "1",
+                "0",
+                "2",
+                "5"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal has never won the ATP Tour Finals!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many times has Novak Djokovic won the ATP Tour Finals?",
+            "answers": [
+                "1",
+                "5",
+                "3",
+                "6"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic has won the ATP Tour Finals five times!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is Novak Djokovic's highest doubles ranking?",
+            "answers": [
+                "114",
+                "24",
+                "26",
+                "69"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's highest doubles ranking of all time is 114, which he achieved in 2009!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is Rafael Nadal's highest doubles ranking?",
+            "answers": [
+                "114",
+                "24",
+                "26",
+                "69"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's highest doubles ranking of all time is 26, which he achieved in 2005!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is Roger Federer's highest doubles ranking?",
+            "answers": [
+                "114",
+                "24",
+                "26",
+                "69"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Federer",
+                "Big Three"
+            ],
+            "info": "Federer's highest doubles ranking of all time is 24, which he achieved in 2003!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is Rafael Nadal's best Grand Slam doubles result?",
+            "answers": [
+                "Semifinals at the US Open",
+                "Quarterfinal at Roland Garros",
+                "Quarterfinal at the US Open",
+                "Fourth round at the Australian Open"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nadal",
+                "Big Three"
+            ],
+            "info": "Nadal's best doubles Grand Slam result is semifinals at the US Open!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What is Novak Djokovic's best Grand Slam doubles result?",
+            "answers": [
+                "Second round at Wimbledon",
+                "Fourth round at Roland Garros",
+                "Second round at the Australian Open",
+                "Fourth round at the Australian Open"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Djokovic",
+                "Big Three"
+            ],
+            "info": "Djokovic's best doubles Grand Slam result is the second round at Wimbledon!",
+            "isActiveQuestion": true
         }
     ]   
 }   
