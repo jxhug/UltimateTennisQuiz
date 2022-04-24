@@ -28,7 +28,7 @@ public class ToggleSlider : MonoBehaviour
 		}
 		else
 		{
-			toggleBack.color = new Color32(255, 255, 255, 255);
+			toggleBack.color = new Color32(204, 204, 204, 255);
 			toggleSwitch.GetComponent<RectTransform>().anchoredPosition = new Vector2(-47.5f, 0f);
 		}
 	}
@@ -61,7 +61,7 @@ public class ToggleSlider : MonoBehaviour
 		animator.Play("DisableToggle");
 		yield return new WaitForSeconds(.5f);
 		animator.enabled = false;
-		toggleBack.color = new Color32(255, 255, 255, 255);
+		toggleBack.color = new Color32(204, 204, 204, 255);
 		toggleSwitch.GetComponent<RectTransform>().anchoredPosition = new Vector2(-47.5f, 0f);
 	}
 }

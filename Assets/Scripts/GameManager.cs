@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
     //score objects
     private int[] scores;
 
-    public int highScore = 0;
+    private int highScore;
 
 
     //answer UI objects
@@ -219,18 +219,10 @@ public class GameManager : MonoBehaviour
         utils = new Utils();
 
         numberQuestionsPerPlayer = Menu.GetNumberOfQuestionsPerGame();
+        highScore = PlayerPrefs.GetInt("highScore", 0);
 
         portraitMainQuestionScreen.SetActive(true);
         landscapeMainQuestionScreen.SetActive(true);
-
-        if (numberPlayersInGame == 1)
-		{
-            portraitNumberPlayerText.enabled = false;
-		}
-		else
-		{
-            portraitNumberPlayerText.enabled = true;
-        }
 
         portraitSingleplayerFinalScoreScreen.SetActive(false);
         landscapeSingleplayerFinalScoreScreen.SetActive(false);
@@ -253,6 +245,31 @@ public class GameManager : MonoBehaviour
 
         numberPlayersInGame = PlayerSelect.numberPlayersInGame;
         numberQuestionsInGame = numberPlayersInGame * numberQuestionsPerPlayer;
+
+        if (numberPlayersInGame == 1)
+        {
+            //set inactive
+            portraitNumberPlayerText.gameObject.SetActive(false);
+            landscapeNumberPlayerText.gameObject.SetActive(false);
+
+            // change rect transform
+            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
+            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -50);
+            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
+            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -50);
+        }
+        else
+        {
+            //set active
+            portraitNumberPlayerText.gameObject.SetActive(true);
+            landscapeNumberPlayerText.gameObject.SetActive(true);
+
+            // change rect transform
+            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
+            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -215);
+            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
+            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -135);
+        }
 
         switch (numberPlayersInGame)
         {
@@ -405,6 +422,7 @@ public class GameManager : MonoBehaviour
         if (scores[0] > highScore)
         {
             highScore = scores[0];
+            PlayerPrefs.SetInt("highScore", highScore);
         }
 
         portraitSingleplayerFinalScoreScreen.SetActive(true);
