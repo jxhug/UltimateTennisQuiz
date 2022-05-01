@@ -227,7 +227,7 @@ public class GameManager : MonoBehaviour
         portraitSingleplayerFinalScoreScreen.SetActive(false);
         landscapeSingleplayerFinalScoreScreen.SetActive(false);
 
-		portraitTwoPlayerFinalScoreScreen.SetActive(false);
+        portraitTwoPlayerFinalScoreScreen.SetActive(false);
         portraitThreePlayerFinalScoreScreen.SetActive(false);
         portraitFourPlayerFinalScoreScreen.SetActive(false);
         landscapeTwoPlayerFinalScoreScreen.SetActive(false);
@@ -236,7 +236,7 @@ public class GameManager : MonoBehaviour
 
         correctAnswerUI.SetActive(false);
         incorrectAnswerUI.SetActive(false);
-        
+
         utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, true);
 
         var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
@@ -331,15 +331,15 @@ public class GameManager : MonoBehaviour
         SetCurrentQuestion();
     }
 
-	private void Update()
-	{
-        utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, false);
-	}
-
-	void SetCurrentQuestion()
+    private void Update()
     {
-        portraitNumberPlayerText.text = ("Player " + (currentPlayer + 1));
-        landscapeNumberPlayerText.text = ("Player " + (currentPlayer + 1));
+        utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, false);
+    }
+
+    void SetCurrentQuestion()
+    {
+        portraitNumberPlayerText.text = "Player " + (currentPlayer + 1);
+        landscapeNumberPlayerText.text = "Player " + (currentPlayer + 1);
 
         randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
@@ -419,20 +419,20 @@ public class GameManager : MonoBehaviour
 
     void SingleplayerEndScreen()
     {
-        if (scores[0] > highScore)
+        if (Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) > highScore)  // THIS IS WRONG - highPercentSc
         {
-            highScore = scores[0];
+            highScore = Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer);
             PlayerPrefs.SetInt("highScore", highScore);
         }
 
         portraitSingleplayerFinalScoreScreen.SetActive(true);
         landscapeSingleplayerFinalScoreScreen.SetActive(true);
 
-        portraitSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
-        landscapeSingleplayerScoreText.text = ("Your final score is: " + scores[0] + "/" + numberQuestionsPerPlayer);
+        portraitSingleplayerScoreText.text = "Your final score is: " + Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) + "%";
+        landscapeSingleplayerScoreText.text = "Your final score is: " + Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) + "%";
 
-        portraitSingleplayerHighScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
-        landscapeSingleplayerHighScoreText.text = ("Your highest score is: " + highScore + "/" + numberQuestionsPerPlayer);
+        portraitSingleplayerHighScoreText.text = "Your highest score is: " + highScore + "%";
+        landscapeSingleplayerHighScoreText.text = "Your highest score is: " + highScore + "%";
     }
 
     void MultiplayerEndScreen()
@@ -459,8 +459,8 @@ public class GameManager : MonoBehaviour
             portraitMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
             landscapeMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
 
-            portraitMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score: " + scores[i] + "/" + numberQuestionsPerPlayer);
-            landscapeMultiplayerImageTexts[i].text = ("Player " + (i + 1) + "'s Final Score: " + scores[i] + "/" + numberQuestionsPerPlayer);
+            portraitMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + Mathf.RoundToInt(100 * scores[i] / numberQuestionsPerPlayer) + "%";
+            landscapeMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + Mathf.RoundToInt(100 * scores[i] / numberQuestionsPerPlayer) + "%";
 
             if (scores[i] == winningScore && scores[i] != 0)
             {
@@ -483,6 +483,6 @@ public class GameManager : MonoBehaviour
                 portraitMultiplayerWinnerImages[i].SetActive(true);
                 landscapeMultiplayerWinnerImages[i].SetActive(true);
             }
-        } 
+        }
     }
-}   
+}

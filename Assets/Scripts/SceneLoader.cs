@@ -21,4 +21,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("PlayerSelect");
     }
+    public void LoadStore()
+    {
+        SceneManager.LoadScene("Store");
+    }
 }
