@@ -62,7 +62,8 @@
             "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
-                "Big Three"
+                "Big Three",
+                "Starter Questions"
             ],
             "info": "Roger Federer made his debut on the ATP Tour in 1998.",
             "isActiveQuestion": false
@@ -78,7 +79,8 @@
             "correctAnswerIndex": 1,
             "tags": [
                 "Nadal",
-                "Big Three"
+                "Big Three",
+                "Starter Questions"
             ],
             "info": "Rafael Nadal made his debut on the ATP Tour in 1998.",
             "isActiveQuestion": false
@@ -94,7 +96,8 @@
             "correctAnswerIndex": 1,
             "tags": [
                 "Djokovic",
-                "Big Three"
+                "Big Three",
+                "Starter Questions"
             ],
             "info": "Novak Djokovic made his debut on the ATP Tour in 2003.",
             "isActiveQuestion": false
@@ -1601,6 +1604,204 @@
                 "Big Three"
             ],
             "info": "Djokovic's best doubles Grand Slam result is the second round at Wimbledon!",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Where is Alex de Minuar from?",
+            "answers": [
+                "Australia",
+                "Spain",
+                "Bahamas",
+                "New Zealand"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nationalities"
+            ],
+            "info": "Alex de Minuar is Australian, but has Spanish citizenship too!",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Where is Damir Džumhur from?",
+            "answers": [
+                "Bosnia and Herzegovina",
+                "Kosovo",
+                "Croatia",
+                "North Macedonia"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nationalities"
+            ],
+            "info": "Damir Džumhur is from Bosnia and Herzegovina, and he also resides there.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Where is Ricardas Berankis from?",
+            "answers": [
+                "Estonia",
+                "Lithunia",
+                "Ecuador",
+                "North Macedonia"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Nationalities"
+            ],
+            "info": "Ricardas Berankis is from Lithunia, and he resides in both Florida and Vilnius, Lithunia.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Where is Casper Ruud from?",
+            "answers": [
+                "Norway",
+                "Finland",
+                "Iceland",
+                "Denmark"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nationalities"
+            ],
+            "info": "Casper Ruud is from Norway, and he resides in Oslo, the capital of Norway.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Where is Casper Ruud from?",
+            "answers": [
+                "Norway",
+                "Finland",
+                "Iceland",
+                "Denmark"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Nationalities"
+            ],
+            "info": "Casper Ruud is from Norway, and he resides in Oslo, the capital of Norway.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many Grand Slams did Rod Laver win?",
+            "answers": [
+                "11",
+                "12",
+                "8",
+                "15"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions",
+                "Rod Laver"
+            ],
+            "info": "Rod Laver won 11 Grand Slams in his career.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many singles Grand Slams has Venus Williams won?",
+            "answers": [
+                "7",
+                "9",
+                "3",
+                "15"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions",
+                "Williams Sisters"
+            ],
+            "info": "Venus Williams has won 7 singles Grand Slams, her latest being the 2008 Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many doubles Grand Slams has Venus Williams won?",
+            "answers": [
+                "14",
+                "3",
+                "0",
+                "9"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions",
+                "Williams Sisters"
+            ],
+            "info": "Venus Williams has won 14 doubles Grand Slams, all with her sister Serena.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "When did Naomi Osaka turn pro?",
+            "answers": [
+                "2013",
+                "2008",
+                "2011",
+                "2016"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Naomi Osaka turned pro in 2013, when she was just 16 years old.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "When did Billie Jean King retire?",
+            "answers": [
+                "1983",
+                "1987",
+                "1978",
+                "1979"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Billie Jean King retired in 1983, when she was 40 years old.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "When did Billie Jean King retire?",
+            "answers": [
+                "1983",
+                "1987",
+                "1978",
+                "1979"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Billie Jean King retired in 1983, when she was 40 years old.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many Grand Slams has Roger Federer won?",
+            "answers": [
+                "20",
+                "18",
+                "19",
+                "30"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Roger Federer has won 20 Grand Slams.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Which of these players has won all 9 masters tournaments?",
+            "answers": [
+                "Djokovic",
+                "Federer",
+                "Nadal",
+                "Laver"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Novak Djokovic has won all 9 masters tournaments, more than once too!",
             "isActiveQuestion": true
         }
     ]   

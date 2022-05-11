@@ -15,7 +15,7 @@ public class IAPManager : MonoBehaviour
 		if (Application.platform != RuntimePlatform.IPhonePlayer)
 		{
             restorePuchasesButton.SetActive(false);
-		}
+		} 
 	}
 
 	public void OnPurchaseComplete(Product product)
