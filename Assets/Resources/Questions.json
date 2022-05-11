@@ -451,7 +451,7 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer's best singles olympic result is a silver medal at the 2012 London Summer Olympic Games.",
+            "info": "Federer's best singles Olympic result is a silver medal at the 2012 London Summer Olympic Games.",
             "isActiveQuestion": true
         },
         {
@@ -467,7 +467,7 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal's best singles olympic result is a gold metal at the 2008 Beijing Summer Olympic Games.",
+            "info": "Nadal's best singles Olympic result is a gold metal at the 2008 Beijing Summer Olympic Games.",
             "isActiveQuestion": true
         },
         {
@@ -483,7 +483,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Djokovic's best singles olympic result is a brozne medal at the 2008 Beijing Summer Olympic Games.",
+            "info": "Djokovic's best singles Olympic result is a brozne medal at the 2008 Beijing Summer Olympic Games.",
             "isActiveQuestion": true
         },
         {
@@ -1075,7 +1075,7 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer’s best doubles olympic result is a gold medal at 2008 Beijing Summer Olympic Games.",
+            "info": "Federer’s best doubles Olympic result is a gold medal at 2008 Beijing Summer Olympic Games.",
             "isActiveQuestion": false
         },
         {
@@ -1091,7 +1091,7 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal’s best doubles olympic result is a gold medal at 2016 Rio Summer Olympic Games.",
+            "info": "Nadal’s best doubles Olympic result is a gold medal at 2016 Rio Summer Olympic Games.",
             "isActiveQuestion": false
         },
         {
@@ -1107,7 +1107,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Djokovic’s best doubles olympic result is no medal at all. Djokovic doesn’t have any doubles medal at the Summer Olympic Games.",
+            "info": "Djokovic’s best doubles Olympic result is no medal at all. Djokovic doesn’t have any doubles medal at the Summer Olympic Games.",
             "isActiveQuestion": false
         },
         {
@@ -1289,49 +1289,49 @@
         {
             "questionText": "What is the fastest serve speed that Roger Federer has hit?",
             "answers": [
-                "143 mph (230 kmh)",
-                "145 mph (233 kmh)",
-                "148 mph (238 kmh)",
-                "139 mph (224 kmh)"
+                "143 mph (230 km/h)",
+                "145 mph (233 km/h)",
+                "148 mph (238 km/h)",
+                "139 mph (224 km/h)"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer's fastest serve speed is 143 mph (230 kmh).",
+            "info": "Federer's fastest serve speed is 143 mph (230 km/h).",
             "isActiveQuestion": true
         },
         {
             "questionText": "What is the fastest serve speed that Rafael Nadal has hit?",
             "answers": [
-                "135 mph (217 kmh)",
-                "141 mph (227 kmh)",
-                "148 mph (238 kmh)",
-                "139 mph (224 kmh)"
+                "135 mph (217 km/h)",
+                "141 mph (227 km/h)",
+                "148 mph (238 km/h)",
+                "139 mph (224 km/h)"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal's fastest serve speed is 135 mph (217 kmh).",
+            "info": "Nadal's fastest serve speed is 135 mph (217 km/h).",
             "isActiveQuestion": true
         },
         {
             "questionText": "What is the fastest serve speed that Novak Djokovic has hit?",
             "answers": [
-                "136 mph (219 kmh)",
-                "141 mph (227 kmh)",
-                "148 mph (238 kmh)",
-                "139 mph (224 kmh)"
+                "136 mph (219 km/h)",
+                "141 mph (227 km/h)",
+                "148 mph (238 km/h)",
+                "139 mph (224 km/h)"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Djokovic's fastest serve speed is 136 mph (219 kmh).",
+            "info": "Djokovic's fastest serve speed is 136 mph (219 km/h).",
             "isActiveQuestion": true
         },
         {
@@ -1802,6 +1802,156 @@
                 "Starter Questions"
             ],
             "info": "Novak Djokovic has won all 9 masters tournaments, more than once too!",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who did John McEnroe defeat in the final to win his first Wimbledon singles title?",
+            "answers": [
+                "Borg",
+                "Connors",
+                "Edberg",
+                "Becker"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "In 1981, John McEnroe won his first Wimbledon singles title by defeating Bjorn Borg in the final.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What year did tennis first become an Olympic sport?",
+            "answers": [
+                "1988",
+                "1896",
+                "1924",
+                "1964"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Tennis was originally introduced as an Olympic sport in 1896, but was removed from competition after the 1924 games; and then added back in 1988.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What color were tennis balls before they were yellow?",
+            "answers": [
+                "Green",
+                "White",
+                "Orange",
+                "Red"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The color of tennis balls were white before they were yellow.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many Masters tournaments are there each year?",
+            "answers": [
+                "9",
+                "11",
+                "10",
+                "5"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "There are 9 different masters tournaments each year.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How long was the longest tennis match ever?",
+            "answers": [
+                "11 hours and 5 minutes",
+                "15 hours and 17 minutes",
+                "7 hours and 55 minutes",
+                "15 hours and 5 minutes"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The longest tennis match in history lasted 11 hours and 5 minutes.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "The longest match ever was played by which 2 players?",
+            "answers": [
+                "Isner & Mahut",
+                "Isner & Simon",
+                "Groth & Mahut",
+                "Groth & Tsonga"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The longest tennis match in history lasted 11 hours and 5 minutes.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "What was the speed of the fastest serve ever?",
+            "answers": [
+                "163 mph (263 km/h)",
+                "160 mph (257 km/h)",
+                "157 mph (253 km/h)",
+                "156 mph (251 km/h)"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The record for fastest tennis serve is held by Samuel Groth, when he hit a serve reaching 263 kph/163 mph.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Who hit the fastest serve ever?",
+            "answers": [
+                "Sam Groth",
+                "John Isner",
+                "Albano Olivetti",
+                "Ivo Karlovic"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The record for fastest tennis serve is held by Samuel Groth, when he hit a serve reaching 263 kph/163 mph.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How many shots were hit in the longest professional rally ever?",
+            "answers": [
+                "643",
+                "276",
+                "431",
+                "255"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The record for longest professional rally ever lasted 643 shots, and was played by Vicki Nelson and Jean Hepner in 1984.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "How fast was the shortest Grand Slam final ever?",
+            "answers": [
+                "32 minutes",
+                "34 minutes",
+                "45 minutes",
+                "42 minutes"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The record for shortest Grand Slam final is held by Steffi graf. The match lasted 32 minutes total.",
             "isActiveQuestion": true
         }
     ]   

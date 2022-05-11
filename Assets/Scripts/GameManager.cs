@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
 
         utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, true);
 
-        var jsonTextFile = Resources.Load<TextAsset>("BigThreeQuestions");
+        var jsonTextFile = Resources.Load<TextAsset>("Questii");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
         allQuestions = jsonQuestions.questions.OrderBy(a => rng.Next()).ToList();
 
