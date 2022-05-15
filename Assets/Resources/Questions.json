@@ -1953,6 +1953,126 @@
             ],
             "info": "The record for shortest Grand Slam final is held by Steffi graf. The match lasted 32 minutes total.",
             "isActiveQuestion": true
+        },
+        {
+            "questionText": "How fast was the shortest Grand Slam final ever?",
+            "answers": [
+                "32 minutes",
+                "34 minutes",
+                "45 minutes",
+                "42 minutes"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The record for shortest Grand Slam final is held by Steffi graf. The match lasted 32 minutes total.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Who won the famous \"Battle of the Sexes\"?",
+            "answers": [
+                "Bobby Riggs",
+                "Billie Jean King",
+                "Margaret Court",
+                "Jimmy Connors"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "In September of 1973, Billie Jean King beat Bobby Riggs in straight sets in the famous \"Battle of the Sexes\".",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is the maximum amount of points a tennis player can win from a single tournament?",
+            "answers": [
+                "2,500",
+                "2,000",
+                "1,000",
+                "500"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "A player can win up to 2,000 points from a single Grand Slam tournament.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the first Asian woman to be ranked world number one in the world?",
+            "answers": [
+                "Naomi Osaka",
+                "Li Na",
+                "Sania Mirza",
+                "Zheng Jie"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Naomi Osaka was the first asian woman to become number one in the world.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "In 1988, who won the Grand Slam and the Olympic gold medal in tennis??",
+            "answers": [
+                "Monica Seles",
+                "Steffi Graf",
+                "Jimmy Connors",
+                "Bjorn Borg"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Steffi graf won the Golden Grand Slam in 1988, by winning the Calendar Grand Slam and the Olympic gold medal.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the first African-American tennis player to win Wimbledon?",
+            "answers": [
+                "Arthur Ashe",
+                "Althea Gibson",
+                "Ora Washington",
+                "Venus Williams"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Althea Gibson won Wimbleton in 1957, making her the first African-American tennis player to win Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many seats does the Royal Box at Wimbledon have?",
+            "answers": [
+                "74",
+                "80",
+                "26",
+                "57"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The Royal Box has 74 seats.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What is the average distance run in a best of 3 sets tennis match?",
+            "answers": [
+                "3 mph (5 km/h)",
+                "2 mph (3 km/h)",
+                "0.5 mph (1 km/h)",
+                "1 mph (2 km/h)"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Tennis players run an average of 3 mph (5 km/h) in a best of 3 set match.",
+            "isActiveQuestion": false
         }
     ]   
 }   
