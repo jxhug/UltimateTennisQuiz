@@ -2045,7 +2045,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "How many seats does the Royal Box at Wimbledon have?",
+            "questionText": "How many seats does the Royal Box have at Wimbledon?",
             "answers": [
                 "74",
                 "80",
@@ -2062,16 +2062,121 @@
         {
             "questionText": "What is the average distance run in a best of 3 sets tennis match?",
             "answers": [
-                "3 mph (5 km/h)",
-                "2 mph (3 km/h)",
-                "0.5 mph (1 km/h)",
-                "1 mph (2 km/h)"
+                "3 miles(5 km)",
+                "2 miles (3 km)",
+                "0.5 miles (1 km)",
+                "1 mile (2 km)"
             ],
             "correctAnswerIndex": 0,
             "tags": [
                 "Starter Questions"
             ],
-            "info": "Tennis players run an average of 3 mph (5 km/h) in a best of 3 set match.",
+            "info": "Tennis players run an average of 3 miles (5 km) in a best of 3 set match.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "How many languages does Novak Djokovic fluently speak?",
+            "answers": [
+                "5",
+                "11",
+                "3",
+                "6"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Novak Djokovic is fluent in Serbian, English, German, French, and Italian. Djokovic also knows some phrases in Arabic, Japanese, Spanish, Russian, Chinese, and Portuguese.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What were the first tennis racket strings made of?",
+            "answers": [
+                "Nylon",
+                "Gut",
+                "Polyester",
+                "Kevlar"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The first tennis racket strings were made out of sheep gut.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What surface was the US Open played on before it was played on hard courts?",
+            "answers": [
+                "Carpet",
+                "Grass",
+                "Clay",
+                "Other"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The US Open was played on grass courts before it was played on hard courts.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Where is the US Open played?",
+            "answers": [
+                "Flushing Meadows",
+                "Newport",
+                "Forest Hills",
+                "Chestnut Hill"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The US Open is played at Flushing Meadows, but used to be played at Forest Hills.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Where is the US Open played?",
+            "answers": [
+                "Flushing Meadows",
+                "Newport",
+                "Forest Hills",
+                "Chestnut Hill"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The US Open is played at Flushing Meadows, but used to be played at Forest Hills.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Which of these players has the most years finished as Number One in the world?",
+            "answers": [
+                "Novak Djokovic",
+                "Roger Federer",
+                "Pete Sampras",
+                "Ivan Lendl"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Djokovic has the most years finished as Number One with 7 years.",
+            "isActiveQuestion": true
+        },
+        {
+            "questionText": "Who was the first unseeded player to win the men's singles at Wimbledon?",
+            "answers": [
+                "Novak Djokovic",
+                "Carlos Alcaraz",
+                "Boris Becker",
+                "Ivan Lendl"
+            ],
+            "correctAnswerIndex": 2,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Boris Becker was the first unseeded player to win the men's singles at Wimbledon.",
             "isActiveQuestion": false
         }
     ]   
