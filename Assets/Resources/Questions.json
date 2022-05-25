@@ -103,7 +103,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "When did Roger Federer win his first Grand Slam?",
+            "questionText": "When did Roger Federer win his 1st Grand Slam?",
             "answers": [
                 "2003",
                 "2004",
@@ -115,11 +115,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first Grand Slam, Wimbledon, in 2003.",
+            "info": "Roger Federer won his 1st Grand Slam, Wimbledon, in 2003.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "When did Rafael Nadal win his first Grand Slam?",
+            "questionText": "When did Rafael Nadal win his 1st Grand Slam?",
             "answers": [
                 "2005",
                 "2006",
@@ -131,11 +131,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal won Roland Garros, in 2005. He won on his first Roland Garros debut.",
+            "info": "Rafael Nadal won Roland Garros, in 2005. He won on his 1st Roland Garros debut.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "When did Novak Djokovic win his first Grand Slam?",
+            "questionText": "When did Novak Djokovic win his 1st Grand Slam?",
             "answers": [
                 "2008",
                 "2007",
@@ -147,11 +147,11 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Novak Djokovic won the Austrailian Open in 2008, becoming the first Serbian man to win a Grand Slam.",
+            "info": "Novak Djokovic won the Austrailian Open in 2008, becoming the 1st Serbian man to win a Grand Slam.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first year Roger Federer was Number One in the world?",
+            "questionText": "What was the 1st year Roger Federer was Number One in the world?",
             "answers": [
                 "2003",
                 "2004",
@@ -163,11 +163,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer took the Number One ranking for his first time in 2004.",
+            "info": "Roger Federer took the Number One ranking for his 1st time in 2004.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first year Rafael Nadal was Number One in the world?",
+            "questionText": "What was the 1st year Rafael Nadal was Number One in the world?",
             "answers": [
                 "2009",
                 "2007",
@@ -179,11 +179,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal took the Number One ranking for his first time in 2008.",
+            "info": "Rafael Nadal took the Number One ranking for his 1st time in 2008.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first year Novak Djokovic was Number One in the world?",
+            "questionText": "What was the 1st year Novak Djokovic was Number One in the world?",
             "answers": [
                 "2011",
                 "2010",
@@ -195,7 +195,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Novak Djokovic took the Number One ranking for his first time in 2011.",
+            "info": "Novak Djokovic took the Number One ranking for his 1st time in 2011.",
             "isActiveQuestion": false
         },
         {
@@ -247,7 +247,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "How old was Roger Federer when he won his first Grand Slam?",
+            "questionText": "How old was Roger Federer when he won his 1st Grand Slam?",
             "answers": [
                 "20",
                 "21",
@@ -259,11 +259,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first Grand Slam, Wimbledon, at 21.",
+            "info": "Roger Federer won his 1st Grand Slam, Wimbledon, at 21.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "How old was Rafael Nadal when he won his first Grand Slam?",
+            "questionText": "How old was Rafael Nadal when he won his 1st Grand Slam?",
             "answers": [
                 "24",
                 "21",
@@ -275,11 +275,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal won his first Grand Slam at 24.",
+            "info": "Rafael Nadal won his 1st Grand Slam at 24.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "How old was Novak Djokovic when he won his first Grand Slam?",
+            "questionText": "How old was Novak Djokovic when he won his 1st Grand Slam?",
             "answers": [
                 "23",
                 "21",
@@ -291,7 +291,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Novak Djokovic won his first Grand Slam at 20.",
+            "info": "Novak Djokovic won his 1st Grand Slam at 20.",
             "isActiveQuestion": false
         },
         {
@@ -343,7 +343,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who did Roger Federer beat in order to win his first Grand Slam?",
+            "questionText": "Who did Roger Federer beat in order to win his 1st Grand Slam?",
             "answers": [
                 "Mark Philippoussis",
                 "Andy Roddick",
@@ -355,11 +355,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first Grand Slam beating Mark Philippousis in striaght sets.",
+            "info": "Roger Federer won his 1st Grand Slam beating Mark Philippousis in striaght sets.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who did Rafael Nadal beat in order to win his first Grand Slam?",
+            "questionText": "Who did Rafael Nadal beat in order to win his 1st Grand Slam?",
             "answers": [
                 "Mariano Puerta",
                 "Roger Federer",
@@ -371,11 +371,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal won his first Grand Slam beating Mariano Puerta in four sets.",
+            "info": "Rafael Nadal won his 1st Grand Slam beating Mariano Puerta in four sets.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who did Novak Djokovic beat in order to win his first Grand Slam?",
+            "questionText": "Who did Novak Djokovic beat in order to win his 1st Grand Slam?",
             "answers": [
                 "Jo-Wilfried Tsonga",
                 "Roger Federer",
@@ -387,11 +387,11 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Novak Djokovic won his first Grand Slam beating Jo-Wilfried Tsonga in four sets.",
+            "info": "Novak Djokovic won his 1st Grand Slam beating Jo-Wilfried Tsonga in four sets.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "On what surface did Roger Federer win his first ever ATP title?",
+            "questionText": "On what surface did Roger Federer win his 1st ever ATP title?",
             "answers": [
                 "Carpet",
                 "Clay",
@@ -403,11 +403,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Roger Federer won his first ATP title, the Milan Indoor, on carpet courts.",
+            "info": "Roger Federer won his 1st ATP title, the Milan Indoor, on carpet courts.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "On what surface did Rafael Nadal win his first ever ATP title?",
+            "questionText": "On what surface did Rafael Nadal win his 1st ever ATP title?",
             "answers": [
                 "Carpet",
                 "Clay",
@@ -419,11 +419,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Rafael Nadal won his first ATP title, the Prokom Open, on clay courts.",
+            "info": "Rafael Nadal won his 1st ATP title, the Prokom Open, on clay courts.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "On what surface did Novak Djokovic win his first ever ATP title?",
+            "questionText": "On what surface did Novak Djokovic win his 1st ever ATP title?",
             "answers": [
                 "Carpet",
                 "Clay",
@@ -435,7 +435,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Novak Djokovic won his first ATP title, the Dutch Open, on clay courts. He didn't drop a set thorughout the entire tournament.",
+            "info": "Novak Djokovic won his 1st ATP title, the Dutch Open, on clay courts. He didn't drop a set thorughout the entire tournament.",
             "isActiveQuestion": false
         },
         {
@@ -487,7 +487,7 @@
             "isActiveQuestion": true
         },
         {
-            "questionText": "Who did Roger Federer beat to win his first ATP match?",
+            "questionText": "Who did Roger Federer beat to win his 1st ATP match?",
             "answers": [
                 "Guillaume Raoux",
                 "Carlos Moya",
@@ -499,11 +499,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer won his first ATP match against Guillaume Raoux in Toulouse.",
+            "info": "Federer won his 1st ATP match against Guillaume Raoux in Toulouse.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who did Rafael Nadal beat to win his first ATP match?",
+            "questionText": "Who did Rafael Nadal beat to win his 1st ATP match?",
             "answers": [
                 "Guillaume Raoux",
                 "Ramón Delgado",
@@ -515,7 +515,7 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal won his first ATP match against Ramón Delgado in Mallorca.",
+            "info": "Nadal won his 1st ATP match against Ramón Delgado in Mallorca.",
             "isActiveQuestion": false
         },
         {
@@ -531,7 +531,7 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer first signed with Nike footwear and apparel in 1994 and the sponsor chnaged to Uniqlo in 2018.",
+            "info": "Federer 1st signed with Nike footwear and apparel in 1994 and the sponsor chnaged to Uniqlo in 2018.",
             "isActiveQuestion": false
         },
         {
@@ -583,7 +583,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was Roger Federer's first watch sponsor?",
+            "questionText": "What was Roger Federer's 1st watch sponsor?",
             "answers": [
                 "Rolex",
                 "Hublot",
@@ -595,11 +595,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer's first watch sponsor was Rolex.",
+            "info": "Federer's 1st watch sponsor was Rolex.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was Rafael Nadal's first watch sponsor?",
+            "questionText": "What was Rafael Nadal's 1st watch sponsor?",
             "answers": [
                 "Rolex",
                 "Hublot",
@@ -611,11 +611,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal's first watch sponsor was Richard Mille.",
+            "info": "Nadal's 1st watch sponsor was Richard Mille.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was Novak Djokovic's first watch sponsor?",
+            "questionText": "What was Novak Djokovic's 1st watch sponsor?",
             "answers": [
                 "Rolex",
                 "Hublot",
@@ -627,7 +627,7 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Djokovic's first watch sponsor was Audemars Piguet, but in 2021 his watch sponsor is Hublot.",
+            "info": "Djokovic's 1st watch sponsor was Audemars Piguet, but in 2021 his watch sponsor is Hublot.",
             "isActiveQuestion": false
         },
         {
@@ -1015,7 +1015,7 @@
             "isActiveQuestion": true
         },
         {
-            "questionText": "What was the first ATP title Roger Federer won?",
+            "questionText": "What was the 1st ATP title Roger Federer won?",
             "answers": [
                 "Milan Indoors",
                 "Swiss Indoors",
@@ -1027,11 +1027,11 @@
                 "Federer",
                 "Big Three"
             ],
-            "info": "Federer's first ATP title was at the 2001 Milan Indoor tournament, where he defeated Julien Boutter in the final.",
+            "info": "Federer's 1st ATP title was at the 2001 Milan Indoor tournament, where he defeated Julien Boutter in the final.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first ATP title Rafael Nadal won?",
+            "questionText": "What was the 1st ATP title Rafael Nadal won?",
             "answers": [
                 "Prokom Open",
                 "Croatia Open",
@@ -1043,11 +1043,11 @@
                 "Nadal",
                 "Big Three"
             ],
-            "info": "Nadal's first ATP title was at the 2004 Prokom Open tournament, where he defeated José Acasuso in the final.",
+            "info": "Nadal's 1st ATP title was at the 2004 Prokom Open tournament, where he defeated José Acasuso in the final.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What was the first ATP title Novak Djokovic won?",
+            "questionText": "What was the 1st ATP title Novak Djokovic won?",
             "answers": [
                 "Italian Open",
                 "Brisbane International",
@@ -1059,7 +1059,7 @@
                 "Djokovic",
                 "Big Three"
             ],
-            "info": "Djokovic's first ATP title was at the 2006 Dutch Open tournament, where he defeated Nicolás Massú in the final.",
+            "info": "Djokovic's 1st ATP title was at the 2006 Dutch Open tournament, where he defeated Nicolás Massú in the final.",
             "isActiveQuestion": false
         },
         {
@@ -1159,7 +1159,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Roger Federer first start playing tennis?",
+            "questionText": "At what age did Roger Federer 1st start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1175,7 +1175,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Rafael Nadal first start playing tennis?",
+            "questionText": "At what age did Rafael Nadal 1st start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1191,7 +1191,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "At what age did Novak Djokovic first start playing tennis?",
+            "questionText": "At what age did Novak Djokovic 1st start playing tennis?",
             "answers": [
                 "8",
                 "7",
@@ -1805,7 +1805,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who did John McEnroe defeat in the final to win his first Wimbledon singles title?",
+            "questionText": "Who did John McEnroe defeat in the final to win his 1st Wimbledon singles title?",
             "answers": [
                 "Borg",
                 "Connors",
@@ -1816,11 +1816,11 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "In 1981, John McEnroe won his first Wimbledon singles title by defeating Bjorn Borg in the final.",
+            "info": "In 1981, John McEnroe won his 1st Wimbledon singles title by defeating Bjorn Borg in the final.",
             "isActiveQuestion": false
         },
         {
-            "questionText": "What year did tennis first become an Olympic sport?",
+            "questionText": "What year did tennis 1st become an Olympic sport?",
             "answers": [
                 "1988",
                 "1896",
@@ -2000,7 +2000,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who was the first Asian woman to be ranked world number one in the world?",
+            "questionText": "Who was the 1st Asian woman to be ranked world number one in the world?",
             "answers": [
                 "Naomi Osaka",
                 "Li Na",
@@ -2011,7 +2011,7 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "Naomi Osaka was the first asian woman to become number one in the world.",
+            "info": "Naomi Osaka was the 1st asian woman to become number one in the world.",
             "isActiveQuestion": false
         },
         {
@@ -2030,7 +2030,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "Who was the first African-American tennis player to win Wimbledon?",
+            "questionText": "Who was the 1st African-American tennis player to win Wimbledon?",
             "answers": [
                 "Arthur Ashe",
                 "Althea Gibson",
@@ -2041,7 +2041,7 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "Althea Gibson won Wimbleton in 1957, making her the first African-American tennis player to win Wimbledon.",
+            "info": "Althea Gibson won Wimbleton in 1957, making her the 1st African-American tennis player to win Wimbledon.",
             "isActiveQuestion": false
         },
         {
@@ -2090,7 +2090,7 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "What were the first tennis racket strings made of?",
+            "questionText": "What were the 1st tennis racket strings made of?",
             "answers": [
                 "Nylon",
                 "Gut",
@@ -2101,7 +2101,7 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "The first tennis racket strings were made out of sheep gut.",
+            "info": "The 1st tennis racket strings were made out of sheep gut.",
             "isActiveQuestion": false
         },
         {
@@ -2165,7 +2165,7 @@
             "isActiveQuestion": true
         },
         {
-            "questionText": "Who was the first unseeded player to win the men's singles at Wimbledon?",
+            "questionText": "Who was the 1st unseeded player to win the men's singles at Wimbledon?",
             "answers": [
                 "Novak Djokovic",
                 "Carlos Alcaraz",
@@ -2176,7 +2176,142 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "Boris Becker was the first unseeded player to win the men's singles at Wimbledon.",
+            "info": "Boris Becker was the 1st unseeded player to win the men's singles at Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who won the women's Roland Garros in 2019?",
+            "answers": [
+                "Ashleigh Barty",
+                "Simona Halep",
+                "Noami Osaka",
+                "Markéta Vondroušová"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Ashleigh Barty won Roland Garros in 2019, beating Markéta Vondroušová.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What color must be primarily worn by the players at Wimbledon?",
+            "answers": [
+                "White",
+                "Green",
+                "Yellow",
+                "Black"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "White must be the primary color that players wear at Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the 1st male player to win 100 tournaments in the Open Era?",
+            "answers": [
+                "Jimmy Connors",
+                "Roger Federer",
+                "Ivan Lendl",
+                "Bjorn Borg"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Jimmy Connors was the 1st player in the Open Era to win more than 100 ATP singles titles, which he achieved in 1983.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the 1st male player to get to the semi-finals of a Grand Slam since 2009?",
+            "answers": [
+                "John Isner",
+                "Sam Querrey",
+                "Reilly Opelka",
+                "Jack Sock"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Sam Querrey was the 1st male player to get to the semi-finals of a Grand Slam since 2009, which he did by beating Andy Murray at the 2017 Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the 1st American male player to get to the semi-finals of a Grand Slam since 2009?",
+            "answers": [
+                "John Isner",
+                "Sam Querrey",
+                "Reilly Opelka",
+                "Jack Sock"
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Sam Querrey was the 1st American male player to get to the semi-finals of a Grand Slam since 2009, which he did by beating Andy Murray at the 2017 Wimbledon.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who was the only American to win Wimbledon in the 60s?",
+            "answers": [
+                "Chuck McKinley",
+                "Arthur Ashe",
+                "Butch Buchholz",
+                "Clark Graebner"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "Chuck McKinley was the only American tennis player to win Wimbledon in the 1960s.",
+            "isActiveQuestion": false
+        },    
+        {
+            "questionText": "Which siblings have won the Wimbledon mixed doubles?",
+            "answers": [
+                "John and Tracy Austin",
+                "Andy and Jamie Murray",
+                "Serena and Venus Williams",
+                "Kristyna and Karolina Pliskova"
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "John and Tracy Austin won the Wimbledon mixed doubles in 1980s.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "What was the 1st tournament Carlos Alcaraz won?",
+            "answers": [
+                "Rio Open",
+                "Croatia Open",
+                "Madrid Open",
+                "Barcalona Open"  
+            ],
+            "correctAnswerIndex": 1,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The 1st tournament Carlos Alcaraz won was the Croatia Open in Umag.",
+            "isActiveQuestion": false
+        },
+        {
+            "questionText": "Who is the 1st number one other than Djokovic, Nadal, Federer and Murray since 2005?",
+            "answers": [
+                "Daniil Medvedev",
+                "Carlos Alcaraz",
+                "Andy Roddick",
+                "Stan Wawrinka"  
+            ],
+            "correctAnswerIndex": 0,
+            "tags": [
+                "Starter Questions"
+            ],
+            "info": "The 1st tournament Carlos Alcaraz won was the Croatia Open in Umag.",
             "isActiveQuestion": false
         }
     ]   
