@@ -1582,7 +1582,7 @@
                 "Quarterfinal at the US Open",
                 "Fourth round at the Australian Open"
             ],
-            "correctAnswerIndex": 1,
+            "correctAnswerIndex": 0 ,
             "tags": [
                 "Nadal",
                 "Big Three"
@@ -1891,7 +1891,7 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "The longest tennis match in history lasted 11 hours and 5 minutes.",
+            "info": "The longest tennis match in history was played by John Isner and Nicolas Mahut.",
             "isActiveQuestion": true
         },
         {

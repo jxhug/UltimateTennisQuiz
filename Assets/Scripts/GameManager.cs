@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
 
         utils.CheckIfOrientationUpdated(portraitCanvas, landscapeCanvas, true);
 
-        var jsonTextFile = Resources.Load<TextAsset>("Questii");
+        var jsonTextFile = Resources.Load<TextAsset>("Questions");
         jsonQuestions = JsonUtility.FromJson<QuestionList>(jsonTextFile.text);
         allQuestions = jsonQuestions.questions.OrderBy(a => rng.Next()).ToList();
 
