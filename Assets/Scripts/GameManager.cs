@@ -213,6 +213,7 @@ public class GameManager : MonoBehaviour
     private Utils utils;
 
 
+
     //methods
     void Start()
     {
@@ -245,31 +246,6 @@ public class GameManager : MonoBehaviour
 
         numberPlayersInGame = PlayerSelect.numberPlayersInGame;
         numberQuestionsInGame = numberPlayersInGame * numberQuestionsPerPlayer;
-
-        if (numberPlayersInGame == 1)
-        {
-            //set inactive
-            portraitNumberPlayerText.gameObject.SetActive(false);
-            landscapeNumberPlayerText.gameObject.SetActive(false);
-
-            // change rect transform
-            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
-            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -50);
-            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
-            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -50);
-        }
-        else
-        {
-            //set active
-            portraitNumberPlayerText.gameObject.SetActive(true);
-            landscapeNumberPlayerText.gameObject.SetActive(true);
-
-            // change rect transform
-            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
-            portraitQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -215);
-            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMin = new Vector2(50, 50);
-            landscapeQuestionText.gameObject.GetComponent<RectTransform>().offsetMax = new Vector2(-50, -135);
-        }
 
         switch (numberPlayersInGame)
         {
@@ -338,8 +314,22 @@ public class GameManager : MonoBehaviour
 
     void SetCurrentQuestion()
     {
-        portraitNumberPlayerText.text = "Player " + (currentPlayer + 1);
-        landscapeNumberPlayerText.text = "Player " + (currentPlayer + 1);
+        if (numberPlayersInGame == 1)
+        {
+            //change contents of text
+            portraitNumberPlayerText.text = "";
+            landscapeNumberPlayerText.text = "";
+        }
+        else
+        {
+            //change contents of text
+            portraitNumberPlayerText.text = "Player " + (currentPlayer + 1) + ": ";
+            landscapeNumberPlayerText.text = "Player " + (currentPlayer + 1) + ": ";
+        }
+
+        int numQuestionsRemainingForPlayer = (int) System.Math.Ceiling((double) unansweredQuestions.Count / numberPlayersInGame);
+        portraitNumberPlayerText.text += "Question " + (numberQuestionsPerPlayer - numQuestionsRemainingForPlayer + 1) + " of " + numberQuestionsPerPlayer;
+        landscapeNumberPlayerText.text += "Question " + (numberQuestionsPerPlayer - numQuestionsRemainingForPlayer + 1) + " of " + numberQuestionsPerPlayer;
 
         randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
@@ -419,17 +409,19 @@ public class GameManager : MonoBehaviour
 
     void SingleplayerEndScreen()
     {
-        if (Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) > highScore)  // THIS IS WRONG - highPercentSc
+        int percentScore = Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer);
+
+        if (percentScore > highScore)
         {
-            highScore = Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer);
+            highScore = percentScore;
             PlayerPrefs.SetInt("highScore", highScore);
         }
 
         portraitSingleplayerFinalScoreScreen.SetActive(true);
         landscapeSingleplayerFinalScoreScreen.SetActive(true);
 
-        portraitSingleplayerScoreText.text = "Your final score is: " + Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) + "%";
-        landscapeSingleplayerScoreText.text = "Your final score is: " + Mathf.RoundToInt(100 * scores[0] / numberQuestionsPerPlayer) + "%";
+        portraitSingleplayerScoreText.text = "Your final score is: " + percentScore + "%";
+        landscapeSingleplayerScoreText.text = "Your final score is: " + percentScore + "%";
 
         portraitSingleplayerHighScoreText.text = "Your highest score is: " + highScore + "%";
         landscapeSingleplayerHighScoreText.text = "Your highest score is: " + highScore + "%";
@@ -459,8 +451,9 @@ public class GameManager : MonoBehaviour
             portraitMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
             landscapeMultiplayerImageTexts[i].GetComponent<RectTransform>().offsetMin = new Vector2(50f, 50f);
 
-            portraitMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + Mathf.RoundToInt(100 * scores[i] / numberQuestionsPerPlayer) + "%";
-            landscapeMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + Mathf.RoundToInt(100 * scores[i] / numberQuestionsPerPlayer) + "%";
+            int percentScore = Mathf.RoundToInt(100 * scores[i] / numberQuestionsPerPlayer);
+            portraitMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + percentScore + "%";
+            landscapeMultiplayerImageTexts[i].text = "Player " + (i + 1) + "'s Final Score: " + percentScore + "%";
 
             if (scores[i] == winningScore && scores[i] != 0)
             {
