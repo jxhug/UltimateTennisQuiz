@@ -681,17 +681,17 @@
         {
             "questionText": "What year did Roger Federer win his 10th Slam in?",
             "answers": [
-                "2012",
-                "2013",
+                "2007",
+                "2008",
                 "2009",
                 "2010"
             ],
             "correctAnswerIndex": 0,
             "tags": [
-                "Djokovic",
+                "Federer",
                 "Big Three"
             ],
-            "info": "Djokovic won his 10th Grand Slam, The Australian Open, in 2012.",
+            "info": "Federer won his 10th Grand Slam, The Australian Open, in 2007.",
             "isActiveQuestion": false
         },
         {
@@ -1436,7 +1436,7 @@
                 "1",
                 "0",
                 "2",
-                "-1"
+                "3"
             ],
             "correctAnswerIndex": 0,
             "tags": [
@@ -1667,21 +1667,6 @@
             "isActiveQuestion": false
         },
         {
-            "questionText": "Where is Casper Ruud from?",
-            "answers": [
-                "Norway",
-                "Finland",
-                "Iceland",
-                "Denmark"
-            ],
-            "correctAnswerIndex": 0,
-            "tags": [
-                "Nationalities"
-            ],
-            "info": "Casper Ruud is from Norway, and he resides in Oslo, the capital of Norway.",
-            "isActiveQuestion": false
-        },
-        {
             "questionText": "How many Grand Slams did Rod Laver win?",
             "answers": [
                 "11",
@@ -1742,21 +1727,6 @@
                 "Starter Questions"
             ],
             "info": "Naomi Osaka turned pro in 2013, when she was just 16 years old.",
-            "isActiveQuestion": false
-        },
-        {
-            "questionText": "When did Billie Jean King retire?",
-            "answers": [
-                "1983",
-                "1987",
-                "1978",
-                "1979"
-            ],
-            "correctAnswerIndex": 0,
-            "tags": [
-                "Starter Questions"
-            ],
-            "info": "Billie Jean King retired in 1983, when she was 40 years old.",
             "isActiveQuestion": false
         },
         {
@@ -1951,22 +1921,7 @@
             "tags": [
                 "Starter Questions"
             ],
-            "info": "The record for shortest Grand Slam final is held by Steffi graf. The match lasted 32 minutes total.",
-            "isActiveQuestion": true
-        },
-        {
-            "questionText": "How fast was the shortest Grand Slam final ever?",
-            "answers": [
-                "32 minutes",
-                "34 minutes",
-                "45 minutes",
-                "42 minutes"
-            ],
-            "correctAnswerIndex": 0,
-            "tags": [
-                "Starter Questions"
-            ],
-            "info": "The record for shortest Grand Slam final is held by Steffi graf. The match lasted 32 minutes total.",
+            "info": "The record for shortest Grand Slam final is held by Steffi Graf. The match lasted 32 minutes total.",
             "isActiveQuestion": true
         },
         {
@@ -2022,11 +1977,11 @@
                 "Jimmy Connors",
                 "Bjorn Borg"
             ],
-            "correctAnswerIndex": 0,
+            "correctAnswerIndex": 1,
             "tags": [
                 "Starter Questions"
             ],
-            "info": "Steffi graf won the Golden Grand Slam in 1988, by winning the Calendar Grand Slam and the Olympic gold medal.",
+            "info": "Steffi Graf won the Golden Grand Slam in 1988, by winning the Calendar Grand Slam and the Olympic gold medal.",
             "isActiveQuestion": false
         },
         {
@@ -2118,21 +2073,6 @@
             ],
             "info": "The US Open was played on grass courts before it was played on hard courts.",
             "isActiveQuestion": false
-        },
-        {
-            "questionText": "Where is the US Open played?",
-            "answers": [
-                "Flushing Meadows",
-                "Newport",
-                "Forest Hills",
-                "Chestnut Hill"
-            ],
-            "correctAnswerIndex": 0,
-            "tags": [
-                "Starter Questions"
-            ],
-            "info": "The US Open is played at Flushing Meadows, but used to be played at Forest Hills.",
-            "isActiveQuestion": true
         },
         {
             "questionText": "Where is the US Open played?",

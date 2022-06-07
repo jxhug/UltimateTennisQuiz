@@ -77,7 +77,7 @@ namespace MenuNS
         public void LoadSettings()
         {
             sfxToggle = PlayerPrefs.GetInt("sfxToggle", 1);
-            musicToggle = PlayerPrefs.GetInt("musicToggle", 1);
+            musicToggle = PlayerPrefs.GetInt("musicToggle", 0);
             questionsPerGameDropdownIndex = PlayerPrefs.GetInt("questionsPerGameDropdownIndex", 5);
         }
 
